@@ -1,0 +1,353 @@
+/*******************FONTS**************************/
+@font-face {
+  font-family: Bold;
+  src: url(../fonts/Oswald-Bold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Demib;
+  src: url(../fonts/Oswald-DemiBold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: light;
+  src: url(../fonts/Oswald-Light.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Medium;
+  src: url(../fonts/Oswald-Medium.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Regular;
+  src: url(../fonts/Oswald-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+.Bo {
+  font-family: "Bold";
+}
+.De {
+  font-family: "Demib";
+}
+.Li {
+  font-family: "light";
+}
+.Me {
+  font-family: "Medium";
+}
+.Re {
+  font-family: "Regular";
+}
+/**************************************************/
+/**************************************************/
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  color: #000;
+  -webkit-border-radius: none;
+          border-radius: none;
+  text-decoration: none;
+  border: 0px;
+  padding: 0px;
+}
+/**************************************************/
+header,
+.navbar,
+.navbar-default,
+.container_header {
+  min-height: 50px;
+  background-color: #16191f;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: 0px;
+}
+header .navbar-header a:hover,
+.navbar .navbar-header a:hover,
+.navbar-default .navbar-header a:hover,
+.container_header .navbar-header a:hover {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+header .navbar-right li a,
+.navbar .navbar-right li a,
+.navbar-default .navbar-right li a,
+.container_header .navbar-right li a {
+  font-family: "Medium";
+  font-size: 18px;
+  color: #8b94a6;
+  margin-top: 7px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 30px;
+  padding-left: 30px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+}
+header .navbar-right li a:hover,
+.navbar .navbar-right li a:hover,
+.navbar-default .navbar-right li a:hover,
+.container_header .navbar-right li a:hover {
+  background-color: #e30303;
+  color: #fefeff;
+}
+header .navbar-right li .line-radius,
+.navbar .navbar-right li .line-radius,
+.navbar-default .navbar-right li .line-radius,
+.container_header .navbar-right li .line-radius {
+  border: 1px solid #e30303;
+}
+.menu {
+  background-color: #282f3d;
+  min-height: 50px;
+}
+.menu .container_menu .nav-pills li {
+  font-family: "Regular";
+  font-size: 16px;
+}
+.menu .container_menu .nav-pills li a {
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fff;
+}
+.menu .container_menu .nav-pills li a:hover {
+  background-color: #16191f;
+}
+.menu .container_menu .nav-pills li a:visited {
+  background-color: #16191f;
+}
+.menu .container_menu .nav-pills li a img {
+  padding-right: 7px;
+}
+.menu .container_menu .nav-pills .dropdown_my a {
+  color: #6b768c;
+}
+.menu .container_menu .nav-pills .navbar-right {
+  text-transform: uppercase;
+  margin-top: 13px;
+  padding-bottom: 0px;
+}
+.menu .container_menu .nav-pills .navbar-right li {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.menu .container_menu .nav-pills .navbar-right li .favorites {
+  border-right: 1px solid #6b768c;
+}
+.menu .container_menu .nav-pills .navbar-right li a {
+  color: #6b768c;
+  padding-right: 12px;
+  padding-left: 9px;
+}
+.menu .container_menu .nav-pills .navbar-right li a span {
+  color: #e30303;
+}
+.menu .container_menu .nav-pills .navbar-right li a:hover {
+  background-color: #16191f;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.main {
+  min-height: 2330px;
+  background-image: url("../img/BG-main.png");
+}
+.main .container .row {
+  margin-top: 30px;
+}
+.main .container .row h2 {
+  text-transform: uppercase;
+  font-family: "Demib";
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  max-width: 20%;
+}
+.main .container .row h2:after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  max-width: 57px;
+  height: 2px;
+  background-color: #fff;
+}
+.main .container .row .serch {
+  margin-top: 10px;
+}
+.main .container .row .serch .navbar-form {
+  padding: 10px 5px;
+}
+.main .container .row .serch .form-control {
+  width: 50%;
+  margin-left: 157px;
+  background-color: #282f3d;
+  padding: 6px 12px;
+  border: none;
+}
+.main .container .row .serch .btn {
+  background-image: none;
+  background-color: #16191f;
+  border-color: #16191f;
+}
+.main .container .main_picture .row .first_panel {
+  min-height: 240px;
+  max-width: 378px;
+  background-image: url("../img/fpanel.png");
+  background-size: cover;
+  border: 1px solid #1d222e;
+}
+.main .container .main_picture .row .first_panel:hover {
+  border: 1px solid #e30303;
+}
+.main .container .main_picture .row .first_panel .text_bot {
+  position: absolute;
+}
+.main .container .main_picture .row .first_panel .text_bot .left_t {
+  margin-top: 174px;
+  color: #fff;
+  max-width: 70%;
+  background-color: #191e2b;
+  opacity: 0.85;
+  position: relative;
+  padding-top: 8px;
+  border-right: 0.3px solid #8b94a6;
+}
+.main .container .main_picture .row .first_panel .text_bot .left_t h5 {
+  font-family: "Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.main .container .main_picture .row .first_panel .text_bot .left_t span {
+  font-family: "Regular";
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.main .container .main_picture .row .first_panel .text_bot .right_t {
+  margin-top: 174px;
+  padding-left: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 30%;
+  background-color: #191e2b;
+  opacity: 0.85;
+}
+.main .container .main_picture .row .first_panel .text_bot .right_t p {
+  padding-top: 1px;
+  font-family: "Bold";
+  font-size: 24px;
+  color: #e30303;
+  margin-top: 9px;
+}
+.main .container .main_picture .row .second_panel {
+  min-height: 240px;
+  max-width: 378px;
+  background-image: url("../img/spanel.png");
+  background-size: cover;
+}
+.main .container .main_picture .row .three_panel {
+  min-height: 240px;
+  max-width: 378px;
+  background-image: url("../img/tpanel.png");
+  background-size: cover;
+}
+.main .tournament_up h2 {
+  text-transform: uppercase;
+  font-family: "Demib";
+  margin-top: 30px;
+  font-size: 18px;
+  color: #fff;
+  max-width: 20%;
+}
+.main .tournament_up h2 span {
+  color: #e30303;
+}
+.main .tournament_up h2:after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  max-width: 57px;
+  height: 2px;
+  background-color: #fff;
+}
+.main .row .header_table {
+  margin-top: 17px;
+  background: #323a4a;
+  min-height: 50px;
+  width: 926px;
+  font-family: "Regular";
+  font-size: 15px;
+  color: #969fb3;
+  padding-top: 17px;
+  padding-left: 115px;
+  padding-bottom: 20px;
+  margin-left: 0px;
+}
+.main .row .header_table .tournament {
+  width: 300px;
+}
+.main .row .header_table .discipline {
+  margin-left: 147px;
+}
+.main .row .header_table .region {
+  margin-left: 85px;
+}
+.main .row .header_table .prize {
+  margin-left: 74px;
+}
+.main .row .header_table .area {
+  margin-left: 64px;
+}
+.main .row .header_table .dates {
+  margin-left: 55px;
+}
+.main .row .game_list {
+  background: url("../img/icon/bg1.png");
+  width: 926px;
+}
+.main .row .game_list .turnament_list {
+  width: 300px;
+  display: inline-block;
+}
+.main .row .game_list .turnament_list .img {
+  background: url("../img/icon/1.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 50px;
+  display: inline-block;
+}
+.main .row .game_list .turnament_list h3 {
+  text-transform: uppercase;
+  margin-top: 15px;
+  display: inline-block;
+  position: absolute;
+  font-family: "Bold";
+  font-size: 14px;
+  color: #fff;
+}
+.main .row .game_list .discipline_list {
+  width: 120px;
+  display: inline-block;
+}
+.main .row .game_list .discipline_list .img {
+  background: url("../img/icon/shut_men_small.png");
+  background-position: center;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+.main .row .game_list .discipline_list h3 {
+  margin-top: 4px;
+  padding-left: 5px;
+  display: inline-block;
+  position: absolute;
+  font-family: "Bold";
+  font-size: 14px;
+  color: #fff;
+}
