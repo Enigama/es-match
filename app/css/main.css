@@ -111,6 +111,12 @@ a:active {
 } */
 body {
   height: 2682px;
+  /***********************HISTORY**************************/
+  /***********************END HISTORY**************************/
+  /****************************PAGE FOOTER**********************/
+  /****************************END PAGE FOOTER**********************/
+  /**********************FOOTER*********************************/
+  /**********************FOOTER*********************************/
 }
 body header {
   background: #16191f;
@@ -342,7 +348,7 @@ body .menu .container_menu .navbar-right li a {
   text-decoration: none;
 }
 body .main {
-  min-height: 2330px;
+  min-height: 2440px;
   background-image: url("../img/BG-main.png");
 }
 body .main .container {
@@ -492,10 +498,9 @@ body .main .container .tournament_up h2:after {
   background-color: #fff;
 }
 body .main .container .row {
-  margin-left: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  margin-left: -15px;
+  margin-left: 0px;
 }
 body .main .container .row .tesrik {
   margin-top: 30px;
@@ -529,7 +534,7 @@ body .main .container .row .tesrik .clear_::after {
   background-color: #0a68be;
 }
 body .main .container .row .line0 {
-  margin-left: 4px;
+  margin-left: 0px;
   padding-left: 0px;
   padding-right: 0px;
   width: 930px;
@@ -585,7 +590,7 @@ body .main .container .qwe {
   margin-top: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  margin-left: -15px;
+  margin-left: -4px;
   width: 1161px;
 }
 body .main .container .qwe .qwe1 {
@@ -1816,14 +1821,16 @@ body .main .container .number_page .pagination li span:hover {
   color: #fff;
 }
 body .row {
-  margin-left: 20px;
   width: 1135px;
+  margin-right: 0px;
 }
 body .row .history {
   background: #282f3d;
   height: 237px;
-  width: 1140px;
+  width: 1120px;
   padding-right: 0px;
+  margin-left: 18px;
+  /***************cheng - **/
 }
 body .row .history .img_history {
   background: url("/img/Lineage_logo.jpg");
@@ -1863,7 +1870,7 @@ body .row .history .tetx_history .number_page {
   float: right;
   width: 85%;
   height: 50px;
-  padding-left: 140px;
+  padding-left: 130px;
 }
 body .row .history .tetx_history .number_page .pagination {
   margin-bottom: 0px;
@@ -1878,17 +1885,22 @@ body .row .history .social_page {
 body .row .history .social_page .vk {
   background: url("/img/vk.png");
   height: 205px;
-  width: 205px;
+  width: 195px;
 }
 body .row .history .social_page .fb {
   background: url("/img/fb.png");
   height: 205px;
-  width: 205px;
+  width: 195px;
   margin-left: 15px;
+}
+body .row {
+  margin-left: 13px;
 }
 body .row .page_footer {
   display: inline-block;
   padding-left: 0px;
+  margin-left: 20px;
+  /***************cheng - **/
 }
 body .row .page_footer span {
   display: inline-block;
@@ -1912,7 +1924,7 @@ body .row .page_footer .group_min_icon img {
   padding-left: 10px;
 }
 body .row .right_link {
-  margin-left: 368px;
+  margin-left: 358px;
   padding-right: 0px;
 }
 body .row .right_link a {
@@ -1943,7 +1955,7 @@ body .row .list_game_footer .txt_active span {
   margin-left: 15px;
 }
 body .row .list_game_footer .list_bot {
-  width: 1140px;
+  width: 1135px;
   margin-top: 30px;
   height: 50px;
   background: #282f3d;
@@ -2126,21 +2138,16 @@ body footer .container {
 }
 body footer .container .row {
   margin-top: 15px;
+  margin-left: 25px;
   width: 1161px;
   height: 121px;
-  margin-left: 0px;
   padding-left: 0px;
+  padding-right: 0px;
 }
 body footer .container .row .col-md-5 {
   padding-left: 0px;
   display: inline-block;
   margin-left: -20px;
-  /* a:first-child{
-							margin-right:18px;
-						}
-						a:last-child{
-							margin-left:18px;
-						} */
 }
 body footer .container .row .col-md-5 a {
   display: inline-block;
@@ -2195,6 +2202,7 @@ body footer .container .row .social_fb {
   width: 1141px;
   height: 50px;
   border-bottom: 1px solid #471418;
+  margin-left: 0px;
 }
 body footer .container .row .social_fb a {
   margin-left: 10px;
