@@ -577,8 +577,8 @@ body .main .container .qwe {
 }
 body .main .container .qwe .qwe1 {
   padding-left: 0px;
-  /*popover for HOVER*/
-  /****************************************************************************/
+  /*********************************popover for HOVER************************************/
+  /*********************************end popover for HOVER************************************/
 }
 body .main .container .qwe .qwe1 .line1,
 body .main .container .qwe .qwe1 .line2,
@@ -1912,6 +1912,8 @@ body .row .right_link a:hover {
 body .row .list_game_footer {
   display: inline-block;
   margin-left: 10px;
+  /*********************************popover for HOVER************************************/
+  /*********************************end popover for HOVER************************************/
 }
 body .row .list_game_footer .txt_active {
   padding-left: 0;
@@ -1995,6 +1997,68 @@ body .row .list_game_footer .list_bot .fourth_column .comment img {
 }
 body .row .list_game_footer .not_m {
   margin-top: 0;
+}
+body .row .list_game_footer .popover,
+body .row .list_game_footer .popover-content {
+  background: #fff;
+  width: 167px;
+  height: 169px;
+}
+body .row .list_game_footer .popover .small_popover .img_pop_small,
+body .row .list_game_footer .popover-content .small_popover .img_pop_small {
+  background: url("/img/logo_bot.png") no-repeat;
+  width: 96px;
+  height: 46px;
+  vertical-align: middle;
+}
+body .row .list_game_footer .popover .small_popover span,
+body .row .list_game_footer .popover-content .small_popover span {
+  margin-top: 10px;
+  font-family: "Bold";
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000;
+  margin-left: 1px;
+}
+body .row .list_game_footer .popover .small_popover .mini_cd,
+body .row .list_game_footer .popover-content .small_popover .mini_cd {
+  margin-top: 5px;
+  display: inline-block;
+}
+body .row .list_game_footer .popover .small_popover .mini_cd .img_cd,
+body .row .list_game_footer .popover-content .small_popover .mini_cd .img_cd {
+  background: url("/img/icon-C.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+body .row .list_game_footer .popover .small_popover .mini_cd span,
+body .row .list_game_footer .popover-content .small_popover .mini_cd span {
+  font-family: "Regular";
+  font-size: 13px;
+  color: #9b9aa4;
+  padding-left: 5px;
+  text-align: center;
+  text-transform: none;
+  margin-top: 0px;
+}
+body .row .list_game_footer .popover .small_popover .money span,
+body .row .list_game_footer .popover-content .small_popover .money span {
+  font-family: "Bold";
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000;
+}
+body .row .list_game_footer .popover .small_popover .cheng,
+body .row .list_game_footer .popover-content .small_popover .cheng {
+  font-family: "Regular";
+  font-size: 13px;
+  color: #9b9aa4;
+  padding-top: 10px;
+  text-align: center;
+}
+body .row .list_game_footer .popover.bottom > .arrow:after {
+  border-bottom-color: #fff;
 }
 body .img14 {
   background: url("/img/logo_bot.png");
