@@ -116,7 +116,7 @@ body header {
   background: #16191f;
   height: 50px;
   /*********************************popover for signed********************************************/
-  /************************************************************************************************/
+  /*******************************end popover for signed****************************************/
 }
 body header .container {
   background: #16191f;
@@ -124,12 +124,13 @@ body header .container {
 body header .container nav {
   border: none;
 }
-body header .container nav .container_header .collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
-body header .container nav .container_header .navbar-collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
-body header .container nav .container_header .collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
-body header .container nav .container_header .navbar-collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
-body header .container nav .container_header .collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
-body header .container nav .container_header .navbar-collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a) {
+body header .container nav .container_header .collapse .nav .li .a,
+body header .container nav .container_header .navbar-collapse .nav .li .a,
+body header .container nav .container_header .collapse .navbar-nav .li .a,
+body header .container nav .container_header .navbar-collapse .navbar-nav .li .a,
+body header .container nav .container_header .collapse .navbar-right .li .a,
+body header .container nav .container_header .navbar-collapse .navbar-right .li .a {
+  /*:not(.popover>.popover-content>.pop_begin>.social_min>a)*/
   font-family: "Medium";
   font-size: 18px;
   color: #8b94a6;
@@ -142,22 +143,42 @@ body header .container nav .container_header .navbar-collapse .navbar-right li a
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
-body header .container nav .container_header .collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
-body header .container nav .container_header .navbar-collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
-body header .container nav .container_header .collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
-body header .container nav .container_header .navbar-collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
-body header .container nav .container_header .collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
-body header .container nav .container_header .navbar-collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover {
+body header .container nav .container_header .collapse .nav .li .a:hover,
+body header .container nav .container_header .navbar-collapse .nav .li .a:hover,
+body header .container nav .container_header .collapse .navbar-nav .li .a:hover,
+body header .container nav .container_header .navbar-collapse .navbar-nav .li .a:hover,
+body header .container nav .container_header .collapse .navbar-right .li .a:hover,
+body header .container nav .container_header .navbar-collapse .navbar-right .li .a:hover {
   background-color: #e30303;
   color: #fefeff;
 }
-body header .container nav .container_header .collapse .nav li .line-radius,
-body header .container nav .container_header .navbar-collapse .nav li .line-radius,
-body header .container nav .container_header .collapse .navbar-nav li .line-radius,
-body header .container nav .container_header .navbar-collapse .navbar-nav li .line-radius,
-body header .container nav .container_header .collapse .navbar-right li .line-radius,
-body header .container nav .container_header .navbar-collapse .navbar-right li .line-radius {
+body header .container nav .container_header .collapse .nav .li .line-radius,
+body header .container nav .container_header .navbar-collapse .nav .li .line-radius,
+body header .container nav .container_header .collapse .navbar-nav .li .line-radius,
+body header .container nav .container_header .navbar-collapse .navbar-nav .li .line-radius,
+body header .container nav .container_header .collapse .navbar-right .li .line-radius,
+body header .container nav .container_header .navbar-collapse .navbar-right .li .line-radius {
+  font-family: "Medium";
+  font-size: 18px;
+  color: #8b94a6;
+  text-transform: uppercase;
+  margin-top: 7px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 30px;
+  padding-left: 30px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
   border: 1px solid #e30303;
+}
+body header .container nav .container_header .collapse .nav .li .line-radius:hover,
+body header .container nav .container_header .navbar-collapse .nav .li .line-radius:hover,
+body header .container nav .container_header .collapse .navbar-nav .li .line-radius:hover,
+body header .container nav .container_header .navbar-collapse .navbar-nav .li .line-radius:hover,
+body header .container nav .container_header .collapse .navbar-right .li .line-radius:hover,
+body header .container nav .container_header .navbar-collapse .navbar-right .li .line-radius:hover {
+  background-color: #e30303;
+  color: #fefeff;
 }
 body header .popover {
   background: #282f3d;
@@ -173,28 +194,20 @@ body header .popover .popover-content .pop_begin .social_min p {
   font-family: "light";
   font-size: 15px;
   color: #7a8395;
+  margin-bottom: 5px;
 }
 body header .popover .popover-content .pop_begin .social_min a {
   margin-right: 10px;
   padding: 0px;
-  /********************************clear-after nav**************************/
-  text-transform: none;
-  margin-top: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-  -webkit-border-radius: 0px;
-          border-radius: 0px;
-  /********************************clear-after nav**************************/
+  width: 28px;
+  height: 28px;
 }
 body header .popover .popover-content .pop_begin .social_min a img {
   width: 28px;
   height: 28px;
 }
-body header .popover .popover-content .pop_begin .social_min a:hover {
-  background: none;
-  color: #fff;
+body header .popover .popover-content .pop_begin .social_min a img:last-child {
+  margin-top: 10px;
 }
 body header .popover .popover-content .pop_begin form {
   margin-top: 10px;
@@ -1550,8 +1563,12 @@ body .main .container .qwe .qwe1 .line20 .true_color:hover {
 body .main .container .qwe .qwe1 .popover,
 body .main .container .qwe .qwe1 .popover-content {
   background: #fff;
-  width: 167px;
-  height: 169px;
+  width: 162px;
+  height: 155px;
+}
+body .main .container .qwe .qwe1 .popover .small_popover,
+body .main .container .qwe .qwe1 .popover-content .small_popover {
+  height: 155px;
 }
 body .main .container .qwe .qwe1 .popover .small_popover .img_pop_small,
 body .main .container .qwe .qwe1 .popover-content .small_popover .img_pop_small {
@@ -1590,6 +1607,7 @@ body .main .container .qwe .qwe1 .popover-content .small_popover .mini_cd span {
   text-align: center;
   text-transform: none;
   margin-top: 0px;
+  vertical-align: super;
 }
 body .main .container .qwe .qwe1 .popover .small_popover .money span,
 body .main .container .qwe .qwe1 .popover-content .small_popover .money span {
@@ -1603,8 +1621,8 @@ body .main .container .qwe .qwe1 .popover-content .small_popover .cheng {
   font-family: "Regular";
   font-size: 13px;
   color: #9b9aa4;
-  padding-top: 10px;
   text-align: center;
+  margin-top: 10px;
 }
 body .main .container .qwe .qwe1 .popover.bottom > .arrow:after {
   border-bottom-color: #fff;
@@ -2001,8 +2019,12 @@ body .row .list_game_footer .not_m {
 body .row .list_game_footer .popover,
 body .row .list_game_footer .popover-content {
   background: #fff;
-  width: 167px;
-  height: 169px;
+  width: 162px;
+  height: 155px;
+}
+body .row .list_game_footer .popover .small_popover,
+body .row .list_game_footer .popover-content .small_popover {
+  height: 155px;
 }
 body .row .list_game_footer .popover .small_popover .img_pop_small,
 body .row .list_game_footer .popover-content .small_popover .img_pop_small {
@@ -2041,6 +2063,7 @@ body .row .list_game_footer .popover-content .small_popover .mini_cd span {
   text-align: center;
   text-transform: none;
   margin-top: 0px;
+  vertical-align: super;
 }
 body .row .list_game_footer .popover .small_popover .money span,
 body .row .list_game_footer .popover-content .small_popover .money span {
@@ -2054,8 +2077,8 @@ body .row .list_game_footer .popover-content .small_popover .cheng {
   font-family: "Regular";
   font-size: 13px;
   color: #9b9aa4;
-  padding-top: 10px;
   text-align: center;
+  margin-top: 10px;
 }
 body .row .list_game_footer .popover.bottom > .arrow:after {
   border-bottom-color: #fff;

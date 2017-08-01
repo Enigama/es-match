@@ -122,8 +122,8 @@ body{
 					.container_header{
 						.collapse,.navbar-collapse{
 							.nav ,.navbar-nav ,.navbar-right{
-								li{
-									a:not(.popover>.popover-content>.pop_begin>.social_min>a){
+								.li{
+									.a{/*:not(.popover>.popover-content>.pop_begin>.social_min>a)*/
 										.Me;
 										font-size: 18px;
 										color: #8b94a6;
@@ -142,8 +142,25 @@ body{
 										}
 									}
 									.line-radius{
+										.Me;
+										font-size: 18px;
+										color: #8b94a6;
+										text-transform: uppercase;
+										margin-top: 7px;
+										    padding-top: 6px;
+										    padding-bottom: 6px;
+										    padding-right: 30px;
+										    padding-left: 30px;
+										    border-radius: 50px;
+										&:hover{
+											
+											background-color: #e30303;
+											color: #fefeff;
+											
+										}
 										border:1px solid #e30303;
 									}
+
 
 								}
 
@@ -173,37 +190,24 @@ body{
 						.Li;
 						font-size: 15px;
 						color: #7a8395;
+						margin-bottom: 5px;
 						
 					}
 					a{
+
 						margin-right:10px;
 						padding:0px;
-						//margin-top:15px;
-						//margin-left:10px;
+						width:28px;
+						height:28px;
 						img{
 							
 							width:28px;
 							height:28px;
 
 						}
-
-					/********************************clear-after nav**************************/
-											text-transform: none;
-											margin-top: 0px;
-										    padding-top: 0px;
-										    padding-bottom: 0px;
-										    padding-right: 0px;
-										    padding-left: 0px;
-										    border-radius: 0px;
-										    &:hover{
-											
-											background:none;
-											color: #fff;
-											
-										}
-
-					/********************************clear-after nav**************************/
-
+						img:last-child{
+							margin-top:10px;
+						}
 					}
 				}
 				form{
@@ -287,7 +291,7 @@ body{
 	.popover.bottom>.arrow:after{
 		border-bottom-color: #282f3d;
 	}
-/************************************************************************************************/
+/*******************************end popover for signed****************************************/
 	}
 
 	.menu{
@@ -867,10 +871,10 @@ body{
 	
 		.popover,.popover-content{
 			background:#fff;
-			width:167px;
-			height:169px;
+			width:162px;
+			height:155px;
 			.small_popover{
-				
+				height:155px;
 				.img_pop_small{
 					background:url("/img/logo_bot.png") no-repeat;
 					width:96px;
@@ -902,7 +906,8 @@ body{
 						padding-left:5px;
 						text-align: center;
 						text-transform: none;
-						margin-top:0px
+						margin-top:0px;
+						vertical-align: super;
 					}
 				}
 				.money{
@@ -917,8 +922,9 @@ body{
 					.Re;
 						font-size:13px;
 						color:#9b9aa4;
-						padding-top:10px;
+						//padding-top:10px;
 						text-align: center;
+						margin-top:10px
 
 						
 				}
@@ -1351,10 +1357,10 @@ body{
 	
 		.popover,.popover-content{
 			background:#fff;
-			width:167px;
-			height:169px;
+			width:162px;
+			height:155px;
 			.small_popover{
-				
+				height:155px;
 				.img_pop_small{
 					background:url("/img/logo_bot.png") no-repeat;
 					width:96px;
@@ -1386,7 +1392,8 @@ body{
 						padding-left:5px;
 						text-align: center;
 						text-transform: none;
-						margin-top:0px
+						margin-top:0px;
+						vertical-align: super;
 					}
 				}
 				.money{
@@ -1401,8 +1408,9 @@ body{
 					.Re;
 						font-size:13px;
 						color:#9b9aa4;
-						padding-top:10px;
+						//padding-top:10px;
 						text-align: center;
+						margin-top:10px
 
 						
 				}
