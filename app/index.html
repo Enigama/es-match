@@ -3,44 +3,84 @@
 <head>
 	<meta charset="UTF-8">
 	<title>es-match</title>
-	  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+	
+		<!-- <link rel="stylesheet" href="css/jquery-ui.min.css">
+    	 <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  	<script src="js/jquery-3.1.1.min.js"></script>
+
+	<script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.ru.js"></script>
+			<script src="js/libs.min.js"></script>				
+    <script src="js/script.js"></script>
+
+   		<link rel="stylesheet" href="css/main.css"> -->
+
+	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
-     
-     <script src="js/jquery-3.1.1.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
 
-	<link rel="stylesheet" href="css/libs.min.css">
-	<link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.ru.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+
 </head>
 <body>
-<header>
-  <div class="container">
-    <nav class="navbar navbar-default">
-  <div class="container container_header">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="es-match"></a>
-    </div>
+<script type="text/javascript">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Добавить турнир</a></li>
-            <li><a href="#">новости</a></li>
-            <li><a href="#">реклама</a></li>
-            <li><a href="#" class="line-radius">вход | регистрация</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-  </div>
+  $('.datepicker').datepicker();
+
+</script>
+<script type="text/javascript">
+$('.input-group.date').datepicker({
+    format: 'mm/dd/yyyy',
+    startDate: '-3d'
+});
+</script>
+
+   
+
+<header>
+	<div class="container">
+	    <nav class="navbar navbar-default">
+	  		<div class="container container_header">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <img class="navbar-brand" src="img/logo.png" alt="es-match">
+			    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			            <li><a href="#">Добавить турнир</a></li>
+			            <li><a href="#">новости</a></li>
+			            <li><a href="#">реклама</a></li>
+			            <li><a href="#" class="line-radius" data-html="true"  data-toggle="popover" data-placement="bottom">вход | регистрация</a></li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+	  		</div><!-- /.container-fluid -->
+		</nav>
+	</div>
 </header>
 <section class="menu">
   <div class="container container_menu">
@@ -129,36 +169,855 @@
         </div>
       </div>
     </div>
-    <!--                              -->
-    <div class="row">
-      <div class="col-lg-9 tournament_up">
-        <h2>турниры (<span>264</span>)</h2>
-      </div>
-      <div class=" col-lg-9 container text-center header_table">
-        <dvi class="tournament">Турнир</dvi>
-        <dvi class="discipline">Дисциплина</dvi>
-        <dvi class="region">Регион</dvi>
-        <dvi class="prize">Приз</dvi>
-        <dvi class="area">Площадка</dvi>
-        <dvi class="dates">Даты проведения</dvi>
-      </div> 
-    </div>
-        <div class="row line1">
-          <div class="col-lg-9 game_list">
-              <div class="turnament_list">
-                <div class="img"></div>
-                <h3>msi gaming dota 2 cup</h3>
-              </div>
-              <div class="discipline_list">
-                <div class="img"></div>
-                <h3>Call of Duty</h3>
-              </div>
-          </div>
-        </div>
 
+<div class="row lol">
+	<div class="col-md-12">
+		<div class="row">    
+		    <div class="line0 col-md-12">
+		      <div class="tournament_up .col-md-10">
+		        <h2>турниры (<span>264</span>)</h2>
+		      </div>	
+		        <div class="row header_table"><!--container-->
+		        <dvi class="tournament ">Турнир</dvi>
+		        <dvi class="discipline">Дисциплина</dvi>
+		        <dvi class="region">Регион</dvi>
+		        <dvi class="prize">Приз</dvi>
+		        <dvi class="area">Площадка</dvi>
+		        <dvi class="dates">Даты проведения</dvi>
+		      </div> 
+		    </div>
+		    <div class="col-md-1 col-ofsset-md-10  tesrik">
+			      <span class="filts_">фильтры</span>
+			</div>
+			<div class="col-md-1 col-ofsset-md-10  tesrik">
+				<span class="clear_">Очистить</span>
+			</div>
+		</div>
+
+<div class="row qwe">
+	<div class="col-md-9 qwe1">
+		<div class="row col-md-10 line1">
+			<div class="game_list">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img1"></div>
+		               <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		              <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az"><span>Азия</span></div>
+		              <div class="prize_"><span>5000 руб</span></div>
+		              <div class="area_"><span>www.gme.ru</span></div>
+		              <div class="dates_1">
+		               <span1>12.06.16 -</span1><span2> 18.06.16</span2>
+		              </div>
+			</div> 
+		</div>
+
+		<div class="row  col-md-10 line2">
+			<div class=" game_list">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img2"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                    <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_1">
+		               <span1>12.06.16 -</span1><span2> 18.06.16</span2>
+		              </div>
+		 	</div>
+		</div>
+		<div class="row col-md-10 line3">
+			<div class="game_list">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img3"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                    <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_1">
+		              <span1>12.06.16 -</span1><span2> 18.06.16</span2> 
+		              </div>
+				</div>
+		</div>
+		<div class="row col-md-10 line4">
+			<div class="game_list">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img4"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                    <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_1">
+		               <span1>12.06.16 -</span1><span2> 18.06.16</span2>
+		              </div>
+		    </div>
+		</div>		   
+		<div class="row col-md-10 line5">
+			<div class="game_list">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img5"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                    <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_1">
+		               <span1>12.06.16 -</span1><span2> 18.06.16</span2>
+		              </div>
+		    </div>
+		</div>		   
+		<div class="row col-md-10 line6">
+			<div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img6"></div>
+		                <span class="red_word">msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                    <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		               <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>	
+			</div>
+		</div>          
+
+
+		<div class="row col-md-10 line7">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img7"></div>
+		                <span class="red_word">msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+
+		<div class="row col-md-10 line8">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span class="red_word">msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line9">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line10">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line11">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line12">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line13">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line14">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line15">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line16">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line17">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line18">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line19">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+		<div class="row col-md-10 line20">
+		          <div class="game_list true_color">
+		              <div class="turnament_list" data-toggle="popover_jeka" data-trigger="hover" data-html="true"  data-placement="bottom">
+		                <div class="img8"></div>
+		                <span>msi gaming dota 2 cup</span>
+		              </div>
+		              <div class="discipline_list">
+		                <div class="img0"></div>
+		                <span>Call of Duty</span>
+		              </div>
+		              <div class="region_az">
+		                <span>Азия</span>
+		              </div>
+		              <div class="prize_">
+		                <span>5000 руб</span>
+		              </div>
+		              <div class="area_">
+		                 <span>www.gme.ru</span>
+		              </div>
+		              <div class="dates_">
+		                <span1 class="rgb_g">12.06.16 </span1><span2 class="rgb_r"> 18.06.16</span2>
+		              </div>
+		          </div>
+		</div>
+	</div><!--qwe1-->
+		<div class="col-md-3 col-offset-10 qwe2">
+			 <div class="filtres">
+	            <span>Тип турнира</span>
+	            <div class="input-group type">
+	              <input id="ti" type="text" class="form-control" aria-label=".." placeholder="Выберите тип">
+	              <div class="input-group-btn type">
+	                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
+	                <ul class="dropdown-menu dropdown-menu-right">
+	                  <li><a href="#">Квалификационные</a></li>
+	                  <li><a href="#">Начальные</a></li>
+	                  <li><a href="#">Начальные</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <span>Дата</span>
+	              <div class="dateforms">     
+	                <div class="dates">
+	                  <div class="input-group date" data-provide="datepicker">
+	                    <input type="text" class="form-control" placeholder="От:"><span id="#datep" class="input-group-addon"><i class="caret"></i></span>
+	                  </div>
+	                </div>
+	                <div class="dates">
+	                  <div class="input-group date" data-provide="datepicker">
+	                    <input type="text" class="form-control" placeholder="До:"><span id="#datep" class="input-group-addon"><i class="caret"></i></span>
+	                  </div>
+	                </div>
+	              </div>
+	            <div class="prize">
+	              <span>Призовой фонд</span>
+	              <div id='options'>
+	                <form method='post'>
+	                  <label for='price'>
+	                    <input type="text" name="price" id="price" maxlength="10">
+	                  </label>
+	                  <span>до</span>
+	                  <label for='price2' >
+	                    <input type="text" name="price" id="price2" maxlength="10" >
+	                  </label>
+	                </form>
+	              </div>
+	              <div id="slider_price" class="ui-slider ui-corner-all ui-slider-horizontal  ui-widget ui-widget-content">
+	                <!-- <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%;  width: 100%;"></div> -->
+	                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"  style="left: 0%;"></span>
+	                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"  style="left: 100%;"></span>
+	              </div>
+	            </div>
+	            <div class="discip">
+	            	<span>Дисциплина</span>
+		            <div class="input-group type">
+		              <input id="ti" type="text" class="form-control" aria-label=".." placeholder="Выберите игру">
+		                <div class="input-group-btn type">
+			                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
+			                <ul class="dropdown-menu dropdown-menu-right">
+			                  <li><div class=="one"><div class="img9"> </div><a href="#">Rf Online</a></div></li>
+			                  <li><div><div class="img10"></div><a href="#">Aion</a></div></li>
+			                  <li><div><div class="img11"></div><a href="#">Allods</a></div></li>
+			                  <li><div><div class="img12"></div><a href="#">Call of duty</a></div></li>
+			                  <li><div><div class="img13"></div><a href="#">Heartstone</a></div></li>
+			                </ul>
+		                </div>
+		            </div>
+	            </div>
+	            <div class="status discip">
+	            	<span>Статус</span>
+		            <div class="input-group type">
+		              <input id="ti" type="text" class="form-control" aria-label=".." placeholder="Выберите статус">
+		                <div class="input-group-btn type">
+			                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
+			                <ul class="dropdown-menu dropdown-menu-right">
+			                  <li><a href="#">Проводятся</a></li>
+			                  <li><a href="#">Будущие</a></li>
+			                </ul>
+		                </div>
+		            </div>
+	            </div>
+				<div class="format discip">
+	            	<span>Формат турнира</span>
+		            <div class="input-group type">
+		              <input id="ti" type="text" class="form-control" aria-label=".." placeholder="Выберите формат">
+		                <div class="input-group-btn type">
+			                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
+			                <ul class="dropdown-menu dropdown-menu-right">
+			                  <li><a href="#">5х5</a></li>
+			                  <li><a href="#">3х3</a></li>
+			                </ul>
+		                </div>
+		            </div>
+	            </div>
+			</div>
+		</div>
+</div><!--qwe-->	
+		
+	</div><!-- col-md-12 first-->
+		<div class="col-md-5 col-md-offset-5 number_page">					
+			<nav aria-label="...">
+			  <ul class="pagination">
+			    <li class="disabled"><a href="#" ><span>&lt;</span></a></li>
+			    <li><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">6 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">7 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">8 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">... <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">14 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">15 <span class="sr-only">(current)</span></a></li>
+			    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&gt;</span></a></li>
+			  </ul>
+			</nav>
+		</div>
+</div><!--row lol-->
+<div class="row">
+	<div class="history col-md-12">
+		<div class="img_history col-md-2"></div>
+		<div class="tetx_history col-md-6">
+			<h1>история развития linage </h1>
+			<span>Спустя почти 5 лет, 1 октября 2003 года, стартует приквел к первой части Lineage, события в мире которого происходят за 150 лет до событий оригинала. Потомок первой линейки обзавелся полноценной 3D графикой и потрясающей по тем временам детализацией. А в ее широкой груди бьется сердце Unreal Engine 2.0, последующие версии которого ...</span>
+			<div><a href="#">Узнать правду</a></div>
+			<nav aria-label="..." class="number_page">
+			  <ul class="pagination">
+			    <li class="disabled"><a href="#" ><span>&gt;</span></a></li>
+			    <li><a href="#">6 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&lt;</span></a></li>
+			  </ul>
+			</nav>
+		</div>
+		<div class="social_page col-md-4">
+		<div class="col-md-3 vk"></div>
+		<div class="col-md-3 fb"></div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="page_footer col-md-4">
+		<span>матчи</span>
+		<div class="group_min_icon">
+			<img src="/img/dota_min.png" alt="">
+			<img src="/img/icon/shut_men_small.png" alt="">
+			<img src="/img/Linage.png" alt="">
+			<img src="/img/RF.png" alt="">
+			<img src="/img/Aion.png" alt="">
+			<img src="/img/Alods.png" alt="">
+			<img src="/img/WOT.png" alt="">
+		</div>
+	</div>
+	<div class="col-md-4 col-md-offset-8 right_link">
+		<a href="">Будущее</a>
+		<a href="">Проводится</a>
+		<a href="">Прошедшее</a>
+	</div>
+
+	<div class=" row col-md-12 list_game_footer">
+		<div class="col-md-12 txt_active">
+			<span>Активные</span>
+		</div>
+		<div class="row list_bot">
+			<div class="first_column">
+				<div class="img14"></div>
+				<span>msi gaming dota 2 cup</span>
+			</div>
+			<div class="second_columd">
+				<div class="img15"></div>
+				<span>Dota2</span>
+			</div>
+			<div class="third_column">
+				<span3>Nas Ne Dognyat</span3>
+				<div class="img16"></div>
+				<span4>vs</span4>
+				<div class="img17"></div>
+				<span3>Pacific eSports</span3>
+			</div>
+			<div class="fourth_column">
+				<span>live</span>
+				<div class="comment">
+					<span4>236</span4>
+					<img src="/img/comment.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="row list_bot not_m">
+			<div class="first_column">
+				<div class="img14"></div>
+				<span>msi gaming dota 2 cup</span>
+			</div>
+			<div class="second_columd">
+				<div class="img15"></div>
+				<span>Dota2</span>
+			</div>
+			<div class="third_column">
+				<span3>Nas Ne Dognyat</span3>
+				<div class="img16"></div>
+				<span4>vs</span4>
+				<div class="img17"></div>
+				<span3>Pacific eSports</span3>
+			</div>
+			<div class="fourth_column">
+				<span>live</span>
+				<div class="comment">
+					<span4>236</span4>
+					<img src="/img/comment.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="row list_bot not_m">
+			<div class="first_column">
+				<div class="img14"></div>
+				<span>msi gaming dota 2 cup</span>
+			</div>
+			<div class="second_columd">
+				<div class="img15"></div>
+				<span>Dota2</span>
+			</div>
+			<div class="third_column">
+				<span3>Nas Ne Dognyat</span3>
+				<div class="img16"></div>
+				<span4>vs</span4>
+				<div class="img17"></div>
+				<span3>Pacific eSports</span3>
+			</div>
+			<div class="fourth_column">
+				<span>live</span>
+				<div class="comment">
+					<span4>236</span4>
+					<img src="/img/comment.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=" row col-md-12 list_game_footer">
+			<div class="col-md-12 txt_active">
+				<span>Будущее</span>
+			</div>
+			<div class="row list_bot">
+				<div class="first_column">
+					<div class="img14"></div>
+					<span>msi gaming dota 2 cup</span>
+				</div>
+				<div class="second_columd">
+					<div class="img15"></div>
+					<span>Dota2</span>
+				</div>
+				<div class="third_column">
+					<span3>Nas Ne Dognyat</span3>
+					<div class="img16"></div>
+					<span4>vs</span4>
+					<div class="img17"></div>
+					<span3>Pacific eSports</span3>
+				</div>
+				<div class="fourth_column">
+					<span>live</span>
+					<div class="comment">
+						<span4>236</span4>
+						<img src="/img/comment.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="row list_bot not_m">
+				<div class="first_column">
+					<div class="img14"></div>
+					<span>msi gaming dota 2 cup</span>
+				</div>
+				<div class="second_columd">
+					<div class="img15"></div>
+					<span>Dota2</span>
+				</div>
+				<div class="third_column">
+					<span3>Nas Ne Dognyat</span3>
+					<div class="img16"></div>
+					<span4>vs</span4>
+					<div class="img17"></div>
+					<span3>Pacific eSports</span3>
+				</div>
+				<div class="fourth_column">
+					<span>live</span>
+					<div class="comment">
+						<span4>236</span4>
+						<img src="/img/comment.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="row list_bot not_m">
+				<div class="first_column">
+					<div class="img14"></div>
+					<span>msi gaming dota 2 cup</span>
+				</div>
+				<div class="second_columd">
+					<div class="img15"></div>
+					<span>Dota2</span>
+				</div>
+				<div class="third_column">
+					<span3>Nas Ne Dognyat</span3>
+					<div class="img16"></div>
+					<span4>vs</span4>
+					<div class="img17"></div>
+					<span3>Pacific eSports</span3>
+				</div>
+				<div class="fourth_column">
+					<span>live</span>
+					<div class="comment">
+						<span4>236</span4>
+						<img src="/img/comment.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+</div>
 </section>
-
-<script src="js/libs.min.js"></script>
-<script src="js/common.js"></script>
+<footer>
+	<div class=" container">
+		<div class="row col-md-12">
+			<div class="col-md-5">
+				<a href="">главная</a>
+				<a href="">Новости</a>
+				<a href="">контакты</a>
+			</div>
+			<div class="col-md-6 col-md-offset-1">
+				<a href="">реклама</a>
+				<a href="">добавить турнир</a>
+				<a href="">партнеры</a>
+			</div>
+			<div class="row col-md-6 social_fb">
+				<a><img src="/img/vk_logo.png" alt=""></a>
+				<a><img src="/img/fb_logo.png" alt=""></a>
+				<a><img src="/img/skype.png" alt=""><span>es-match.com</span></a>
+				<a><img src="/img/mail.png" alt=""><span>suppor&#64;tes-match.com</span></a>
+			</div>
+			<div class="abaout col-md-12">
+				<h1>о сервисе</h1>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, itaque at distinctio facilis est, voluptates pariatur incidunt provident nihil impedit cupiditate esse voluptatibus deleniti. Rem voluptatem adipisci dolorum, deleniti nobis!Quod ducimus earum esse ab perferendis? Esse ex aut adipisci aliquam voluptate perspiciatis quae facilis illum, atque temporibus ab, incidunt soluta quidem, qui eaque, veritatis sit sunt. Modi, laudantium labore.</span>
+				<div class="year_company">
+					&copy;2015-2016,es-matc
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
 </body>
-</html>s
+</html>

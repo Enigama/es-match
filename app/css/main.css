@@ -29,6 +29,15 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: AReg;
+  src: url(../fonts/ArialRegular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+.AReg {
+  font-family: "AReg";
+}
 .Bo {
   font-family: "Bold";
 }
@@ -58,30 +67,73 @@ a:active {
   padding: 0px;
 }
 /**************************************************/
-header,
-.navbar,
-.navbar-default,
-.container_header {
-  min-height: 50px;
-  background-color: #16191f;
-  text-transform: uppercase;
+/* header, .navbar, .navbar-default, .container_header{
+	
+	min-height: 50px;
+	background-color: #16191f;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+
+	.navbar-header{
+	
+		a:hover{
+			padding-top: 15px;
+			// padding-right:15px;
+			padding-left:15px;
+		}
+		
+	}
+	.navbar-right{
+		li{
+			a{
+				.Me;
+				font-size: 18px;
+				color: #8b94a6;
+				margin-top: 7px;
+				    padding-top: 6px;
+				    padding-bottom: 6px;
+				    padding-right: 30px;
+				    padding-left: 30px;
+				    border-radius: 50px;
+				&:hover{
+					
+					background-color: #e30303;
+					color: #fefeff;
+					
+				}
+			}
+			.line-radius{
+				border:1px solid #e30303;
+			}
+		}
+	}
+
+} */
+body {
+  height: 2682px;
+}
+body header {
+  background: #16191f;
+  height: 50px;
+  /*********************************popover for signed********************************************/
+  /************************************************************************************************/
+}
+body header .container {
+  background: #16191f;
+}
+body header .container nav {
   border: none;
-  margin-bottom: 0px;
 }
-header .navbar-header a:hover,
-.navbar .navbar-header a:hover,
-.navbar-default .navbar-header a:hover,
-.container_header .navbar-header a:hover {
-  padding-top: 15px;
-  padding-left: 15px;
-}
-header .navbar-right li a,
-.navbar .navbar-right li a,
-.navbar-default .navbar-right li a,
-.container_header .navbar-right li a {
+body header .container nav .container_header .collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
+body header .container nav .container_header .navbar-collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
+body header .container nav .container_header .collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
+body header .container nav .container_header .navbar-collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
+body header .container nav .container_header .collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a),
+body header .container nav .container_header .navbar-collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a) {
   font-family: "Medium";
   font-size: 18px;
   color: #8b94a6;
+  text-transform: uppercase;
   margin-top: 7px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -90,87 +142,235 @@ header .navbar-right li a,
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
-header .navbar-right li a:hover,
-.navbar .navbar-right li a:hover,
-.navbar-default .navbar-right li a:hover,
-.container_header .navbar-right li a:hover {
+body header .container nav .container_header .collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
+body header .container nav .container_header .navbar-collapse .nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
+body header .container nav .container_header .collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
+body header .container nav .container_header .navbar-collapse .navbar-nav li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
+body header .container nav .container_header .collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover,
+body header .container nav .container_header .navbar-collapse .navbar-right li a:not(.popover>.popover-content>.pop_begin>.social_min>a):hover {
   background-color: #e30303;
   color: #fefeff;
 }
-header .navbar-right li .line-radius,
-.navbar .navbar-right li .line-radius,
-.navbar-default .navbar-right li .line-radius,
-.container_header .navbar-right li .line-radius {
+body header .container nav .container_header .collapse .nav li .line-radius,
+body header .container nav .container_header .navbar-collapse .nav li .line-radius,
+body header .container nav .container_header .collapse .navbar-nav li .line-radius,
+body header .container nav .container_header .navbar-collapse .navbar-nav li .line-radius,
+body header .container nav .container_header .collapse .navbar-right li .line-radius,
+body header .container nav .container_header .navbar-collapse .navbar-right li .line-radius {
   border: 1px solid #e30303;
 }
-.menu {
+body header .popover {
+  background: #282f3d;
+  width: 225px;
+  height: 405px;
+}
+body header .popover .popover-content .pop_begin .social_min {
+  width: 190px;
+  height: 116px;
+  border-bottom: 1px solid #7a8395;
+}
+body header .popover .popover-content .pop_begin .social_min p {
+  font-family: "light";
+  font-size: 15px;
+  color: #7a8395;
+}
+body header .popover .popover-content .pop_begin .social_min a {
+  margin-right: 10px;
+  padding: 0px;
+  /********************************clear-after nav**************************/
+  text-transform: none;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
+  /********************************clear-after nav**************************/
+}
+body header .popover .popover-content .pop_begin .social_min a img {
+  width: 28px;
+  height: 28px;
+}
+body header .popover .popover-content .pop_begin .social_min a:hover {
+  background: none;
+  color: #fff;
+}
+body header .popover .popover-content .pop_begin form {
+  margin-top: 10px;
+  width: 200px;
+}
+body header .popover .popover-content .pop_begin form .form-group label {
+  font-family: "light";
+  font-size: 15px;
+  color: #7a8395;
+}
+body header .popover .popover-content .pop_begin form .form-group input {
+  height: 35px;
+  width: 190px;
+  background: #1d222e;
+  margin-top: 10px;
+  border: none;
+  font-family: "light";
+  font-size: 15px;
+  color: #7a8395;
+}
+body header .popover .popover-content .pop_begin form .form-group input :active {
+  -webkit-box-shadow: 10px #48556e;
+          box-shadow: 10px #48556e;
+  color: green;
+}
+body header .popover .popover-content .pop_begin form .checkbox {
+  /* label{
+							input{
+								span{
+								.Li;
+								font-size: 15px;
+								color:green;
+						
+								}
+							}
+						} */
+}
+body header .popover .popover-content .pop_begin form .checkbox a {
+  text-decoration: none;
+}
+body header .popover .popover-content .pop_begin form .checkbox a span {
+  font-family: "Regular";
+  font-size: 15px;
+  color: #0b74d5;
+  text-transform: none;
+}
+body header .popover .popover-content .pop_begin form .checkbox .col_ {
+  font-family: "light";
+  font-size: 15px;
+  color: #7a8395;
+}
+body header .popover .popover-content .pop_begin form .btn {
+  font-family: "Medium";
+  font-size: 15px;
+  color: #fff;
+  background: #e30303;
+  border: none;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 5px 5px;
+  margin-left: 0px;
+  display: inline-block;
+  width: 95px;
+  height: 35px;
+}
+body header .popover .popover-content .pop_begin form .btn:hover {
+  background: #b00202;
+  color: #fff;
+}
+body header .popover .popover-content .pop_begin form .btn:last-child {
+  margin-left: 10px;
+}
+body header .popover.bottom > .arrow:after {
+  border-bottom-color: #282f3d;
+}
+body .menu {
   background-color: #282f3d;
   min-height: 50px;
 }
-.menu .container_menu .nav-pills li {
+body .menu .container_menu {
+  padding-left: 0px;
+}
+body .menu .container_menu .nav-pills li {
   font-family: "Regular";
   font-size: 16px;
 }
-.menu .container_menu .nav-pills li a {
+body .menu .container_menu .nav-pills li a {
   -webkit-border-radius: 0px;
           border-radius: 0px;
   padding-top: 15px;
   padding-bottom: 15px;
   color: #fff;
 }
-.menu .container_menu .nav-pills li a:hover {
+body .menu .container_menu .nav-pills li a:hover {
   background-color: #16191f;
 }
-.menu .container_menu .nav-pills li a:visited {
+body .menu .container_menu .nav-pills li a:visited {
   background-color: #16191f;
 }
-.menu .container_menu .nav-pills li a img {
+body .menu .container_menu .nav-pills li a img {
   padding-right: 7px;
 }
-.menu .container_menu .nav-pills .dropdown_my a {
+body .menu .container_menu .nav-pills .dropdown_my a {
   color: #6b768c;
 }
-.menu .container_menu .nav-pills .navbar-right {
+body .menu .container_menu .nav-pills .navbar-right {
   text-transform: uppercase;
   margin-top: 13px;
   padding-bottom: 0px;
 }
-.menu .container_menu .nav-pills .navbar-right li {
+body .menu .container_menu .nav-pills .navbar-right li {
   padding-left: 0px;
   padding-right: 0px;
 }
-.menu .container_menu .nav-pills .navbar-right li .favorites {
+body .menu .container_menu .nav-pills .navbar-right li .favorites {
   border-right: 1px solid #6b768c;
 }
-.menu .container_menu .nav-pills .navbar-right li a {
+body .menu .container_menu .nav-pills .navbar-right li a {
   color: #6b768c;
   padding-right: 12px;
   padding-left: 9px;
 }
-.menu .container_menu .nav-pills .navbar-right li a span {
+body .menu .container_menu .nav-pills .navbar-right li a span {
   color: #e30303;
 }
-.menu .container_menu .nav-pills .navbar-right li a:hover {
+body .menu .container_menu .nav-pills .navbar-right li a:hover {
   background-color: #16191f;
   padding-top: 17px;
   padding-bottom: 17px;
 }
-.main {
+body .menu .container_menu .navbar-right li a {
+  text-decoration: none;
+}
+body .main {
   min-height: 2330px;
   background-image: url("../img/BG-main.png");
 }
-.main .container .row {
+body .main .container {
+  /*------------------------------------------------------------------------------------------------*/
+}
+body .main .container .line0,
+body .main .container .line1,
+body .main .container .line2,
+body .main .container .line3,
+body .main .container .line4,
+body .main .container .line5,
+body .main .container .line6,
+body .main .container .line7,
+body .main .container .line8,
+body .main .container .line9,
+body .main .container .line10,
+body .main .container .line11,
+body .main .container .line12,
+body .main .container .line13,
+body .main .container .line14,
+body .main .container .line15,
+body .main .container .line16,
+body .main .container .line17,
+body .main .container .line18,
+body .main .container .line19,
+body .main .container .line20 {
+  margin-left: 2px;
+  margin-top: 0px;
+}
+body .main .container .row {
   margin-top: 30px;
 }
-.main .container .row h2 {
+body .main .container .row h2 {
   text-transform: uppercase;
   font-family: "Demib";
   margin-top: 20px;
   font-size: 18px;
   color: #fff;
-  max-width: 20%;
+  max-width: 21%;
 }
-.main .container .row h2:after {
+body .main .container .row h2:after {
   content: "";
   display: block;
   margin-top: 8px;
@@ -178,38 +378,39 @@ header .navbar-right li .line-radius,
   height: 2px;
   background-color: #fff;
 }
-.main .container .row .serch {
+body .main .container .row .serch {
   margin-top: 10px;
 }
-.main .container .row .serch .navbar-form {
+body .main .container .row .serch .navbar-form {
   padding: 10px 5px;
 }
-.main .container .row .serch .form-control {
+body .main .container .row .serch .form-control {
   width: 50%;
   margin-left: 157px;
   background-color: #282f3d;
   padding: 6px 12px;
   border: none;
 }
-.main .container .row .serch .btn {
+body .main .container .row .serch .btn {
   background-image: none;
   background-color: #16191f;
   border-color: #16191f;
 }
-.main .container .main_picture .row .first_panel {
+body .main .container .main_picture .row .first_panel {
   min-height: 240px;
   max-width: 378px;
   background-image: url("../img/fpanel.png");
   background-size: cover;
   border: 1px solid #1d222e;
 }
-.main .container .main_picture .row .first_panel:hover {
+body .main .container .main_picture .row .first_panel:hover {
   border: 1px solid #e30303;
 }
-.main .container .main_picture .row .first_panel .text_bot {
+body .main .container .main_picture .row .first_panel .text_bot {
   position: absolute;
+  width: 93%;
 }
-.main .container .main_picture .row .first_panel .text_bot .left_t {
+body .main .container .main_picture .row .first_panel .text_bot .left_t {
   margin-top: 174px;
   color: #fff;
   max-width: 70%;
@@ -218,46 +419,47 @@ header .navbar-right li .line-radius,
   position: relative;
   padding-top: 8px;
   border-right: 0.3px solid #8b94a6;
+  padding-right: 10px;
 }
-.main .container .main_picture .row .first_panel .text_bot .left_t h5 {
+body .main .container .main_picture .row .first_panel .text_bot .left_t h5 {
   font-family: "Bold";
   font-size: 14px;
   text-transform: uppercase;
 }
-.main .container .main_picture .row .first_panel .text_bot .left_t span {
+body .main .container .main_picture .row .first_panel .text_bot .left_t span {
   font-family: "Regular";
   font-size: 14px;
   margin-bottom: 7px;
 }
-.main .container .main_picture .row .first_panel .text_bot .right_t {
+body .main .container .main_picture .row .first_panel .text_bot .right_t {
   margin-top: 174px;
   padding-left: 13px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 30%;
+  width: 100px;
   background-color: #191e2b;
   opacity: 0.85;
 }
-.main .container .main_picture .row .first_panel .text_bot .right_t p {
+body .main .container .main_picture .row .first_panel .text_bot .right_t p {
   padding-top: 1px;
   font-family: "Bold";
   font-size: 24px;
   color: #e30303;
   margin-top: 9px;
 }
-.main .container .main_picture .row .second_panel {
+body .main .container .main_picture .row .second_panel {
   min-height: 240px;
   max-width: 378px;
   background-image: url("../img/spanel.png");
   background-size: cover;
 }
-.main .container .main_picture .row .three_panel {
+body .main .container .main_picture .row .three_panel {
   min-height: 240px;
   max-width: 378px;
   background-image: url("../img/tpanel.png");
   background-size: cover;
 }
-.main .tournament_up h2 {
+body .main .container .tournament_up h2 {
   text-transform: uppercase;
   font-family: "Demib";
   margin-top: 30px;
@@ -265,10 +467,10 @@ header .navbar-right li .line-radius,
   color: #fff;
   max-width: 20%;
 }
-.main .tournament_up h2 span {
+body .main .container .tournament_up h2 span {
   color: #e30303;
 }
-.main .tournament_up h2:after {
+body .main .container .tournament_up h2:after {
   content: "";
   display: block;
   margin-top: 8px;
@@ -276,78 +478,1685 @@ header .navbar-right li .line-radius,
   height: 2px;
   background-color: #fff;
 }
-.main .row .header_table {
+body .main .container .row {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -15px;
+}
+body .main .container .row .tesrik {
+  margin-top: 30px;
+  display: inline-block;
+}
+body .main .container .row .tesrik .filts_ {
+  color: #fff;
+  font-family: "Demib";
+  font-size: 18px;
+  text-transform: uppercase;
+}
+body .main .container .row .tesrik .filts_::after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  max-width: 50px;
+  height: 2px;
+  background-color: #fff;
+}
+body .main .container .row .tesrik .clear_ {
+  color: #0a68be;
+  font-family: "Regular";
+  font-size: 15px;
+}
+body .main .container .row .tesrik .clear_::after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  max-width: 50px;
+  height: 1px;
+  background-color: #0a68be;
+}
+body .main .container .row .line0 {
+  margin-left: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 930px;
+}
+body .main .container .row .line0 .row {
   margin-top: 17px;
   background: #323a4a;
   min-height: 50px;
   width: 926px;
+  /* border-top:1px solid #82899b; */
+  border-bottom: 1px solid #82899b;
+  /* border-right:1px solid #82899b;
+					border-left: 1px solid #82899b; */
   font-family: "Regular";
   font-size: 15px;
   color: #969fb3;
   padding-top: 17px;
-  padding-left: 115px;
+  padding-left: 0px;
+  padding-right: 0px;
   padding-bottom: 20px;
   margin-left: 0px;
 }
-.main .row .header_table .tournament {
-  width: 300px;
+body .main .container .row .line0 .row .tournament {
+  display: inline-block;
+  width: 26%;
+  text-align: center;
 }
-.main .row .header_table .discipline {
-  margin-left: 147px;
+body .main .container .row .line0 .row .discipline {
+  display: inline-block;
+  text-align: center;
+  width: 16%;
 }
-.main .row .header_table .region {
-  margin-left: 85px;
+body .main .container .row .line0 .row .region {
+  display: inline-block;
+  text-align: center;
+  width: 17%;
 }
-.main .row .header_table .prize {
-  margin-left: 74px;
+body .main .container .row .line0 .row .prize {
+  display: inline-block;
+  text-align: center;
+  width: 7%;
 }
-.main .row .header_table .area {
-  margin-left: 64px;
+body .main .container .row .line0 .row .area {
+  display: inline-block;
+  text-align: center;
+  width: 16%;
 }
-.main .row .header_table .dates {
-  margin-left: 55px;
+body .main .container .row .line0 .row .dates {
+  display: inline-block;
+  width: 11%;
 }
-.main .row .game_list {
-  background: url("../img/icon/bg1.png");
+body .main .container .qwe {
+  margin-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -15px;
+  width: 1161px;
+}
+body .main .container .qwe .qwe1 {
+  padding-left: 0px;
+  /*popover for HOVER*/
+  /****************************************************************************/
+}
+body .main .container .qwe .qwe1 .line1,
+body .main .container .qwe .qwe1 .line2,
+body .main .container .qwe .qwe1 .line3,
+body .main .container .qwe .qwe1 .line4,
+body .main .container .qwe .qwe1 .line5,
+body .main .container .qwe .qwe1 .line6,
+body .main .container .qwe .qwe1 .line7,
+body .main .container .qwe .qwe1 .line8,
+body .main .container .qwe .qwe1 .line9,
+body .main .container .qwe .qwe1 .line10,
+body .main .container .qwe .qwe1 .line11,
+body .main .container .qwe .qwe1 .line12,
+body .main .container .qwe .qwe1 .line13,
+body .main .container .qwe .qwe1 .line14,
+body .main .container .qwe .qwe1 .line15,
+body .main .container .qwe .qwe1 .line16,
+body .main .container .qwe .qwe1 .line17,
+body .main .container .qwe .qwe1 .line18,
+body .main .container .qwe .qwe1 .line19,
+body .main .container .qwe .qwe1 .line20 {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
   width: 926px;
 }
-.main .row .game_list .turnament_list {
-  width: 300px;
+body .main .container .qwe .qwe1 .line1 .game_list,
+body .main .container .qwe .qwe1 .line2 .game_list,
+body .main .container .qwe .qwe1 .line3 .game_list,
+body .main .container .qwe .qwe1 .line4 .game_list,
+body .main .container .qwe .qwe1 .line5 .game_list,
+body .main .container .qwe .qwe1 .line6 .game_list,
+body .main .container .qwe .qwe1 .line7 .game_list,
+body .main .container .qwe .qwe1 .line8 .game_list,
+body .main .container .qwe .qwe1 .line9 .game_list,
+body .main .container .qwe .qwe1 .line10 .game_list,
+body .main .container .qwe .qwe1 .line11 .game_list,
+body .main .container .qwe .qwe1 .line12 .game_list,
+body .main .container .qwe .qwe1 .line13 .game_list,
+body .main .container .qwe .qwe1 .line14 .game_list,
+body .main .container .qwe .qwe1 .line15 .game_list,
+body .main .container .qwe .qwe1 .line16 .game_list,
+body .main .container .qwe .qwe1 .line17 .game_list,
+body .main .container .qwe .qwe1 .line18 .game_list,
+body .main .container .qwe .qwe1 .line19 .game_list,
+body .main .container .qwe .qwe1 .line20 .game_list {
+  background: url("../img/icon/bg1.png");
+  width: 926px;
+  height: 50px;
+  margin-left: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-bottom: 1px solid #82899b;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line2 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line3 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line4 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line5 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line6 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line7 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line8 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line9 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line10 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line11 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line12 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line13 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line14 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line15 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line16 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line17 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line18 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line19 .game_list .turnament_list,
+body .main .container .qwe .qwe1 .line20 .game_list .turnament_list {
+  display: inline-block;
+  width: 29%;
+  height: 50px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line2 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line3 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line4 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line5 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line6 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line7 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line8 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line9 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line10 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line11 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line12 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line13 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line14 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line15 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line16 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line17 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line18 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line19 .game_list .turnament_list span:not(.red_word),
+body .main .container .qwe .qwe1 .line20 .game_list .turnament_list span:not(.red_word) {
+  font-family: "Bold";
+  font-size: 14px;
+  color: #eaeaeb;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line2 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line3 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line4 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line5 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line6 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line7 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line8 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line9 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line10 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line11 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line12 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line13 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line14 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line15 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line16 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line17 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line18 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line19 .game_list .turnament_list .red_word,
+body .main .container .qwe .qwe1 .line20 .game_list .turnament_list .red_word {
+  font-family: "Bold";
+  font-size: 14px;
+  color: #f5282a;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line2 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line3 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line4 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line5 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line6 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line7 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line8 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line9 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line10 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line11 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line12 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line13 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line14 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line15 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line16 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line17 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line18 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line19 .game_list .discipline_list,
+body .main .container .qwe .qwe1 .line20 .game_list .discipline_list {
+  display: inline-block;
+  width: 19%;
+  margin-left: 10px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line2 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line3 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line4 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line5 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line6 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line7 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line8 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line9 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line10 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line11 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line12 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line13 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line14 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line15 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line16 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line17 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line18 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line19 .game_list .discipline_list span,
+body .main .container .qwe .qwe1 .line20 .game_list .discipline_list span {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #82899b;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .region_az,
+body .main .container .qwe .qwe1 .line2 .game_list .region_az,
+body .main .container .qwe .qwe1 .line3 .game_list .region_az,
+body .main .container .qwe .qwe1 .line4 .game_list .region_az,
+body .main .container .qwe .qwe1 .line5 .game_list .region_az,
+body .main .container .qwe .qwe1 .line6 .game_list .region_az,
+body .main .container .qwe .qwe1 .line7 .game_list .region_az,
+body .main .container .qwe .qwe1 .line8 .game_list .region_az,
+body .main .container .qwe .qwe1 .line9 .game_list .region_az,
+body .main .container .qwe .qwe1 .line10 .game_list .region_az,
+body .main .container .qwe .qwe1 .line11 .game_list .region_az,
+body .main .container .qwe .qwe1 .line12 .game_list .region_az,
+body .main .container .qwe .qwe1 .line13 .game_list .region_az,
+body .main .container .qwe .qwe1 .line14 .game_list .region_az,
+body .main .container .qwe .qwe1 .line15 .game_list .region_az,
+body .main .container .qwe .qwe1 .line16 .game_list .region_az,
+body .main .container .qwe .qwe1 .line17 .game_list .region_az,
+body .main .container .qwe .qwe1 .line18 .game_list .region_az,
+body .main .container .qwe .qwe1 .line19 .game_list .region_az,
+body .main .container .qwe .qwe1 .line20 .game_list .region_az {
+  display: inline-block;
+  width: 11%;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line2 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line3 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line4 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line5 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line6 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line7 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line8 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line9 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line10 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line11 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line12 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line13 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line14 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line15 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line16 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line17 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line18 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line19 .game_list .region_az span,
+body .main .container .qwe .qwe1 .line20 .game_list .region_az span {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #82899b;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .prize_,
+body .main .container .qwe .qwe1 .line2 .game_list .prize_,
+body .main .container .qwe .qwe1 .line3 .game_list .prize_,
+body .main .container .qwe .qwe1 .line4 .game_list .prize_,
+body .main .container .qwe .qwe1 .line5 .game_list .prize_,
+body .main .container .qwe .qwe1 .line6 .game_list .prize_,
+body .main .container .qwe .qwe1 .line7 .game_list .prize_,
+body .main .container .qwe .qwe1 .line8 .game_list .prize_,
+body .main .container .qwe .qwe1 .line9 .game_list .prize_,
+body .main .container .qwe .qwe1 .line10 .game_list .prize_,
+body .main .container .qwe .qwe1 .line11 .game_list .prize_,
+body .main .container .qwe .qwe1 .line12 .game_list .prize_,
+body .main .container .qwe .qwe1 .line13 .game_list .prize_,
+body .main .container .qwe .qwe1 .line14 .game_list .prize_,
+body .main .container .qwe .qwe1 .line15 .game_list .prize_,
+body .main .container .qwe .qwe1 .line16 .game_list .prize_,
+body .main .container .qwe .qwe1 .line17 .game_list .prize_,
+body .main .container .qwe .qwe1 .line18 .game_list .prize_,
+body .main .container .qwe .qwe1 .line19 .game_list .prize_,
+body .main .container .qwe .qwe1 .line20 .game_list .prize_ {
+  display: inline-block;
+  width: 7%;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line2 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line3 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line4 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line5 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line6 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line7 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line8 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line9 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line10 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line11 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line12 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line13 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line14 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line15 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line16 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line17 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line18 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line19 .game_list .prize_ span,
+body .main .container .qwe .qwe1 .line20 .game_list .prize_ span {
+  font-family: "Bold";
+  font-size: 14px;
+  color: #eaeaeb;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .area_,
+body .main .container .qwe .qwe1 .line2 .game_list .area_,
+body .main .container .qwe .qwe1 .line3 .game_list .area_,
+body .main .container .qwe .qwe1 .line4 .game_list .area_,
+body .main .container .qwe .qwe1 .line5 .game_list .area_,
+body .main .container .qwe .qwe1 .line6 .game_list .area_,
+body .main .container .qwe .qwe1 .line7 .game_list .area_,
+body .main .container .qwe .qwe1 .line8 .game_list .area_,
+body .main .container .qwe .qwe1 .line9 .game_list .area_,
+body .main .container .qwe .qwe1 .line10 .game_list .area_,
+body .main .container .qwe .qwe1 .line11 .game_list .area_,
+body .main .container .qwe .qwe1 .line12 .game_list .area_,
+body .main .container .qwe .qwe1 .line13 .game_list .area_,
+body .main .container .qwe .qwe1 .line14 .game_list .area_,
+body .main .container .qwe .qwe1 .line15 .game_list .area_,
+body .main .container .qwe .qwe1 .line16 .game_list .area_,
+body .main .container .qwe .qwe1 .line17 .game_list .area_,
+body .main .container .qwe .qwe1 .line18 .game_list .area_,
+body .main .container .qwe .qwe1 .line19 .game_list .area_,
+body .main .container .qwe .qwe1 .line20 .game_list .area_ {
+  display: inline-block;
+  width: 12%;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line2 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line3 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line4 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line5 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line6 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line7 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line8 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line9 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line10 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line11 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line12 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line13 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line14 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line15 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line16 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line17 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line18 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line19 .game_list .area_ span,
+body .main .container .qwe .qwe1 .line20 .game_list .area_ span {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #82899b;
+  text-align: center;
+  margin-left: 30px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_1,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15%;
+  height: 50px;
+  text-align: center;
+  margin-left: 7px;
+  padding-top: 7px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .line1 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_1 span2,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_1 span2 {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #eeeded;
+  margin-top: 2px ;
+  padding: 1px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_1 span2:not(.rgb_r)::after,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_1 span2:not(.rgb_r)::after {
+  content: "Самый ожидаемый !";
+  font-family: "AReg";
+  font-size: 11px;
+  display: block;
+  text-align: center;
+  background: #ff2828;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  width: 79%;
+  margin-left: 18px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .dates_,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_ {
+  padding-top: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15%;
+  height: 50px;
+  text-align: center;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_ .rgb_g,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_ .rgb_g {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #5ed176;
+  padding-top: 2px;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_ .rgb_g::after,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_ .rgb_g::after {
+  content: "-";
+  color: #fff;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line2 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line3 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line4 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line5 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line6 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line7 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line8 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line9 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line10 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line11 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line12 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line13 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line14 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line15 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line16 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line17 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line18 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line19 .game_list .dates_ .rgb_r,
+body .main .container .qwe .qwe1 .line20 .game_list .dates_ .rgb_r {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #c32a2f;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .img0,
+body .main .container .qwe .qwe1 .line2 .game_list .img0,
+body .main .container .qwe .qwe1 .line3 .game_list .img0,
+body .main .container .qwe .qwe1 .line4 .game_list .img0,
+body .main .container .qwe .qwe1 .line5 .game_list .img0,
+body .main .container .qwe .qwe1 .line6 .game_list .img0,
+body .main .container .qwe .qwe1 .line7 .game_list .img0,
+body .main .container .qwe .qwe1 .line8 .game_list .img0,
+body .main .container .qwe .qwe1 .line9 .game_list .img0,
+body .main .container .qwe .qwe1 .line10 .game_list .img0,
+body .main .container .qwe .qwe1 .line11 .game_list .img0,
+body .main .container .qwe .qwe1 .line12 .game_list .img0,
+body .main .container .qwe .qwe1 .line13 .game_list .img0,
+body .main .container .qwe .qwe1 .line14 .game_list .img0,
+body .main .container .qwe .qwe1 .line15 .game_list .img0,
+body .main .container .qwe .qwe1 .line16 .game_list .img0,
+body .main .container .qwe .qwe1 .line17 .game_list .img0,
+body .main .container .qwe .qwe1 .line18 .game_list .img0,
+body .main .container .qwe .qwe1 .line19 .game_list .img0,
+body .main .container .qwe .qwe1 .line20 .game_list .img0 {
+  background: url("../img/icon/shut_men_small.png");
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
   display: inline-block;
 }
-.main .row .game_list .turnament_list .img {
+body .main .container .qwe .qwe1 .line1 .game_list .img1,
+body .main .container .qwe .qwe1 .line2 .game_list .img1,
+body .main .container .qwe .qwe1 .line3 .game_list .img1,
+body .main .container .qwe .qwe1 .line4 .game_list .img1,
+body .main .container .qwe .qwe1 .line5 .game_list .img1,
+body .main .container .qwe .qwe1 .line6 .game_list .img1,
+body .main .container .qwe .qwe1 .line7 .game_list .img1,
+body .main .container .qwe .qwe1 .line8 .game_list .img1,
+body .main .container .qwe .qwe1 .line9 .game_list .img1,
+body .main .container .qwe .qwe1 .line10 .game_list .img1,
+body .main .container .qwe .qwe1 .line11 .game_list .img1,
+body .main .container .qwe .qwe1 .line12 .game_list .img1,
+body .main .container .qwe .qwe1 .line13 .game_list .img1,
+body .main .container .qwe .qwe1 .line14 .game_list .img1,
+body .main .container .qwe .qwe1 .line15 .game_list .img1,
+body .main .container .qwe .qwe1 .line16 .game_list .img1,
+body .main .container .qwe .qwe1 .line17 .game_list .img1,
+body .main .container .qwe .qwe1 .line18 .game_list .img1,
+body .main .container .qwe .qwe1 .line19 .game_list .img1,
+body .main .container .qwe .qwe1 .line20 .game_list .img1 {
   background: url("../img/icon/1.png");
   background-repeat: no-repeat;
-  width: 100px;
-  height: 50px;
+  width: 96px;
+  height: 46px;
   display: inline-block;
+  vertical-align: middle;
 }
-.main .row .game_list .turnament_list h3 {
+body .main .container .qwe .qwe1 .line1 .game_list .img2,
+body .main .container .qwe .qwe1 .line2 .game_list .img2,
+body .main .container .qwe .qwe1 .line3 .game_list .img2,
+body .main .container .qwe .qwe1 .line4 .game_list .img2,
+body .main .container .qwe .qwe1 .line5 .game_list .img2,
+body .main .container .qwe .qwe1 .line6 .game_list .img2,
+body .main .container .qwe .qwe1 .line7 .game_list .img2,
+body .main .container .qwe .qwe1 .line8 .game_list .img2,
+body .main .container .qwe .qwe1 .line9 .game_list .img2,
+body .main .container .qwe .qwe1 .line10 .game_list .img2,
+body .main .container .qwe .qwe1 .line11 .game_list .img2,
+body .main .container .qwe .qwe1 .line12 .game_list .img2,
+body .main .container .qwe .qwe1 .line13 .game_list .img2,
+body .main .container .qwe .qwe1 .line14 .game_list .img2,
+body .main .container .qwe .qwe1 .line15 .game_list .img2,
+body .main .container .qwe .qwe1 .line16 .game_list .img2,
+body .main .container .qwe .qwe1 .line17 .game_list .img2,
+body .main .container .qwe .qwe1 .line18 .game_list .img2,
+body .main .container .qwe .qwe1 .line19 .game_list .img2,
+body .main .container .qwe .qwe1 .line20 .game_list .img2 {
+  background: url("../img/icon/2.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .img3,
+body .main .container .qwe .qwe1 .line2 .game_list .img3,
+body .main .container .qwe .qwe1 .line3 .game_list .img3,
+body .main .container .qwe .qwe1 .line4 .game_list .img3,
+body .main .container .qwe .qwe1 .line5 .game_list .img3,
+body .main .container .qwe .qwe1 .line6 .game_list .img3,
+body .main .container .qwe .qwe1 .line7 .game_list .img3,
+body .main .container .qwe .qwe1 .line8 .game_list .img3,
+body .main .container .qwe .qwe1 .line9 .game_list .img3,
+body .main .container .qwe .qwe1 .line10 .game_list .img3,
+body .main .container .qwe .qwe1 .line11 .game_list .img3,
+body .main .container .qwe .qwe1 .line12 .game_list .img3,
+body .main .container .qwe .qwe1 .line13 .game_list .img3,
+body .main .container .qwe .qwe1 .line14 .game_list .img3,
+body .main .container .qwe .qwe1 .line15 .game_list .img3,
+body .main .container .qwe .qwe1 .line16 .game_list .img3,
+body .main .container .qwe .qwe1 .line17 .game_list .img3,
+body .main .container .qwe .qwe1 .line18 .game_list .img3,
+body .main .container .qwe .qwe1 .line19 .game_list .img3,
+body .main .container .qwe .qwe1 .line20 .game_list .img3 {
+  background: url("../img/icon/3.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .img4,
+body .main .container .qwe .qwe1 .line2 .game_list .img4,
+body .main .container .qwe .qwe1 .line3 .game_list .img4,
+body .main .container .qwe .qwe1 .line4 .game_list .img4,
+body .main .container .qwe .qwe1 .line5 .game_list .img4,
+body .main .container .qwe .qwe1 .line6 .game_list .img4,
+body .main .container .qwe .qwe1 .line7 .game_list .img4,
+body .main .container .qwe .qwe1 .line8 .game_list .img4,
+body .main .container .qwe .qwe1 .line9 .game_list .img4,
+body .main .container .qwe .qwe1 .line10 .game_list .img4,
+body .main .container .qwe .qwe1 .line11 .game_list .img4,
+body .main .container .qwe .qwe1 .line12 .game_list .img4,
+body .main .container .qwe .qwe1 .line13 .game_list .img4,
+body .main .container .qwe .qwe1 .line14 .game_list .img4,
+body .main .container .qwe .qwe1 .line15 .game_list .img4,
+body .main .container .qwe .qwe1 .line16 .game_list .img4,
+body .main .container .qwe .qwe1 .line17 .game_list .img4,
+body .main .container .qwe .qwe1 .line18 .game_list .img4,
+body .main .container .qwe .qwe1 .line19 .game_list .img4,
+body .main .container .qwe .qwe1 .line20 .game_list .img4 {
+  background: url("../img/icon/4.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .img5,
+body .main .container .qwe .qwe1 .line2 .game_list .img5,
+body .main .container .qwe .qwe1 .line3 .game_list .img5,
+body .main .container .qwe .qwe1 .line4 .game_list .img5,
+body .main .container .qwe .qwe1 .line5 .game_list .img5,
+body .main .container .qwe .qwe1 .line6 .game_list .img5,
+body .main .container .qwe .qwe1 .line7 .game_list .img5,
+body .main .container .qwe .qwe1 .line8 .game_list .img5,
+body .main .container .qwe .qwe1 .line9 .game_list .img5,
+body .main .container .qwe .qwe1 .line10 .game_list .img5,
+body .main .container .qwe .qwe1 .line11 .game_list .img5,
+body .main .container .qwe .qwe1 .line12 .game_list .img5,
+body .main .container .qwe .qwe1 .line13 .game_list .img5,
+body .main .container .qwe .qwe1 .line14 .game_list .img5,
+body .main .container .qwe .qwe1 .line15 .game_list .img5,
+body .main .container .qwe .qwe1 .line16 .game_list .img5,
+body .main .container .qwe .qwe1 .line17 .game_list .img5,
+body .main .container .qwe .qwe1 .line18 .game_list .img5,
+body .main .container .qwe .qwe1 .line19 .game_list .img5,
+body .main .container .qwe .qwe1 .line20 .game_list .img5 {
+  background: url("../img/icon/5.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .img6,
+body .main .container .qwe .qwe1 .line2 .game_list .img6,
+body .main .container .qwe .qwe1 .line3 .game_list .img6,
+body .main .container .qwe .qwe1 .line4 .game_list .img6,
+body .main .container .qwe .qwe1 .line5 .game_list .img6,
+body .main .container .qwe .qwe1 .line6 .game_list .img6,
+body .main .container .qwe .qwe1 .line7 .game_list .img6,
+body .main .container .qwe .qwe1 .line8 .game_list .img6,
+body .main .container .qwe .qwe1 .line9 .game_list .img6,
+body .main .container .qwe .qwe1 .line10 .game_list .img6,
+body .main .container .qwe .qwe1 .line11 .game_list .img6,
+body .main .container .qwe .qwe1 .line12 .game_list .img6,
+body .main .container .qwe .qwe1 .line13 .game_list .img6,
+body .main .container .qwe .qwe1 .line14 .game_list .img6,
+body .main .container .qwe .qwe1 .line15 .game_list .img6,
+body .main .container .qwe .qwe1 .line16 .game_list .img6,
+body .main .container .qwe .qwe1 .line17 .game_list .img6,
+body .main .container .qwe .qwe1 .line18 .game_list .img6,
+body .main .container .qwe .qwe1 .line19 .game_list .img6,
+body .main .container .qwe .qwe1 .line20 .game_list .img6 {
+  background: url("../img/icon/6.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .img7,
+body .main .container .qwe .qwe1 .line2 .game_list .img7,
+body .main .container .qwe .qwe1 .line3 .game_list .img7,
+body .main .container .qwe .qwe1 .line4 .game_list .img7,
+body .main .container .qwe .qwe1 .line5 .game_list .img7,
+body .main .container .qwe .qwe1 .line6 .game_list .img7,
+body .main .container .qwe .qwe1 .line7 .game_list .img7,
+body .main .container .qwe .qwe1 .line8 .game_list .img7,
+body .main .container .qwe .qwe1 .line9 .game_list .img7,
+body .main .container .qwe .qwe1 .line10 .game_list .img7,
+body .main .container .qwe .qwe1 .line11 .game_list .img7,
+body .main .container .qwe .qwe1 .line12 .game_list .img7,
+body .main .container .qwe .qwe1 .line13 .game_list .img7,
+body .main .container .qwe .qwe1 .line14 .game_list .img7,
+body .main .container .qwe .qwe1 .line15 .game_list .img7,
+body .main .container .qwe .qwe1 .line16 .game_list .img7,
+body .main .container .qwe .qwe1 .line17 .game_list .img7,
+body .main .container .qwe .qwe1 .line18 .game_list .img7,
+body .main .container .qwe .qwe1 .line19 .game_list .img7,
+body .main .container .qwe .qwe1 .line20 .game_list .img7 {
+  background: url("../img/icon/7.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .line1 .game_list .img8,
+body .main .container .qwe .qwe1 .line2 .game_list .img8,
+body .main .container .qwe .qwe1 .line3 .game_list .img8,
+body .main .container .qwe .qwe1 .line4 .game_list .img8,
+body .main .container .qwe .qwe1 .line5 .game_list .img8,
+body .main .container .qwe .qwe1 .line6 .game_list .img8,
+body .main .container .qwe .qwe1 .line7 .game_list .img8,
+body .main .container .qwe .qwe1 .line8 .game_list .img8,
+body .main .container .qwe .qwe1 .line9 .game_list .img8,
+body .main .container .qwe .qwe1 .line10 .game_list .img8,
+body .main .container .qwe .qwe1 .line11 .game_list .img8,
+body .main .container .qwe .qwe1 .line12 .game_list .img8,
+body .main .container .qwe .qwe1 .line13 .game_list .img8,
+body .main .container .qwe .qwe1 .line14 .game_list .img8,
+body .main .container .qwe .qwe1 .line15 .game_list .img8,
+body .main .container .qwe .qwe1 .line16 .game_list .img8,
+body .main .container .qwe .qwe1 .line17 .game_list .img8,
+body .main .container .qwe .qwe1 .line18 .game_list .img8,
+body .main .container .qwe .qwe1 .line19 .game_list .img8,
+body .main .container .qwe .qwe1 .line20 .game_list .img8 {
+  background: url("../img/standart.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .line1 .game_list:hover,
+body .main .container .qwe .qwe1 .line2 .game_list:hover,
+body .main .container .qwe .qwe1 .line3 .game_list:hover,
+body .main .container .qwe .qwe1 .line4 .game_list:hover,
+body .main .container .qwe .qwe1 .line5 .game_list:hover,
+body .main .container .qwe .qwe1 .line6 .game_list:hover,
+body .main .container .qwe .qwe1 .line7 .game_list:hover,
+body .main .container .qwe .qwe1 .line8 .game_list:hover,
+body .main .container .qwe .qwe1 .line9 .game_list:hover,
+body .main .container .qwe .qwe1 .line10 .game_list:hover,
+body .main .container .qwe .qwe1 .line11 .game_list:hover,
+body .main .container .qwe .qwe1 .line12 .game_list:hover,
+body .main .container .qwe .qwe1 .line13 .game_list:hover,
+body .main .container .qwe .qwe1 .line14 .game_list:hover,
+body .main .container .qwe .qwe1 .line15 .game_list:hover,
+body .main .container .qwe .qwe1 .line16 .game_list:hover,
+body .main .container .qwe .qwe1 .line17 .game_list:hover,
+body .main .container .qwe .qwe1 .line18 .game_list:hover,
+body .main .container .qwe .qwe1 .line19 .game_list:hover,
+body .main .container .qwe .qwe1 .line20 .game_list:hover {
+  background: #423443;
+}
+body .main .container .qwe .qwe1 .line1 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line2 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line3 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line4 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line5 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line6 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line7 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line8 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line9 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line10 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line11 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line12 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line13 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line14 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line15 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line16 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line17 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line18 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line19 .game_list:hover .img1,
+body .main .container .qwe .qwe1 .line20 .game_list:hover .img1 {
+  background: url("../img/icon/11.png");
+}
+body .main .container .qwe .qwe1 .line1 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line2 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line3 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line4 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line5 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line6 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line7 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line8 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line9 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line10 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line11 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line12 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line13 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line14 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line15 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line16 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line17 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line18 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line19 .game_list:hover .img3,
+body .main .container .qwe .qwe1 .line20 .game_list:hover .img3 {
+  background: url("../img/icon/13.png");
+}
+body .main .container .qwe .qwe1 .line1 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line2 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line3 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line4 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line5 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line6 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line7 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line8 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line9 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line10 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line11 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line12 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line13 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line14 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line15 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line16 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line17 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line18 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line19 .game_list:hover .img4,
+body .main .container .qwe .qwe1 .line20 .game_list:hover .img4 {
+  background: url("../img/icon/14.png");
+}
+body .main .container .qwe .qwe1 .line1 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line2 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line3 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line4 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line5 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line6 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line7 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line8 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line9 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line10 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line11 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line12 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line13 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line14 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line15 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line16 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line17 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line18 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line19 .game_list:hover .img5,
+body .main .container .qwe .qwe1 .line20 .game_list:hover .img5 {
+  background: url("../img/icon/15.png");
+}
+body .main .container .qwe .qwe1 .line1 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line2 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line3 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line4 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line5 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line6 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line7 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line8 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line9 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line10 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line11 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line12 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line13 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line14 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line15 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line16 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line17 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line18 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line19 .game_list:hover .img6,
+body .main .container .qwe .qwe1 .line20 .game_list:hover .img6 {
+  background: url("../img/icon/16.png");
+}
+body .main .container .qwe .qwe1 .line1 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line2 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line3 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line4 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line5 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line6 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line7 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line8 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line9 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line10 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line11 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line12 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line13 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line14 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line15 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line16 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line17 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line18 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line19 .game_list:hover .img7,
+body .main .container .qwe .qwe1 .line20 .game_list:hover .img7 {
+  background: url("../img/icon/17.png");
+}
+body .main .container .qwe .qwe1 .line1 .true_color,
+body .main .container .qwe .qwe1 .line2 .true_color,
+body .main .container .qwe .qwe1 .line3 .true_color,
+body .main .container .qwe .qwe1 .line4 .true_color,
+body .main .container .qwe .qwe1 .line5 .true_color,
+body .main .container .qwe .qwe1 .line6 .true_color,
+body .main .container .qwe .qwe1 .line7 .true_color,
+body .main .container .qwe .qwe1 .line8 .true_color,
+body .main .container .qwe .qwe1 .line9 .true_color,
+body .main .container .qwe .qwe1 .line10 .true_color,
+body .main .container .qwe .qwe1 .line11 .true_color,
+body .main .container .qwe .qwe1 .line12 .true_color,
+body .main .container .qwe .qwe1 .line13 .true_color,
+body .main .container .qwe .qwe1 .line14 .true_color,
+body .main .container .qwe .qwe1 .line15 .true_color,
+body .main .container .qwe .qwe1 .line16 .true_color,
+body .main .container .qwe .qwe1 .line17 .true_color,
+body .main .container .qwe .qwe1 .line18 .true_color,
+body .main .container .qwe .qwe1 .line19 .true_color,
+body .main .container .qwe .qwe1 .line20 .true_color {
+  background: #282f3d;
+}
+body .main .container .qwe .qwe1 .line1 .true_color:hover,
+body .main .container .qwe .qwe1 .line2 .true_color:hover,
+body .main .container .qwe .qwe1 .line3 .true_color:hover,
+body .main .container .qwe .qwe1 .line4 .true_color:hover,
+body .main .container .qwe .qwe1 .line5 .true_color:hover,
+body .main .container .qwe .qwe1 .line6 .true_color:hover,
+body .main .container .qwe .qwe1 .line7 .true_color:hover,
+body .main .container .qwe .qwe1 .line8 .true_color:hover,
+body .main .container .qwe .qwe1 .line9 .true_color:hover,
+body .main .container .qwe .qwe1 .line10 .true_color:hover,
+body .main .container .qwe .qwe1 .line11 .true_color:hover,
+body .main .container .qwe .qwe1 .line12 .true_color:hover,
+body .main .container .qwe .qwe1 .line13 .true_color:hover,
+body .main .container .qwe .qwe1 .line14 .true_color:hover,
+body .main .container .qwe .qwe1 .line15 .true_color:hover,
+body .main .container .qwe .qwe1 .line16 .true_color:hover,
+body .main .container .qwe .qwe1 .line17 .true_color:hover,
+body .main .container .qwe .qwe1 .line18 .true_color:hover,
+body .main .container .qwe .qwe1 .line19 .true_color:hover,
+body .main .container .qwe .qwe1 .line20 .true_color:hover {
+  background: #323a4a;
+}
+body .main .container .qwe .qwe1 .popover,
+body .main .container .qwe .qwe1 .popover-content {
+  background: #fff;
+  width: 167px;
+  height: 169px;
+}
+body .main .container .qwe .qwe1 .popover .small_popover .img_pop_small,
+body .main .container .qwe .qwe1 .popover-content .small_popover .img_pop_small {
+  background: url("/img/logo_bot.png") no-repeat;
+  width: 96px;
+  height: 46px;
+  vertical-align: middle;
+}
+body .main .container .qwe .qwe1 .popover .small_popover span,
+body .main .container .qwe .qwe1 .popover-content .small_popover span {
+  margin-top: 10px;
+  font-family: "Bold";
+  font-size: 13px;
   text-transform: uppercase;
-  margin-top: 15px;
-  display: inline-block;
-  position: absolute;
-  font-family: "Bold";
-  font-size: 14px;
-  color: #fff;
+  color: #000;
+  margin-left: 1px;
 }
-.main .row .game_list .discipline_list {
-  width: 120px;
+body .main .container .qwe .qwe1 .popover .small_popover .mini_cd,
+body .main .container .qwe .qwe1 .popover-content .small_popover .mini_cd {
+  margin-top: 5px;
   display: inline-block;
 }
-.main .row .game_list .discipline_list .img {
-  background: url("../img/icon/shut_men_small.png");
-  background-position: center;
-  width: 22px;
-  height: 22px;
+body .main .container .qwe .qwe1 .popover .small_popover .mini_cd .img_cd,
+body .main .container .qwe .qwe1 .popover-content .small_popover .mini_cd .img_cd {
+  background: url("/img/icon-C.png") no-repeat;
+  width: 20px;
+  height: 20px;
   display: inline-block;
 }
-.main .row .game_list .discipline_list h3 {
-  margin-top: 4px;
+body .main .container .qwe .qwe1 .popover .small_popover .mini_cd span,
+body .main .container .qwe .qwe1 .popover-content .small_popover .mini_cd span {
+  font-family: "Regular";
+  font-size: 13px;
+  color: #9b9aa4;
   padding-left: 5px;
-  display: inline-block;
-  position: absolute;
+  text-align: center;
+  text-transform: none;
+  margin-top: 0px;
+}
+body .main .container .qwe .qwe1 .popover .small_popover .money span,
+body .main .container .qwe .qwe1 .popover-content .small_popover .money span {
   font-family: "Bold";
-  font-size: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000;
+}
+body .main .container .qwe .qwe1 .popover .small_popover .cheng,
+body .main .container .qwe .qwe1 .popover-content .small_popover .cheng {
+  font-family: "Regular";
+  font-size: 13px;
+  color: #9b9aa4;
+  padding-top: 10px;
+  text-align: center;
+}
+body .main .container .qwe .qwe1 .popover.bottom > .arrow:after {
+  border-bottom-color: #fff;
+}
+body .main .container .qwe .qwe2 {
+  margin-top: -60px;
+  background: #282f3d;
+  width: 19%;
+  height: 620px;
+  margin-left: 69px;
+  padding-top: 10px;
+}
+body .main .container .qwe .qwe2 .type .dropdown-menu-right {
+  background: #282f3d;
+}
+body .main .container .qwe .qwe2 .type .dropdown-menu-right li a {
   color: #fff;
 }
+body .main .container .qwe .qwe2 span {
+  font-family: "Demib";
+  font-size: 16px;
+  color: #969fb3;
+}
+body .main .container .qwe .qwe2 .input-group {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+body .main .container .qwe .qwe2 .form-control {
+  background-color: #1d222e;
+  border: none;
+}
+body .main .container .qwe .qwe2 .btn {
+  background: #48556e;
+  border-color: #48556e;
+  border: none;
+}
+body .main .container .qwe .qwe2 .dateforms {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+body .main .container .qwe .qwe2 .dateforms .dates {
+  width: 52%;
+}
+body .main .container .qwe .qwe2 .dateforms .dates span {
+  background: #48556e;
+  border-color: #48556e;
+}
+body .main .container .qwe .qwe2 .prize {
+  /**********************SLIDER*************************/
+  /*********************END SLIDER***********************/
+}
+body .main .container .qwe .qwe2 .prize #options {
+  padding-top: 20px;
+}
+body .main .container .qwe .qwe2 .prize #options form label {
+  width: 43%;
+}
+body .main .container .qwe .qwe2 .prize #options form label input {
+  width: 100%;
+  background-color: #1d222e;
+  border: none;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  height: 34px;
+  color: #fff;
+  padding-left: 5px;
+}
+body .main .container .qwe .qwe2 .prize #slider_price {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+body .main .container .qwe .qwe2 .prize #slider_price span {
+  background: #48556e;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  border: none;
+}
+body .main .container .qwe .qwe2 .prize .ui-widget-header {
+  background: #48556e;
+}
+body .main .container .qwe .qwe2 .prize .ui-widget-content {
+  background: #1d222e;
+  border: 1px solid #48556e;
+}
+body .main .container .qwe .qwe2 .prize .ui-widget.ui-widget-content {
+  border: 1px solid #48556e;
+}
+body .main .container .qwe .qwe2 .discip .type .input-group-btn .dropdown-menu-right {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+body .main .container .qwe .qwe2 .discip .type .input-group-btn .dropdown-menu-right li:hover {
+  background: #1d222e;
+  text-decoration: none;
+}
+body .main .container .qwe .qwe2 .discip .type .input-group-btn .dropdown-menu-right li div {
+  margin-left: 10px;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+body .main .container .qwe .qwe2 .discip .type .input-group-btn .dropdown-menu-right li div a {
+  text-decoration: none;
+  padding-left: 10px;
+}
+body .main .container .qwe .qwe2 .img9 {
+  background: url("/img/Linage.png");
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+body .main .container .qwe .qwe2 .img10 {
+  background: url("/img/Aion.png");
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+body .main .container .qwe .qwe2 .img11 {
+  background: url("/img/Alods.png");
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+body .main .container .qwe .qwe2 .img12 {
+  background: url("/img/WOT.png");
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+body .main .container .qwe .qwe2 .img13 {
+  background: url("/img/RF.png");
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+body .main .container .qwe .qwe2 .status .type .input-group-btn .dropdown-menu-right,
+body .main .container .qwe .qwe2 .format .type .input-group-btn .dropdown-menu-right {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+body .main .container .qwe .qwe2 .status .type .input-group-btn .dropdown-menu-right li a:hover,
+body .main .container .qwe .qwe2 .format .type .input-group-btn .dropdown-menu-right li a:hover {
+  background: #1d222e;
+  text-decoration: none;
+}
+body .main .container .number_page {
+  padding-right: 0px;
+  padding-left: 45px;
+}
+body .main .container .number_page .pagination > li:first-child > a,
+body .main .container .number_page .pagination > li:first-child > span,
+body .main .container .number_page .pagination > li:last-child > a {
+  margin-left: 0;
+  margin-right: 2px;
+  -webkit-border-top-left-radius: 0px;
+          border-top-left-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  background: none;
+  border: none;
+  cursor: default;
+}
+body .main .container .number_page .pagination > li:first-child > a:hover,
+body .main .container .number_page .pagination > li:first-child > span:hover,
+body .main .container .number_page .pagination > li:last-child > a:hover {
+  background: #323a4a;
+  color: #fff;
+}
+body .main .container .number_page .pagination li a,
+body .main .container .number_page .pagination li span {
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  background: none;
+  border: none;
+  color: #82899b;
+}
+body .main .container .number_page .pagination li a:hover,
+body .main .container .number_page .pagination li span:hover {
+  background: #323a4a;
+  color: #fff;
+}
+body .row {
+  margin-left: 20px;
+  width: 1135px;
+}
+body .row .history {
+  background: #282f3d;
+  height: 237px;
+  width: 1140px;
+  padding-right: 0px;
+}
+body .row .history .img_history {
+  background: url("/img/Lineage_logo.jpg");
+  height: 204px;
+  width: 18%;
+  margin-top: 18px;
+}
+body .row .history .tetx_history {
+  height: 237px;
+  width: 43%;
+}
+body .row .history .tetx_history h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Medium";
+  font-size: 25px;
+}
+body .row .history .tetx_history h1:after {
+  content: "(часть 1)";
+  color: #fff;
+  font-family: "Medium";
+  font-size: 25px;
+  text-transform: none;
+}
+body .row .history .tetx_history span {
+  font-family: "Regular";
+  font-size: 15px;
+  color: #7f8799;
+}
+body .row .history .tetx_history a {
+  font-family: "Regular";
+  font-size: 15px;
+  color: #106ac1;
+  float: right;
+}
+body .row .history .tetx_history .number_page {
+  float: right;
+  width: 85%;
+  height: 50px;
+  padding-left: 140px;
+}
+body .row .history .tetx_history .number_page .pagination {
+  margin-bottom: 0px;
+}
+body .row .history .social_page {
+  height: 237px;
+  width: 39%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 15px;
+}
+body .row .history .social_page .vk {
+  background: url("/img/vk.png");
+  height: 205px;
+  width: 205px;
+}
+body .row .history .social_page .fb {
+  background: url("/img/fb.png");
+  height: 205px;
+  width: 205px;
+  margin-left: 15px;
+}
+body .row .page_footer {
+  display: inline-block;
+  padding-left: 0px;
+}
+body .row .page_footer span {
+  display: inline-block;
+  color: #fff;
+  font-family: "Demib";
+  font-size: 18px;
+}
+body .row .page_footer span::after {
+  content: "";
+  display: block;
+  margin-top: 4px;
+  max-width: 50px;
+  height: 2px;
+  background-color: #fff;
+}
+body .row .page_footer .group_min_icon {
+  display: inline-block;
+  margin-left: 5px;
+}
+body .row .page_footer .group_min_icon img {
+  padding-left: 10px;
+}
+body .row .right_link {
+  margin-left: 368px;
+  padding-right: 0px;
+}
+body .row .right_link a {
+  font-family: "Demib";
+  font-size: 18px;
+  color: #969fb3;
+  margin-left: 22px;
+  float: right;
+  margin-right: -10px;
+}
+body .row .right_link a:hover {
+  color: #e30303;
+  text-decoration: none;
+}
+body .row .list_game_footer {
+  display: inline-block;
+  margin-left: 10px;
+}
+body .row .list_game_footer .txt_active {
+  padding-left: 0;
+  color: #fff;
+  font-family: "Demib";
+  font-size: 18px;
+}
+body .row .list_game_footer .txt_active span {
+  margin-left: 15px;
+}
+body .row .list_game_footer .list_bot {
+  width: 1140px;
+  margin-top: 30px;
+  height: 50px;
+  background: #282f3d;
+  border-bottom: 1px solid #969fb3;
+  margin-left: 15px;
+}
+body .row .list_game_footer .list_bot .first_column {
+  display: inline-block;
+  width: 26%;
+}
+body .row .list_game_footer .list_bot .first_column span {
+  color: #fff;
+  padding-left: 10px;
+  font-family: "Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+body .row .list_game_footer .list_bot .second_columd {
+  display: inline-block;
+  width: 17%;
+  text-align: center;
+}
+body .row .list_game_footer .list_bot .second_columd span {
+  color: #969fb3;
+  padding-left: 5px;
+  font-family: "Regular";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+body .row .list_game_footer .list_bot .third_column {
+  display: inline-block;
+  width: 37%;
+}
+body .row .list_game_footer .list_bot .third_column span3 {
+  color: #fff;
+  font-family: "Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+body .row .list_game_footer .list_bot .third_column span4 {
+  color: #969fb3;
+  font-family: "Regular";
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 12px;
+}
+body .row .list_game_footer .list_bot .fourth_column {
+  display: inline-block;
+  width: 18%;
+}
+body .row .list_game_footer .list_bot .fourth_column span {
+  display: inline-block;
+  color: #69ee82;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+body .row .list_game_footer .list_bot .fourth_column .comment {
+  display: inline-block;
+  margin-left: 100px;
+}
+body .row .list_game_footer .list_bot .fourth_column .comment span4 {
+  display: inline-block;
+  color: #969fb3;
+  font-family: "Regular";
+  font-size: 14px;
+}
+body .row .list_game_footer .list_bot .fourth_column .comment img {
+  margin-left: 2px;
+}
+body .row .list_game_footer .not_m {
+  margin-top: 0;
+}
+body .img14 {
+  background: url("/img/logo_bot.png");
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .img15 {
+  background: url("/img/dota_min.png");
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+body .img16 {
+  background: url("/img/navi.png");
+  width: 38px;
+  height: 34px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: 5px;
+}
+body .img17 {
+  background: url("/img/f5.png");
+  width: 41px;
+  height: 44px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: 5px;
+}
+body footer {
+  height: 255px;
+  background: #16191f;
+}
+body footer .container {
+  padding-left: 0px;
+  height: 253px;
+}
+body footer .container .row {
+  margin-top: 15px;
+  width: 1161px;
+  height: 121px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+body footer .container .row .col-md-5 {
+  padding-left: 0px;
+  display: inline-block;
+  margin-left: -20px;
+  /* a:first-child{
+							margin-right:18px;
+						}
+						a:last-child{
+							margin-left:18px;
+						} */
+}
+body footer .container .row .col-md-5 a {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Medium";
+  font-size: 18px;
+  padding: 10px 25px;
+}
+body footer .container .row .col-md-5 a:hover {
+  background: #e30303;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  text-decoration: none;
+  padding: 5px 25px;
+}
+body footer .container .row .col-md-6:not(.social_fb) {
+  margin-top: 10px;
+  padding-right: 0px;
+}
+body footer .container .row .col-md-6:not(.social_fb) a {
+  margin-left: -25px;
+  background: #e30303;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Medium";
+  font-size: 18px;
+  padding: 5px 35px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+body footer .container .row .col-md-6:not(.social_fb) a:hover {
+  background: #16191f;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  text-decoration: none;
+  border: 1px solid #e30303;
+}
+body footer .container .row .col-md-6:not(.social_fb) a:nth-child(2) {
+  padding: 5px 15px;
+  margin-left: 55px;
+}
+body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3) {
+  background: #16191f;
+  border: 1px solid #e30303;
+  margin-left: 55px;
+}
+body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3):hover {
+  background: #e30303;
+}
+body footer .container .row .social_fb {
+  width: 1141px;
+  height: 50px;
+  border-bottom: 1px solid #471418;
+}
+body footer .container .row .social_fb a {
+  margin-left: 10px;
+}
+body footer .container .row .social_fb a img:nth-child(1) {
+  margin-left: -7px;
+}
+body footer .container .row .social_fb a span {
+  color: #fff;
+  font-family: "Medium";
+  font-size: 18px;
+  margin-left: 5px;
+}
+body footer .container .row .social_fb a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+body footer .container .row .abaout {
+  padding-left: 0px;
+}
+body footer .container .row .abaout h1 {
+  font-family: "Regular";
+  font-size: 18px;
+  color: #e30303;
+  text-transform: uppercase;
+}
+body footer .container .row .abaout span {
+  font-family: "Regular";
+  font-size: 12px;
+  color: #fff;
+}
+body footer .container .row .abaout .year_company {
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e30303;
+}
+/* .popover-content{
+	width:220px;
+	background:green;
+}
+
+.small_popover:not(.popover-content){
+	width:220px;
+	margin-left:0px;
+	margin-top:0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background:red;
+
+}
+ */
