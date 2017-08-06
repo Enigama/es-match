@@ -53,10 +53,10 @@ var gulp = require('gulp'),
 
 	gulp.task('browser-sync',function(){
 		browserSync({
-			server:{
+			server:"./app"/*{
 				baseDir:'app'
 
-			}//,open:true//, notify:false для отключения уведомления
+			},open:true//, notify:false для отключения уведомления*/
 		});
 	});
 //**********************LESS********************************************************

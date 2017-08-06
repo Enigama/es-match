@@ -120,7 +120,7 @@ body {
 }
 body header {
   background: #16191f;
-  height: 50px;
+  min-height: 50px;
   /*********************************popover for signed********************************************/
   /*******************************end popover for signed****************************************/
 }
@@ -128,7 +128,11 @@ body header .container {
   background: #16191f;
 }
 body header .container nav {
+  max-width: 100%;
   border: none;
+}
+body header .container nav .container_header {
+  max-width: 100%;
 }
 body header .container nav .container_header .collapse .nav .li .a,
 body header .container nav .container_header .navbar-collapse .nav .li .a,
@@ -136,7 +140,6 @@ body header .container nav .container_header .collapse .navbar-nav .li .a,
 body header .container nav .container_header .navbar-collapse .navbar-nav .li .a,
 body header .container nav .container_header .collapse .navbar-right .li .a,
 body header .container nav .container_header .navbar-collapse .navbar-right .li .a {
-  /*:not(.popover>.popover-content>.pop_begin>.social_min>a)*/
   font-family: "Medium";
   font-size: 18px;
   color: #8b94a6;
@@ -144,8 +147,8 @@ body header .container nav .container_header .navbar-collapse .navbar-right .li 
   margin-top: 7px;
   padding-top: 6px;
   padding-bottom: 6px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -171,8 +174,8 @@ body header .container nav .container_header .navbar-collapse .navbar-right .li 
   margin-top: 7px;
   padding-top: 6px;
   padding-bottom: 6px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   border: 1px solid #e30303;
@@ -293,59 +296,78 @@ body .menu {
   background-color: #282f3d;
   min-height: 50px;
 }
-body .menu .container_menu {
-  padding-left: 0px;
+body .menu .container_menu nav {
+  min-height: 50px;
+  margin-bottom: 0px;
+  background: #282f3d;
+  border: none;
+  -webkit-border-radius: none;
+          border-radius: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-body .menu .container_menu .nav-pills li {
+body .menu .container_menu .container .collapse .navbar-collapse {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+body .menu .container_menu .navbar-left li {
   font-family: "Regular";
   font-size: 16px;
 }
-body .menu .container_menu .nav-pills li a {
+body .menu .container_menu .navbar-left li a {
   -webkit-border-radius: 0px;
           border-radius: 0px;
   padding-top: 15px;
   padding-bottom: 15px;
   color: #fff;
 }
-body .menu .container_menu .nav-pills li a:hover {
+body .menu .container_menu .navbar-left li a:hover {
   background-color: #16191f;
 }
-body .menu .container_menu .nav-pills li a:visited {
+body .menu .container_menu .navbar-left li a:visited {
   background-color: #16191f;
 }
-body .menu .container_menu .nav-pills li a img {
+body .menu .container_menu .navbar-left li a img {
   padding-right: 7px;
 }
-body .menu .container_menu .nav-pills .dropdown_my a {
+body .menu .container_menu .navbar-left .dropdown_my a {
   color: #6b768c;
 }
-body .menu .container_menu .nav-pills .navbar-right {
-  text-transform: uppercase;
-  margin-top: 13px;
-  padding-bottom: 0px;
+body .menu .container_menu .navbar-left .dropdown-menu {
+  background-color: #282f3d;
 }
-body .menu .container_menu .nav-pills .navbar-right li {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-body .menu .container_menu .nav-pills .navbar-right li .favorites {
-  border-right: 1px solid #6b768c;
-}
-body .menu .container_menu .nav-pills .navbar-right li a {
-  color: #6b768c;
-  padding-right: 12px;
-  padding-left: 9px;
-}
-body .menu .container_menu .nav-pills .navbar-right li a span {
-  color: #e30303;
-}
-body .menu .container_menu .nav-pills .navbar-right li a:hover {
-  background-color: #16191f;
-  padding-top: 17px;
-  padding-bottom: 17px;
+body .menu .container_menu .navbar-left .dropdown-menu li a:hover {
+  background: #16191f;
 }
 body .menu .container_menu .navbar-right li a {
   text-decoration: none;
+}
+body .menu .container_menu nav .container .collapse {
+  padding-left: 0px;
+}
+body .menu .container_menu nav .container .collapse .navbar-right {
+  min-height: 50px;
+  margin-right: 0px;
+  text-transform: uppercase;
+  /* margin-top: 13px;
+							padding-bottom: 0px; */
+}
+body .menu .container_menu nav .container .collapse .navbar-right li {
+  max-height: 50px;
+}
+body .menu .container_menu nav .container .collapse .navbar-right li .favorites {
+  border-right: 1px solid #6b768c;
+}
+body .menu .container_menu nav .container .collapse .navbar-right li a {
+  height: 50px;
+  color: #6b768c;
+}
+body .menu .container_menu nav .container .collapse .navbar-right li a p {
+  color: #e30303;
+  text-shadow: #e30303 0 0 15px;
+}
+body .menu .container_menu nav .container .collapse .navbar-right li a:hover {
+  background-color: #16191f;
 }
 body .main {
   min-height: 2440px;
@@ -417,7 +439,7 @@ body .main .container .row .serch .btn {
 }
 body .main .container .main_picture .row .first_panel {
   min-height: 240px;
-  max-width: 378px;
+  max-width: 100%;
   background-image: url("../img/fpanel.png");
   background-size: cover;
   border: 1px solid #1d222e;
@@ -427,12 +449,12 @@ body .main .container .main_picture .row .first_panel:hover {
 }
 body .main .container .main_picture .row .first_panel .text_bot {
   position: absolute;
-  width: 93%;
+  width: 100%;
 }
 body .main .container .main_picture .row .first_panel .text_bot .left_t {
   margin-top: 174px;
   color: #fff;
-  max-width: 70%;
+  max-width: 67%;
   background-color: #191e2b;
   opacity: 0.85;
   position: relative;
@@ -451,11 +473,11 @@ body .main .container .main_picture .row .first_panel .text_bot .left_t span {
   margin-bottom: 7px;
 }
 body .main .container .main_picture .row .first_panel .text_bot .right_t {
+  width: 25%;
   margin-top: 174px;
-  padding-left: 13px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 100px;
+  margin-right: 10px;
   background-color: #191e2b;
   opacity: 0.85;
 }
@@ -465,16 +487,17 @@ body .main .container .main_picture .row .first_panel .text_bot .right_t p {
   font-size: 24px;
   color: #e30303;
   margin-top: 9px;
+  margin-left: -10px;
 }
 body .main .container .main_picture .row .second_panel {
   min-height: 240px;
-  max-width: 378px;
+  max-width: 100%;
   background-image: url("../img/spanel.png");
   background-size: cover;
 }
 body .main .container .main_picture .row .three_panel {
   min-height: 240px;
-  max-width: 378px;
+  max-width: 100%;
   background-image: url("../img/tpanel.png");
   background-size: cover;
 }
@@ -493,7 +516,7 @@ body .main .container .tournament_up h2:after {
   content: "";
   display: block;
   margin-top: 8px;
-  max-width: 57px;
+  max-width: 45%;
   height: 2px;
   background-color: #fff;
 }
@@ -502,48 +525,17 @@ body .main .container .row {
   padding-right: 0px;
   margin-left: 0px;
 }
-body .main .container .row .tesrik {
-  margin-top: 30px;
-  display: inline-block;
-}
-body .main .container .row .tesrik .filts_ {
-  color: #fff;
-  font-family: "Demib";
-  font-size: 18px;
-  text-transform: uppercase;
-}
-body .main .container .row .tesrik .filts_::after {
-  content: "";
-  display: block;
-  margin-top: 8px;
-  max-width: 50px;
-  height: 2px;
-  background-color: #fff;
-}
-body .main .container .row .tesrik .clear_ {
-  color: #0a68be;
-  font-family: "Regular";
-  font-size: 15px;
-}
-body .main .container .row .tesrik .clear_::after {
-  content: "";
-  display: block;
-  margin-top: 8px;
-  max-width: 50px;
-  height: 1px;
-  background-color: #0a68be;
-}
 body .main .container .row .line0 {
   margin-left: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  width: 930px;
+  max-width: 80.2%;
 }
 body .main .container .row .line0 .row {
   margin-top: 17px;
   background: #323a4a;
   min-height: 50px;
-  width: 926px;
+  max-width: 100%;
   /* border-top:1px solid #82899b; */
   border-bottom: 1px solid #82899b;
   /* border-right:1px solid #82899b;
@@ -584,20 +576,26 @@ body .main .container .row .line0 .row .area {
 }
 body .main .container .row .line0 .row .dates {
   display: inline-block;
-  width: 11%;
+  width: 12%;
 }
 body .main .container .qwe {
   margin-top: 0px;
   padding-left: 0px;
   padding-right: 0px;
   margin-left: -4px;
-  width: 1161px;
-}
-body .main .container .qwe .qwe1 {
-  padding-left: 0px;
-  /*********************************popover for HOVER************************************/
+  width: 100%;
   /*********************************end popover for HOVER************************************/
 }
+body .main .container .qwe .qwe1 {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 81%;
+  /*********************************popover for HOVER************************************/
+}
+body .main .container .qwe .qwe1 .line0,
 body .main .container .qwe .qwe1 .line1,
 body .main .container .qwe .qwe1 .line2,
 body .main .container .qwe .qwe1 .line3,
@@ -619,327 +617,76 @@ body .main .container .qwe .qwe1 .line18,
 body .main .container .qwe .qwe1 .line19,
 body .main .container .qwe .qwe1 .line20 {
   margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 926px;
+  width: 100%;
 }
-body .main .container .qwe .qwe1 .line1 .game_list,
-body .main .container .qwe .qwe1 .line2 .game_list,
-body .main .container .qwe .qwe1 .line3 .game_list,
-body .main .container .qwe .qwe1 .line4 .game_list,
-body .main .container .qwe .qwe1 .line5 .game_list,
-body .main .container .qwe .qwe1 .line6 .game_list,
-body .main .container .qwe .qwe1 .line7 .game_list,
-body .main .container .qwe .qwe1 .line8 .game_list,
-body .main .container .qwe .qwe1 .line9 .game_list,
-body .main .container .qwe .qwe1 .line10 .game_list,
-body .main .container .qwe .qwe1 .line11 .game_list,
-body .main .container .qwe .qwe1 .line12 .game_list,
-body .main .container .qwe .qwe1 .line13 .game_list,
-body .main .container .qwe .qwe1 .line14 .game_list,
-body .main .container .qwe .qwe1 .line15 .game_list,
-body .main .container .qwe .qwe1 .line16 .game_list,
-body .main .container .qwe .qwe1 .line17 .game_list,
-body .main .container .qwe .qwe1 .line18 .game_list,
-body .main .container .qwe .qwe1 .line19 .game_list,
-body .main .container .qwe .qwe1 .line20 .game_list {
+body .main .container .qwe .qwe1 .game_list {
   background: url("../img/icon/bg1.png");
-  width: 926px;
+  width: 99%;
   height: 50px;
   margin-left: 4px;
   padding-left: 0px;
   padding-right: 0px;
   border-bottom: 1px solid #82899b;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line2 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line3 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line4 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line5 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line6 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line7 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line8 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line9 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line10 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line11 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line12 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line13 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line14 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line15 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line16 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line17 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line18 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line19 .game_list .turnament_list,
-body .main .container .qwe .qwe1 .line20 .game_list .turnament_list {
+body .main .container .qwe .qwe1 .game_list .turnament_list {
   display: inline-block;
   width: 29%;
   height: 50px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line2 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line3 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line4 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line5 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line6 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line7 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line8 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line9 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line10 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line11 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line12 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line13 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line14 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line15 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line16 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line17 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line18 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line19 .game_list .turnament_list span:not(.red_word),
-body .main .container .qwe .qwe1 .line20 .game_list .turnament_list span:not(.red_word) {
+body .main .container .qwe .qwe1 .game_list .turnament_list span:not(.red_word) {
   font-family: "Bold";
   font-size: 14px;
   color: #eaeaeb;
   text-transform: uppercase;
   padding-left: 10px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line2 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line3 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line4 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line5 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line6 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line7 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line8 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line9 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line10 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line11 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line12 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line13 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line14 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line15 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line16 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line17 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line18 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line19 .game_list .turnament_list .red_word,
-body .main .container .qwe .qwe1 .line20 .game_list .turnament_list .red_word {
+body .main .container .qwe .qwe1 .game_list .turnament_list .red_word {
   font-family: "Bold";
   font-size: 14px;
   color: #f5282a;
   text-transform: uppercase;
   padding-left: 10px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line2 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line3 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line4 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line5 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line6 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line7 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line8 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line9 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line10 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line11 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line12 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line13 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line14 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line15 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line16 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line17 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line18 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line19 .game_list .discipline_list,
-body .main .container .qwe .qwe1 .line20 .game_list .discipline_list {
+body .main .container .qwe .qwe1 .game_list .discipline_list {
   display: inline-block;
   width: 19%;
   margin-left: 10px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line2 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line3 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line4 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line5 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line6 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line7 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line8 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line9 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line10 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line11 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line12 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line13 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line14 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line15 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line16 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line17 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line18 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line19 .game_list .discipline_list span,
-body .main .container .qwe .qwe1 .line20 .game_list .discipline_list span {
+body .main .container .qwe .qwe1 .game_list .discipline_list span {
   font-family: "Regular";
   font-size: 14px;
   color: #82899b;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .region_az,
-body .main .container .qwe .qwe1 .line2 .game_list .region_az,
-body .main .container .qwe .qwe1 .line3 .game_list .region_az,
-body .main .container .qwe .qwe1 .line4 .game_list .region_az,
-body .main .container .qwe .qwe1 .line5 .game_list .region_az,
-body .main .container .qwe .qwe1 .line6 .game_list .region_az,
-body .main .container .qwe .qwe1 .line7 .game_list .region_az,
-body .main .container .qwe .qwe1 .line8 .game_list .region_az,
-body .main .container .qwe .qwe1 .line9 .game_list .region_az,
-body .main .container .qwe .qwe1 .line10 .game_list .region_az,
-body .main .container .qwe .qwe1 .line11 .game_list .region_az,
-body .main .container .qwe .qwe1 .line12 .game_list .region_az,
-body .main .container .qwe .qwe1 .line13 .game_list .region_az,
-body .main .container .qwe .qwe1 .line14 .game_list .region_az,
-body .main .container .qwe .qwe1 .line15 .game_list .region_az,
-body .main .container .qwe .qwe1 .line16 .game_list .region_az,
-body .main .container .qwe .qwe1 .line17 .game_list .region_az,
-body .main .container .qwe .qwe1 .line18 .game_list .region_az,
-body .main .container .qwe .qwe1 .line19 .game_list .region_az,
-body .main .container .qwe .qwe1 .line20 .game_list .region_az {
+body .main .container .qwe .qwe1 .game_list .region_az {
   display: inline-block;
   width: 11%;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line2 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line3 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line4 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line5 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line6 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line7 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line8 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line9 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line10 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line11 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line12 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line13 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line14 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line15 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line16 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line17 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line18 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line19 .game_list .region_az span,
-body .main .container .qwe .qwe1 .line20 .game_list .region_az span {
+body .main .container .qwe .qwe1 .game_list .region_az span {
   font-family: "Regular";
   font-size: 14px;
   color: #82899b;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .prize_,
-body .main .container .qwe .qwe1 .line2 .game_list .prize_,
-body .main .container .qwe .qwe1 .line3 .game_list .prize_,
-body .main .container .qwe .qwe1 .line4 .game_list .prize_,
-body .main .container .qwe .qwe1 .line5 .game_list .prize_,
-body .main .container .qwe .qwe1 .line6 .game_list .prize_,
-body .main .container .qwe .qwe1 .line7 .game_list .prize_,
-body .main .container .qwe .qwe1 .line8 .game_list .prize_,
-body .main .container .qwe .qwe1 .line9 .game_list .prize_,
-body .main .container .qwe .qwe1 .line10 .game_list .prize_,
-body .main .container .qwe .qwe1 .line11 .game_list .prize_,
-body .main .container .qwe .qwe1 .line12 .game_list .prize_,
-body .main .container .qwe .qwe1 .line13 .game_list .prize_,
-body .main .container .qwe .qwe1 .line14 .game_list .prize_,
-body .main .container .qwe .qwe1 .line15 .game_list .prize_,
-body .main .container .qwe .qwe1 .line16 .game_list .prize_,
-body .main .container .qwe .qwe1 .line17 .game_list .prize_,
-body .main .container .qwe .qwe1 .line18 .game_list .prize_,
-body .main .container .qwe .qwe1 .line19 .game_list .prize_,
-body .main .container .qwe .qwe1 .line20 .game_list .prize_ {
+body .main .container .qwe .qwe1 .game_list .prize_ {
   display: inline-block;
   width: 7%;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line2 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line3 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line4 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line5 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line6 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line7 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line8 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line9 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line10 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line11 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line12 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line13 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line14 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line15 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line16 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line17 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line18 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line19 .game_list .prize_ span,
-body .main .container .qwe .qwe1 .line20 .game_list .prize_ span {
+body .main .container .qwe .qwe1 .game_list .prize_ span {
   font-family: "Bold";
   font-size: 14px;
   color: #eaeaeb;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .area_,
-body .main .container .qwe .qwe1 .line2 .game_list .area_,
-body .main .container .qwe .qwe1 .line3 .game_list .area_,
-body .main .container .qwe .qwe1 .line4 .game_list .area_,
-body .main .container .qwe .qwe1 .line5 .game_list .area_,
-body .main .container .qwe .qwe1 .line6 .game_list .area_,
-body .main .container .qwe .qwe1 .line7 .game_list .area_,
-body .main .container .qwe .qwe1 .line8 .game_list .area_,
-body .main .container .qwe .qwe1 .line9 .game_list .area_,
-body .main .container .qwe .qwe1 .line10 .game_list .area_,
-body .main .container .qwe .qwe1 .line11 .game_list .area_,
-body .main .container .qwe .qwe1 .line12 .game_list .area_,
-body .main .container .qwe .qwe1 .line13 .game_list .area_,
-body .main .container .qwe .qwe1 .line14 .game_list .area_,
-body .main .container .qwe .qwe1 .line15 .game_list .area_,
-body .main .container .qwe .qwe1 .line16 .game_list .area_,
-body .main .container .qwe .qwe1 .line17 .game_list .area_,
-body .main .container .qwe .qwe1 .line18 .game_list .area_,
-body .main .container .qwe .qwe1 .line19 .game_list .area_,
-body .main .container .qwe .qwe1 .line20 .game_list .area_ {
+body .main .container .qwe .qwe1 .game_list .area_ {
   display: inline-block;
   width: 12%;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line2 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line3 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line4 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line5 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line6 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line7 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line8 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line9 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line10 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line11 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line12 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line13 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line14 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line15 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line16 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line17 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line18 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line19 .game_list .area_ span,
-body .main .container .qwe .qwe1 .line20 .game_list .area_ span {
+body .main .container .qwe .qwe1 .game_list .area_ span {
   font-family: "Regular";
   font-size: 14px;
   color: #82899b;
   text-align: center;
   margin-left: 30px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_1,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_1 {
+body .main .container .qwe .qwe1 .game_list .dates_1 {
   display: inline-block;
   vertical-align: middle;
   width: 15%;
@@ -948,103 +695,29 @@ body .main .container .qwe .qwe1 .line20 .game_list .dates_1 {
   margin-left: 7px;
   padding-top: 7px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_1 span1,
-body .main .container .qwe .qwe1 .line1 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_1 span2,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_1 span2 {
+body .main .container .qwe .qwe1 .game_list .dates_1 span1,
+body .main .container .qwe .qwe1 .game_list .dates_1 span2 {
   font-family: "Regular";
   font-size: 14px;
   color: #eeeded;
   margin-top: 2px ;
   padding: 1px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_1 span2:not(.rgb_r)::after,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_1 span2:not(.rgb_r)::after {
+body .main .container .qwe .qwe1 .game_list .dates_1 span2:not(.rgb_r)::after {
   content: "Самый ожидаемый !";
   font-family: "AReg";
   font-size: 11px;
   display: block;
   text-align: center;
-  background: #ff2828;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  width: 79%;
+  background: #e30303;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  width: 80%;
   margin-left: 18px;
+  -webkit-box-shadow: #e30303 0px 0px 15px;
+          box-shadow: #e30303 0px 0px 15px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .dates_,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_ {
+body .main .container .qwe .qwe1 .game_list .dates_ {
   padding-top: 15px;
   padding-left: 15px;
   display: inline-block;
@@ -1053,124 +726,29 @@ body .main .container .qwe .qwe1 .line20 .game_list .dates_ {
   height: 50px;
   text-align: center;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_ .rgb_g,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_ .rgb_g {
+body .main .container .qwe .qwe1 .game_list .dates_ .rgb_g {
   font-family: "Regular";
   font-size: 14px;
   color: #5ed176;
   padding-top: 2px;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_ .rgb_g::after,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_ .rgb_g::after {
+body .main .container .qwe .qwe1 .game_list .dates_ .rgb_g::after {
   content: "-";
   color: #fff;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line2 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line3 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line4 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line5 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line6 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line7 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line8 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line9 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line10 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line11 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line12 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line13 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line14 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line15 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line16 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line17 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line18 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line19 .game_list .dates_ .rgb_r,
-body .main .container .qwe .qwe1 .line20 .game_list .dates_ .rgb_r {
+body .main .container .qwe .qwe1 .game_list .dates_ .rgb_r {
   font-family: "Regular";
   font-size: 14px;
   color: #c32a2f;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img0,
-body .main .container .qwe .qwe1 .line2 .game_list .img0,
-body .main .container .qwe .qwe1 .line3 .game_list .img0,
-body .main .container .qwe .qwe1 .line4 .game_list .img0,
-body .main .container .qwe .qwe1 .line5 .game_list .img0,
-body .main .container .qwe .qwe1 .line6 .game_list .img0,
-body .main .container .qwe .qwe1 .line7 .game_list .img0,
-body .main .container .qwe .qwe1 .line8 .game_list .img0,
-body .main .container .qwe .qwe1 .line9 .game_list .img0,
-body .main .container .qwe .qwe1 .line10 .game_list .img0,
-body .main .container .qwe .qwe1 .line11 .game_list .img0,
-body .main .container .qwe .qwe1 .line12 .game_list .img0,
-body .main .container .qwe .qwe1 .line13 .game_list .img0,
-body .main .container .qwe .qwe1 .line14 .game_list .img0,
-body .main .container .qwe .qwe1 .line15 .game_list .img0,
-body .main .container .qwe .qwe1 .line16 .game_list .img0,
-body .main .container .qwe .qwe1 .line17 .game_list .img0,
-body .main .container .qwe .qwe1 .line18 .game_list .img0,
-body .main .container .qwe .qwe1 .line19 .game_list .img0,
-body .main .container .qwe .qwe1 .line20 .game_list .img0 {
+body .main .container .qwe .qwe1 .game_list .img0 {
   background: url("../img/icon/shut_men_small.png");
   width: 20px;
   height: 20px;
   vertical-align: middle;
   display: inline-block;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img1,
-body .main .container .qwe .qwe1 .line2 .game_list .img1,
-body .main .container .qwe .qwe1 .line3 .game_list .img1,
-body .main .container .qwe .qwe1 .line4 .game_list .img1,
-body .main .container .qwe .qwe1 .line5 .game_list .img1,
-body .main .container .qwe .qwe1 .line6 .game_list .img1,
-body .main .container .qwe .qwe1 .line7 .game_list .img1,
-body .main .container .qwe .qwe1 .line8 .game_list .img1,
-body .main .container .qwe .qwe1 .line9 .game_list .img1,
-body .main .container .qwe .qwe1 .line10 .game_list .img1,
-body .main .container .qwe .qwe1 .line11 .game_list .img1,
-body .main .container .qwe .qwe1 .line12 .game_list .img1,
-body .main .container .qwe .qwe1 .line13 .game_list .img1,
-body .main .container .qwe .qwe1 .line14 .game_list .img1,
-body .main .container .qwe .qwe1 .line15 .game_list .img1,
-body .main .container .qwe .qwe1 .line16 .game_list .img1,
-body .main .container .qwe .qwe1 .line17 .game_list .img1,
-body .main .container .qwe .qwe1 .line18 .game_list .img1,
-body .main .container .qwe .qwe1 .line19 .game_list .img1,
-body .main .container .qwe .qwe1 .line20 .game_list .img1 {
+body .main .container .qwe .qwe1 .game_list .img1 {
   background: url("../img/icon/1.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1178,26 +756,7 @@ body .main .container .qwe .qwe1 .line20 .game_list .img1 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img2,
-body .main .container .qwe .qwe1 .line2 .game_list .img2,
-body .main .container .qwe .qwe1 .line3 .game_list .img2,
-body .main .container .qwe .qwe1 .line4 .game_list .img2,
-body .main .container .qwe .qwe1 .line5 .game_list .img2,
-body .main .container .qwe .qwe1 .line6 .game_list .img2,
-body .main .container .qwe .qwe1 .line7 .game_list .img2,
-body .main .container .qwe .qwe1 .line8 .game_list .img2,
-body .main .container .qwe .qwe1 .line9 .game_list .img2,
-body .main .container .qwe .qwe1 .line10 .game_list .img2,
-body .main .container .qwe .qwe1 .line11 .game_list .img2,
-body .main .container .qwe .qwe1 .line12 .game_list .img2,
-body .main .container .qwe .qwe1 .line13 .game_list .img2,
-body .main .container .qwe .qwe1 .line14 .game_list .img2,
-body .main .container .qwe .qwe1 .line15 .game_list .img2,
-body .main .container .qwe .qwe1 .line16 .game_list .img2,
-body .main .container .qwe .qwe1 .line17 .game_list .img2,
-body .main .container .qwe .qwe1 .line18 .game_list .img2,
-body .main .container .qwe .qwe1 .line19 .game_list .img2,
-body .main .container .qwe .qwe1 .line20 .game_list .img2 {
+body .main .container .qwe .qwe1 .game_list .img2 {
   background: url("../img/icon/2.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1205,26 +764,7 @@ body .main .container .qwe .qwe1 .line20 .game_list .img2 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img3,
-body .main .container .qwe .qwe1 .line2 .game_list .img3,
-body .main .container .qwe .qwe1 .line3 .game_list .img3,
-body .main .container .qwe .qwe1 .line4 .game_list .img3,
-body .main .container .qwe .qwe1 .line5 .game_list .img3,
-body .main .container .qwe .qwe1 .line6 .game_list .img3,
-body .main .container .qwe .qwe1 .line7 .game_list .img3,
-body .main .container .qwe .qwe1 .line8 .game_list .img3,
-body .main .container .qwe .qwe1 .line9 .game_list .img3,
-body .main .container .qwe .qwe1 .line10 .game_list .img3,
-body .main .container .qwe .qwe1 .line11 .game_list .img3,
-body .main .container .qwe .qwe1 .line12 .game_list .img3,
-body .main .container .qwe .qwe1 .line13 .game_list .img3,
-body .main .container .qwe .qwe1 .line14 .game_list .img3,
-body .main .container .qwe .qwe1 .line15 .game_list .img3,
-body .main .container .qwe .qwe1 .line16 .game_list .img3,
-body .main .container .qwe .qwe1 .line17 .game_list .img3,
-body .main .container .qwe .qwe1 .line18 .game_list .img3,
-body .main .container .qwe .qwe1 .line19 .game_list .img3,
-body .main .container .qwe .qwe1 .line20 .game_list .img3 {
+body .main .container .qwe .qwe1 .game_list .img3 {
   background: url("../img/icon/3.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1232,26 +772,7 @@ body .main .container .qwe .qwe1 .line20 .game_list .img3 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img4,
-body .main .container .qwe .qwe1 .line2 .game_list .img4,
-body .main .container .qwe .qwe1 .line3 .game_list .img4,
-body .main .container .qwe .qwe1 .line4 .game_list .img4,
-body .main .container .qwe .qwe1 .line5 .game_list .img4,
-body .main .container .qwe .qwe1 .line6 .game_list .img4,
-body .main .container .qwe .qwe1 .line7 .game_list .img4,
-body .main .container .qwe .qwe1 .line8 .game_list .img4,
-body .main .container .qwe .qwe1 .line9 .game_list .img4,
-body .main .container .qwe .qwe1 .line10 .game_list .img4,
-body .main .container .qwe .qwe1 .line11 .game_list .img4,
-body .main .container .qwe .qwe1 .line12 .game_list .img4,
-body .main .container .qwe .qwe1 .line13 .game_list .img4,
-body .main .container .qwe .qwe1 .line14 .game_list .img4,
-body .main .container .qwe .qwe1 .line15 .game_list .img4,
-body .main .container .qwe .qwe1 .line16 .game_list .img4,
-body .main .container .qwe .qwe1 .line17 .game_list .img4,
-body .main .container .qwe .qwe1 .line18 .game_list .img4,
-body .main .container .qwe .qwe1 .line19 .game_list .img4,
-body .main .container .qwe .qwe1 .line20 .game_list .img4 {
+body .main .container .qwe .qwe1 .game_list .img4 {
   background: url("../img/icon/4.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1259,26 +780,7 @@ body .main .container .qwe .qwe1 .line20 .game_list .img4 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img5,
-body .main .container .qwe .qwe1 .line2 .game_list .img5,
-body .main .container .qwe .qwe1 .line3 .game_list .img5,
-body .main .container .qwe .qwe1 .line4 .game_list .img5,
-body .main .container .qwe .qwe1 .line5 .game_list .img5,
-body .main .container .qwe .qwe1 .line6 .game_list .img5,
-body .main .container .qwe .qwe1 .line7 .game_list .img5,
-body .main .container .qwe .qwe1 .line8 .game_list .img5,
-body .main .container .qwe .qwe1 .line9 .game_list .img5,
-body .main .container .qwe .qwe1 .line10 .game_list .img5,
-body .main .container .qwe .qwe1 .line11 .game_list .img5,
-body .main .container .qwe .qwe1 .line12 .game_list .img5,
-body .main .container .qwe .qwe1 .line13 .game_list .img5,
-body .main .container .qwe .qwe1 .line14 .game_list .img5,
-body .main .container .qwe .qwe1 .line15 .game_list .img5,
-body .main .container .qwe .qwe1 .line16 .game_list .img5,
-body .main .container .qwe .qwe1 .line17 .game_list .img5,
-body .main .container .qwe .qwe1 .line18 .game_list .img5,
-body .main .container .qwe .qwe1 .line19 .game_list .img5,
-body .main .container .qwe .qwe1 .line20 .game_list .img5 {
+body .main .container .qwe .qwe1 .game_list .img5 {
   background: url("../img/icon/5.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1286,26 +788,7 @@ body .main .container .qwe .qwe1 .line20 .game_list .img5 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img6,
-body .main .container .qwe .qwe1 .line2 .game_list .img6,
-body .main .container .qwe .qwe1 .line3 .game_list .img6,
-body .main .container .qwe .qwe1 .line4 .game_list .img6,
-body .main .container .qwe .qwe1 .line5 .game_list .img6,
-body .main .container .qwe .qwe1 .line6 .game_list .img6,
-body .main .container .qwe .qwe1 .line7 .game_list .img6,
-body .main .container .qwe .qwe1 .line8 .game_list .img6,
-body .main .container .qwe .qwe1 .line9 .game_list .img6,
-body .main .container .qwe .qwe1 .line10 .game_list .img6,
-body .main .container .qwe .qwe1 .line11 .game_list .img6,
-body .main .container .qwe .qwe1 .line12 .game_list .img6,
-body .main .container .qwe .qwe1 .line13 .game_list .img6,
-body .main .container .qwe .qwe1 .line14 .game_list .img6,
-body .main .container .qwe .qwe1 .line15 .game_list .img6,
-body .main .container .qwe .qwe1 .line16 .game_list .img6,
-body .main .container .qwe .qwe1 .line17 .game_list .img6,
-body .main .container .qwe .qwe1 .line18 .game_list .img6,
-body .main .container .qwe .qwe1 .line19 .game_list .img6,
-body .main .container .qwe .qwe1 .line20 .game_list .img6 {
+body .main .container .qwe .qwe1 .game_list .img6 {
   background: url("../img/icon/6.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1313,26 +796,7 @@ body .main .container .qwe .qwe1 .line20 .game_list .img6 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img7,
-body .main .container .qwe .qwe1 .line2 .game_list .img7,
-body .main .container .qwe .qwe1 .line3 .game_list .img7,
-body .main .container .qwe .qwe1 .line4 .game_list .img7,
-body .main .container .qwe .qwe1 .line5 .game_list .img7,
-body .main .container .qwe .qwe1 .line6 .game_list .img7,
-body .main .container .qwe .qwe1 .line7 .game_list .img7,
-body .main .container .qwe .qwe1 .line8 .game_list .img7,
-body .main .container .qwe .qwe1 .line9 .game_list .img7,
-body .main .container .qwe .qwe1 .line10 .game_list .img7,
-body .main .container .qwe .qwe1 .line11 .game_list .img7,
-body .main .container .qwe .qwe1 .line12 .game_list .img7,
-body .main .container .qwe .qwe1 .line13 .game_list .img7,
-body .main .container .qwe .qwe1 .line14 .game_list .img7,
-body .main .container .qwe .qwe1 .line15 .game_list .img7,
-body .main .container .qwe .qwe1 .line16 .game_list .img7,
-body .main .container .qwe .qwe1 .line17 .game_list .img7,
-body .main .container .qwe .qwe1 .line18 .game_list .img7,
-body .main .container .qwe .qwe1 .line19 .game_list .img7,
-body .main .container .qwe .qwe1 .line20 .game_list .img7 {
+body .main .container .qwe .qwe1 .game_list .img7 {
   background: url("../img/icon/7.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1340,26 +804,7 @@ body .main .container .qwe .qwe1 .line20 .game_list .img7 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list .img8,
-body .main .container .qwe .qwe1 .line2 .game_list .img8,
-body .main .container .qwe .qwe1 .line3 .game_list .img8,
-body .main .container .qwe .qwe1 .line4 .game_list .img8,
-body .main .container .qwe .qwe1 .line5 .game_list .img8,
-body .main .container .qwe .qwe1 .line6 .game_list .img8,
-body .main .container .qwe .qwe1 .line7 .game_list .img8,
-body .main .container .qwe .qwe1 .line8 .game_list .img8,
-body .main .container .qwe .qwe1 .line9 .game_list .img8,
-body .main .container .qwe .qwe1 .line10 .game_list .img8,
-body .main .container .qwe .qwe1 .line11 .game_list .img8,
-body .main .container .qwe .qwe1 .line12 .game_list .img8,
-body .main .container .qwe .qwe1 .line13 .game_list .img8,
-body .main .container .qwe .qwe1 .line14 .game_list .img8,
-body .main .container .qwe .qwe1 .line15 .game_list .img8,
-body .main .container .qwe .qwe1 .line16 .game_list .img8,
-body .main .container .qwe .qwe1 .line17 .game_list .img8,
-body .main .container .qwe .qwe1 .line18 .game_list .img8,
-body .main .container .qwe .qwe1 .line19 .game_list .img8,
-body .main .container .qwe .qwe1 .line20 .game_list .img8 {
+body .main .container .qwe .qwe1 .game_list .img8 {
   background: url("../img/standart.png");
   background-repeat: no-repeat;
   width: 96px;
@@ -1367,202 +812,31 @@ body .main .container .qwe .qwe1 .line20 .game_list .img8 {
   display: inline-block;
   vertical-align: middle;
 }
-body .main .container .qwe .qwe1 .line1 .game_list:hover,
-body .main .container .qwe .qwe1 .line2 .game_list:hover,
-body .main .container .qwe .qwe1 .line3 .game_list:hover,
-body .main .container .qwe .qwe1 .line4 .game_list:hover,
-body .main .container .qwe .qwe1 .line5 .game_list:hover,
-body .main .container .qwe .qwe1 .line6 .game_list:hover,
-body .main .container .qwe .qwe1 .line7 .game_list:hover,
-body .main .container .qwe .qwe1 .line8 .game_list:hover,
-body .main .container .qwe .qwe1 .line9 .game_list:hover,
-body .main .container .qwe .qwe1 .line10 .game_list:hover,
-body .main .container .qwe .qwe1 .line11 .game_list:hover,
-body .main .container .qwe .qwe1 .line12 .game_list:hover,
-body .main .container .qwe .qwe1 .line13 .game_list:hover,
-body .main .container .qwe .qwe1 .line14 .game_list:hover,
-body .main .container .qwe .qwe1 .line15 .game_list:hover,
-body .main .container .qwe .qwe1 .line16 .game_list:hover,
-body .main .container .qwe .qwe1 .line17 .game_list:hover,
-body .main .container .qwe .qwe1 .line18 .game_list:hover,
-body .main .container .qwe .qwe1 .line19 .game_list:hover,
-body .main .container .qwe .qwe1 .line20 .game_list:hover {
+body .main .container .qwe .qwe1 .game_list:hover {
   background: #423443;
 }
-body .main .container .qwe .qwe1 .line1 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line2 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line3 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line4 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line5 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line6 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line7 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line8 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line9 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line10 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line11 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line12 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line13 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line14 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line15 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line16 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line17 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line18 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line19 .game_list:hover .img1,
-body .main .container .qwe .qwe1 .line20 .game_list:hover .img1 {
+body .main .container .qwe .qwe1 .game_list:hover .img1 {
   background: url("../img/icon/11.png");
 }
-body .main .container .qwe .qwe1 .line1 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line2 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line3 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line4 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line5 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line6 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line7 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line8 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line9 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line10 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line11 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line12 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line13 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line14 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line15 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line16 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line17 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line18 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line19 .game_list:hover .img3,
-body .main .container .qwe .qwe1 .line20 .game_list:hover .img3 {
+body .main .container .qwe .qwe1 .game_list:hover .img3 {
   background: url("../img/icon/13.png");
 }
-body .main .container .qwe .qwe1 .line1 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line2 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line3 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line4 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line5 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line6 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line7 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line8 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line9 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line10 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line11 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line12 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line13 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line14 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line15 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line16 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line17 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line18 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line19 .game_list:hover .img4,
-body .main .container .qwe .qwe1 .line20 .game_list:hover .img4 {
+body .main .container .qwe .qwe1 .game_list:hover .img4 {
   background: url("../img/icon/14.png");
 }
-body .main .container .qwe .qwe1 .line1 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line2 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line3 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line4 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line5 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line6 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line7 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line8 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line9 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line10 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line11 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line12 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line13 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line14 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line15 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line16 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line17 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line18 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line19 .game_list:hover .img5,
-body .main .container .qwe .qwe1 .line20 .game_list:hover .img5 {
+body .main .container .qwe .qwe1 .game_list:hover .img5 {
   background: url("../img/icon/15.png");
 }
-body .main .container .qwe .qwe1 .line1 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line2 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line3 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line4 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line5 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line6 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line7 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line8 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line9 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line10 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line11 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line12 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line13 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line14 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line15 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line16 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line17 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line18 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line19 .game_list:hover .img6,
-body .main .container .qwe .qwe1 .line20 .game_list:hover .img6 {
+body .main .container .qwe .qwe1 .game_list:hover .img6 {
   background: url("../img/icon/16.png");
 }
-body .main .container .qwe .qwe1 .line1 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line2 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line3 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line4 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line5 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line6 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line7 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line8 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line9 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line10 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line11 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line12 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line13 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line14 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line15 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line16 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line17 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line18 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line19 .game_list:hover .img7,
-body .main .container .qwe .qwe1 .line20 .game_list:hover .img7 {
+body .main .container .qwe .qwe1 .game_list:hover .img7 {
   background: url("../img/icon/17.png");
 }
-body .main .container .qwe .qwe1 .line1 .true_color,
-body .main .container .qwe .qwe1 .line2 .true_color,
-body .main .container .qwe .qwe1 .line3 .true_color,
-body .main .container .qwe .qwe1 .line4 .true_color,
-body .main .container .qwe .qwe1 .line5 .true_color,
-body .main .container .qwe .qwe1 .line6 .true_color,
-body .main .container .qwe .qwe1 .line7 .true_color,
-body .main .container .qwe .qwe1 .line8 .true_color,
-body .main .container .qwe .qwe1 .line9 .true_color,
-body .main .container .qwe .qwe1 .line10 .true_color,
-body .main .container .qwe .qwe1 .line11 .true_color,
-body .main .container .qwe .qwe1 .line12 .true_color,
-body .main .container .qwe .qwe1 .line13 .true_color,
-body .main .container .qwe .qwe1 .line14 .true_color,
-body .main .container .qwe .qwe1 .line15 .true_color,
-body .main .container .qwe .qwe1 .line16 .true_color,
-body .main .container .qwe .qwe1 .line17 .true_color,
-body .main .container .qwe .qwe1 .line18 .true_color,
-body .main .container .qwe .qwe1 .line19 .true_color,
-body .main .container .qwe .qwe1 .line20 .true_color {
+body .main .container .qwe .qwe1 .true_color {
   background: #282f3d;
 }
-body .main .container .qwe .qwe1 .line1 .true_color:hover,
-body .main .container .qwe .qwe1 .line2 .true_color:hover,
-body .main .container .qwe .qwe1 .line3 .true_color:hover,
-body .main .container .qwe .qwe1 .line4 .true_color:hover,
-body .main .container .qwe .qwe1 .line5 .true_color:hover,
-body .main .container .qwe .qwe1 .line6 .true_color:hover,
-body .main .container .qwe .qwe1 .line7 .true_color:hover,
-body .main .container .qwe .qwe1 .line8 .true_color:hover,
-body .main .container .qwe .qwe1 .line9 .true_color:hover,
-body .main .container .qwe .qwe1 .line10 .true_color:hover,
-body .main .container .qwe .qwe1 .line11 .true_color:hover,
-body .main .container .qwe .qwe1 .line12 .true_color:hover,
-body .main .container .qwe .qwe1 .line13 .true_color:hover,
-body .main .container .qwe .qwe1 .line14 .true_color:hover,
-body .main .container .qwe .qwe1 .line15 .true_color:hover,
-body .main .container .qwe .qwe1 .line16 .true_color:hover,
-body .main .container .qwe .qwe1 .line17 .true_color:hover,
-body .main .container .qwe .qwe1 .line18 .true_color:hover,
-body .main .container .qwe .qwe1 .line19 .true_color:hover,
-body .main .container .qwe .qwe1 .line20 .true_color:hover {
+body .main .container .qwe .qwe1 .true_color:hover {
   background: #323a4a;
 }
 body .main .container .qwe .qwe1 .popover,
@@ -1637,8 +911,47 @@ body .main .container .qwe .qwe2 {
   background: #282f3d;
   width: 19%;
   height: 620px;
-  margin-left: 69px;
   padding-top: 10px;
+  /*********************************************************/
+  /*********************************************************/
+}
+body .main .container .qwe .qwe2 .tesrik {
+  margin-top: -55px;
+  display: inline-block;
+}
+body .main .container .qwe .qwe2 .tesrik .filts_ {
+  margin-left: -28px;
+  color: #fff;
+  font-family: "Demib";
+  font-size: 18px;
+  text-transform: uppercase;
+}
+body .main .container .qwe .qwe2 .tesrik .filts_::after {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  margin-left: 2px;
+  max-width: 80%;
+  height: 2px;
+  background-color: #fff;
+}
+body .main .container .qwe .qwe2 .tesrik .clear_ {
+  color: #0a68be;
+  font-family: "Regular";
+  font-size: 15px;
+}
+body .main .container .qwe .qwe2 .tesrik .clear_::after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  max-width: 100%;
+  height: 1px;
+  background-color: #0a68be;
+}
+body .main .container .qwe .qwe2 .right_cl {
+  padding-right: 0px;
+  padding-left: 40px;
+  margin-left: 100px;
 }
 body .main .container .qwe .qwe2 .type .dropdown-menu-right {
   background: #282f3d;
@@ -1784,7 +1097,7 @@ body .main .container .qwe .qwe2 .format .type .input-group-btn .dropdown-menu-r
 }
 body .main .container .number_page {
   padding-right: 0px;
-  padding-left: 45px;
+  padding-left: 15px;
 }
 body .main .container .number_page .pagination > li:first-child > a,
 body .main .container .number_page .pagination > li:first-child > span,
@@ -1821,13 +1134,13 @@ body .main .container .number_page .pagination li span:hover {
   color: #fff;
 }
 body .row {
-  width: 1135px;
+  max-width: 100%;
   margin-right: 0px;
 }
 body .row .history {
   background: #282f3d;
   height: 237px;
-  width: 1120px;
+  max-width: 97%;
   padding-right: 0px;
   margin-left: 18px;
   /***************cheng - **/
@@ -1870,7 +1183,7 @@ body .row .history .tetx_history .number_page {
   float: right;
   width: 85%;
   height: 50px;
-  padding-left: 130px;
+  padding-left: 120px;
 }
 body .row .history .tetx_history .number_page .pagination {
   margin-bottom: 0px;
@@ -1895,6 +1208,8 @@ body .row .history .social_page .fb {
 }
 body .row {
   margin-left: 13px;
+  /*********************************popover for HOVER************************************/
+  /*********************************end popover for HOVER************************************/
 }
 body .row .page_footer {
   display: inline-block;
@@ -1912,7 +1227,7 @@ body .row .page_footer span::after {
   content: "";
   display: block;
   margin-top: 4px;
-  max-width: 50px;
+  max-width: 50%;
   height: 2px;
   background-color: #fff;
 }
@@ -1924,16 +1239,15 @@ body .row .page_footer .group_min_icon img {
   padding-left: 10px;
 }
 body .row .right_link {
-  margin-left: 358px;
   padding-right: 0px;
+  float: right;
+  width: 30%;
 }
 body .row .right_link a {
   font-family: "Demib";
   font-size: 18px;
   color: #969fb3;
-  margin-left: 22px;
-  float: right;
-  margin-right: -10px;
+  margin-left: 20px;
 }
 body .row .right_link a:hover {
   color: #e30303;
@@ -1942,8 +1256,6 @@ body .row .right_link a:hover {
 body .row .list_game_footer {
   display: inline-block;
   margin-left: 10px;
-  /*********************************popover for HOVER************************************/
-  /*********************************end popover for HOVER************************************/
 }
 body .row .list_game_footer .txt_active {
   padding-left: 0;
@@ -1955,7 +1267,7 @@ body .row .list_game_footer .txt_active span {
   margin-left: 15px;
 }
 body .row .list_game_footer .list_bot {
-  width: 1135px;
+  width: 98%;
   margin-top: 30px;
   height: 50px;
   background: #282f3d;
@@ -2028,25 +1340,25 @@ body .row .list_game_footer .list_bot .fourth_column .comment img {
 body .row .list_game_footer .not_m {
   margin-top: 0;
 }
-body .row .list_game_footer .popover,
-body .row .list_game_footer .popover-content {
+body .row .popover,
+body .row .popover-content {
   background: #fff;
   width: 162px;
   height: 155px;
 }
-body .row .list_game_footer .popover .small_popover,
-body .row .list_game_footer .popover-content .small_popover {
+body .row .popover .small_popover,
+body .row .popover-content .small_popover {
   height: 155px;
 }
-body .row .list_game_footer .popover .small_popover .img_pop_small,
-body .row .list_game_footer .popover-content .small_popover .img_pop_small {
+body .row .popover .small_popover .img_pop_small,
+body .row .popover-content .small_popover .img_pop_small {
   background: url("/img/logo_bot.png") no-repeat;
   width: 96px;
   height: 46px;
   vertical-align: middle;
 }
-body .row .list_game_footer .popover .small_popover span,
-body .row .list_game_footer .popover-content .small_popover span {
+body .row .popover .small_popover span,
+body .row .popover-content .small_popover span {
   margin-top: 10px;
   font-family: "Bold";
   font-size: 13px;
@@ -2054,20 +1366,20 @@ body .row .list_game_footer .popover-content .small_popover span {
   color: #000;
   margin-left: 1px;
 }
-body .row .list_game_footer .popover .small_popover .mini_cd,
-body .row .list_game_footer .popover-content .small_popover .mini_cd {
+body .row .popover .small_popover .mini_cd,
+body .row .popover-content .small_popover .mini_cd {
   margin-top: 5px;
   display: inline-block;
 }
-body .row .list_game_footer .popover .small_popover .mini_cd .img_cd,
-body .row .list_game_footer .popover-content .small_popover .mini_cd .img_cd {
+body .row .popover .small_popover .mini_cd .img_cd,
+body .row .popover-content .small_popover .mini_cd .img_cd {
   background: url("/img/icon-C.png") no-repeat;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
-body .row .list_game_footer .popover .small_popover .mini_cd span,
-body .row .list_game_footer .popover-content .small_popover .mini_cd span {
+body .row .popover .small_popover .mini_cd span,
+body .row .popover-content .small_popover .mini_cd span {
   font-family: "Regular";
   font-size: 13px;
   color: #9b9aa4;
@@ -2077,22 +1389,22 @@ body .row .list_game_footer .popover-content .small_popover .mini_cd span {
   margin-top: 0px;
   vertical-align: super;
 }
-body .row .list_game_footer .popover .small_popover .money span,
-body .row .list_game_footer .popover-content .small_popover .money span {
+body .row .popover .small_popover .money span,
+body .row .popover-content .small_popover .money span {
   font-family: "Bold";
   font-size: 13px;
   text-transform: uppercase;
   color: #000;
 }
-body .row .list_game_footer .popover .small_popover .cheng,
-body .row .list_game_footer .popover-content .small_popover .cheng {
+body .row .popover .small_popover .cheng,
+body .row .popover-content .small_popover .cheng {
   font-family: "Regular";
   font-size: 13px;
   color: #9b9aa4;
   text-align: center;
   margin-top: 10px;
 }
-body .row .list_game_footer .popover.bottom > .arrow:after {
+body .row .popover.bottom > .arrow:after {
   border-bottom-color: #fff;
 }
 body .img14 {
@@ -2100,6 +1412,7 @@ body .img14 {
   background-repeat: no-repeat;
   width: 96px;
   height: 46px;
+  background-size: cover;
   display: inline-block;
   vertical-align: middle;
 }
@@ -2139,7 +1452,7 @@ body footer .container {
 body footer .container .row {
   margin-top: 15px;
   margin-left: 25px;
-  width: 1161px;
+  width: 100%;
   height: 121px;
   padding-left: 0px;
   padding-right: 0px;
@@ -2199,7 +1512,7 @@ body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3):hover {
   background: #e30303;
 }
 body footer .container .row .social_fb {
-  width: 1141px;
+  width: 100%;
   height: 50px;
   border-bottom: 1px solid #471418;
   margin-left: 0px;
@@ -2240,18 +1553,509 @@ body footer .container .row .abaout .year_company {
   text-transform: uppercase;
   color: #e30303;
 }
-/* .popover-content{
-	width:220px;
-	background:green;
+@media (max-width: 1199px) {
+  body .main {
+    height: 3710px;
+  }
+  body .main .container .row h2 {
+    max-width: 30%;
+  }
+  body .main .container .row .serch .form-control {
+    width: 58%;
+    margin-left: 100px;
+  }
+  body .main .container .main_picture .row .first_panel .text_bot .right_t {
+    width: 29.7%;
+    text-align: center;
+  }
+  body .main .container .main_picture .row .second_panel {
+    margin-top: 50px;
+  }
+  body .main .container .main_picture .row .three_panel {
+    margin-top: 50px;
+  }
+  body .main .container .row .line0 {
+    max-width: 99%;
+  }
+  body .main .container .row .line0 .row .dates {
+    width: 15%;
+  }
+  body .main .container .qwe .qwe1 {
+    width: 100%;
+  }
+  body .main .container .qwe .qwe2 {
+    /*right filters*/
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 250px;
+  }
+  body .main .container .qwe .qwe2 .tesrik {
+    width: 26%;
+    padding-left: 0px;
+  }
+  body .main .container .qwe .qwe2 .tesrik .filts_ {
+    margin-left: 0px;
+  }
+  body .main .container .qwe .qwe2 .tesrik .filts_::after {
+    max-width: 50%;
+  }
+  body .main .container .qwe .qwe2 .right_cl {
+    float: right;
+    padding-left: 70px;
+  }
+  body .main .container .number_page {
+    margin-left: 29%;
+    padding-left: 0;
+  }
+  body .row .history .img_history {
+    width: 23%;
+  }
+  body .row .history .tetx_history {
+    width: 45%;
+  }
+  body .row .history .tetx_history h1 {
+    font-size: 20px;
+  }
+  body .row .history .tetx_history span {
+    font-size: 13px;
+  }
+  body .row .history .tetx_history .number_page {
+    width: 85%;
+    margin-top: -10px;
+    padding-left: 60px;
+  }
+  body .row .history .social_page {
+    width: 30%;
+  }
+  body .row .history .social_page .vk {
+    width: 205px;
+    margin-left: 40px;
+  }
+  body .row .history .social_page .fb {
+    visibility: hidden;
+  }
+  body .row .right_link a {
+    font-size: 14px;
+  }
+  body .row .list_game_footer .list_bot .first_column {
+    width: 28%;
+    height: 45px;
+    vertical-align: top;
+  }
+  body .row .list_game_footer .list_bot .second_columd {
+    width: 13%;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 12px;
+  }
+  body .row .list_game_footer .list_bot .second_columd span {
+    font-size: 13px;
+  }
+  body .row .list_game_footer .list_bot .third_column {
+    width: 37%;
+    vertical-align: top;
+  }
+  body .row .list_game_footer .list_bot .third_column span4 {
+    font-size: 13px;
+  }
+  body .row .list_game_footer .list_bot .third_column span3 {
+    font-size: 13px;
+  }
+  body .row .list_game_footer .list_bot .fourth_column {
+    width: 20%;
+    vertical-align: top;
+    height: 45px;
+  }
+  body .row .list_game_footer .list_bot .fourth_column span {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+  body .row .list_game_footer .list_bot .fourth_column .comment {
+    margin-left: 80px;
+  }
+  body footer .container .row .col-md-5 a {
+    font-size: 15px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a {
+    font-size: 13px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a:nth-child(2) {
+    margin-left: 45px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3) {
+    margin-left: 45px;
+  }
+  body footer {
+    height: 260px;
+  }
 }
-
-.small_popover:not(.popover-content){
-	width:220px;
-	margin-left:0px;
-	margin-top:0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	background:red;
-
+@media (max-width: 991px) {
+  body header .container nav .container_header .collapse .nav .li .a,
+  body header .container nav .container_header .navbar-collapse .nav .li .a,
+  body header .container nav .container_header .collapse .navbar-nav .li .a,
+  body header .container nav .container_header .navbar-collapse .navbar-nav .li .a,
+  body header .container nav .container_header .collapse .navbar-right .li .a,
+  body header .container nav .container_header .navbar-collapse .navbar-right .li .a {
+    font-size: 13px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  body header .container nav .container_header .collapse .nav .li .line-radius,
+  body header .container nav .container_header .navbar-collapse .nav .li .line-radius,
+  body header .container nav .container_header .collapse .navbar-nav .li .line-radius,
+  body header .container nav .container_header .navbar-collapse .navbar-nav .li .line-radius,
+  body header .container nav .container_header .collapse .navbar-right .li .line-radius,
+  body header .container nav .container_header .navbar-collapse .navbar-right .li .line-radius {
+    font-size: 13px;
+  }
+  body .menu .container_menu .navbar-left li a {
+    font-size: 13px;
+  }
+  body .menu .container_menu nav .container .collapse .navbar-right {
+    height: 45px;
+    width: 17%;
+    /**/
+  }
+  body .menu .container_menu nav .container .collapse .navbar-right .hidden_ {
+    visibility: hidden;
+    width: 1%;
+  }
+  body .menu .container_menu nav .container .collapse .navbar-right li .favorites {
+    visibility: hidden;
+    width: 1%;
+  }
+  body .menu .container_menu nav .container .collapse .navbar-right li a {
+    font-size: 13px;
+  }
+  body .menu .container_menu nav .container .collapse .navbar-right .en {
+    border-left: 1px solid #6b768c;
+    height: 50px;
+    width: 30%;
+  }
+  body .main .container .row .mq {
+    max-width: 50%;
+  }
+  body .main .container .row .serch .form-control {
+    margin-left: 120px;
+  }
+  body .main .container .main_picture .row .first_panel .text_bot .right_t {
+    width: 28.6%;
+  }
+  body .main .container .row .line0 .row .tournament {
+    width: 34%;
+    font-size: 12px;
+  }
+  body .main .container .row .line0 .row .discipline {
+    width: 12%;
+    font-size: 12px;
+  }
+  body .main .container .row .line0 .row .region {
+    width: 10%;
+    font-size: 12px;
+  }
+  body .main .container .row .line0 .row .prize {
+    width: 5%;
+    font-size: 12px;
+  }
+  body .main .container .row .line0 .row .area {
+    width: 20%;
+    font-size: 12px;
+    padding-left: 14px;
+  }
+  body .main .container .row .line0 .row .dates {
+    width: 15%;
+    font-size: 12px;
+  }
+  body .main .container .qwe .qwe1 .game_list .turnament_list {
+    width: 33%;
+    height: 50px;
+    vertical-align: top;
+  }
+  body .main .container .qwe .qwe1 .game_list .turnament_list span:not(.red_word) {
+    font-size: 11px;
+  }
+  body .main .container .qwe .qwe1 .game_list .discipline_list {
+    width: 15%;
+  }
+  body .main .container .qwe .qwe1 .game_list .discipline_list span {
+    font-size: 12px;
+  }
+  body .main .container .qwe .qwe1 .game_list .region_az {
+    width: 6%;
+  }
+  body .main .container .qwe .qwe1 .game_list .region_az span {
+    font-size: 12px;
+  }
+  body .main .container .qwe .qwe1 .game_list .prize_ {
+    width: 8%;
+  }
+  body .main .container .qwe .qwe1 .game_list .prize_ span {
+    font-size: 12px;
+  }
+  body .main .container .qwe .qwe1 .game_list .area_ {
+    width: 12%;
+  }
+  body .main .container .qwe .qwe1 .game_list .area_ span {
+    font-size: 12px;
+  }
+  body .main .container .qwe .qwe1 .game_list .dates_1 {
+    width: 20%;
+  }
+  body .main .container .qwe .qwe1 .game_list .turnament_list .red_word {
+    font-size: 11px;
+  }
+  body .main .container .qwe .qwe1 .game_list .dates_ {
+    width: 20%;
+  }
+  body .main .container .qwe .qwe1 .game_list .dates_ .rgb_g {
+    font-size: 11px;
+  }
+  body .main .container .qwe .qwe1 .game_list .dates_ .rgb_r {
+    font-size: 11px;
+  }
+  body .main .container .qwe .qwe2 {
+    width: 60%;
+    margin-left: 150px;
+  }
+  body .main .container .qwe .qwe2 .tesrik {
+    float: left;
+  }
+  body .main .container .qwe .qwe2 .tesrik .filts_ {
+    margin-left: 0px;
+    font-size: 15px;
+  }
+  body .main .container .qwe .qwe2 .right_cl {
+    float: right;
+    padding-left: 44px;
+  }
+  body .main .container .number_page {
+    width: 60%;
+    margin-left: 22%;
+  }
+  body .main .container .qwe .qwe2 .tesrik .clear_::after {
+    max-width: 90%;
+  }
+  body .row .history .tetx_history {
+    width: 60%;
+  }
+  body .row .history .img_history {
+    width: 30%;
+  }
+  body .row .history .tetx_history h1 {
+    font-size: 15px;
+  }
+  body .row .history .tetx_history span {
+    font-size: 12px;
+  }
+  body .row .history .tetx_history a {
+    font-size: 13px;
+  }
+  body .row .history .tetx_history .number_page {
+    width: 90%;
+    margin-top: -10px;
+    padding-left: 0px;
+  }
+  body .row .history .social_page {
+    visibility: hidden;
+  }
+  body .row .right_link {
+    width: 38%;
+  }
+  body .main {
+    height: 3760px;
+  }
+  body .row .list_game_footer {
+    width: 100%;
+  }
+  body .img14 {
+    visibility: hidden;
+    width: 1%;
+  }
+  body .row .list_game_footer .list_bot .first_column {
+    width: 23%;
+  }
+  body .row .list_game_footer .list_bot .first_column span {
+    font-size: 11;
+  }
+  body .row .list_game_footer .list_bot .second_columd {
+    width: 12%;
+  }
+  body .row .list_game_footer .list_bot .third_column {
+    width: 47%;
+  }
+  body .row .list_game_footer .list_bot .fourth_column {
+    width: 16%;
+  }
+  body .row .list_game_footer .list_bot .fourth_column .comment {
+    margin-left: 10px;
+  }
+  body footer .container .row .col-md-5 a {
+    font-size: 11px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a {
+    font-size: 12px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a:nth-child(2) {
+    margin-left: 30px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3) {
+    margin-left: 30px;
+  }
 }
- */
+@media (max-width: 767px) {
+  .navbar-default .navbar-toggle:focus,
+  .navbar-default .navbar-toggle:hover .navbar-toggle:active .navbar-toggle:visited {
+    background-color: red;
+  }
+  .navbar-default .navbar-toggle {
+    border: none;
+    background-color: red;
+  }
+  body .menu .container_menu nav .container .collapse .navbar-right .hidden_ {
+    visibility: visible;
+    width: 50%;
+  }
+  body .menu .container_menu nav .container .collapse .navbar-right li .favorites {
+    visibility: visible;
+    width: 35%;
+    border: none;
+  }
+  body footer .container .row {
+    width: 98%;
+  }
+  body .main .container .row .serch .form-control {
+    float: right;
+    width: 50%;
+  }
+  body .main .container .row .serch {
+    margin-top: 20px;
+  }
+  body .row .history .social_page .vk {
+    visibility: hidden;
+  }
+}
+/*MIXIN FOR XS*/
+.dimg {
+  background: none;
+  width: 1%;
+}
+/**************/
+@media (max-width: 687px) {
+  body .main .container .row .mq {
+    max-width: 51%;
+  }
+  body .main .container .row .line0 .row .tournament {
+    width: 30%;
+  }
+  body .main .container .qwe .qwe1 .game_list .turnament_list {
+    width: 29%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img1 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .qwe .qwe1 .game_list .dates_1 {
+    width: 22%;
+  }
+  body .main .container .qwe .qwe1 .game_list .dates_ {
+    width: 25%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img2 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img3 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img4 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img5 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img6 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img7 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .qwe .qwe1 .game_list .img8 {
+    background: none;
+    width: 1%;
+  }
+  body .main .container .number_page {
+    width: 66%;
+    margin-left: 21%;
+  }
+  body .row .right_link {
+    width: 42%;
+  }
+  body .row .list_game_footer .list_bot .first_column {
+    width: 23%;
+  }
+  body .row .list_game_footer .list_bot .first_column span {
+    font-size: 12px;
+  }
+  body .row .list_game_footer .list_bot .second_columd {
+    width: 12%;
+  }
+  body .row .list_game_footer .list_bot .third_column {
+    width: 49%;
+  }
+  body .row .list_game_footer .list_bot .third_column span3 {
+    font-size: 12px;
+  }
+  body .row .list_game_footer .list_bot .third_column span3 {
+    font-size: 12px;
+  }
+  body .row .list_game_footer .list_bot .fourth_column {
+    width: 14%;
+  }
+  body .row .list_game_footer .list_bot .fourth_column span {
+    margin-top: 15px;
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  body .row .list_game_footer .list_bot .fourth_column .comment {
+    margin-left: 5px;
+  }
+  body .row .list_game_footer .list_bot .fourth_column .comment span4 {
+    font-size: 12px;
+  }
+  body footer .container .row .mediaq_768_1 {
+    width: 47%;
+  }
+  body footer .container .row .mediaq_768_1 a {
+    font-size: 11px;
+    padding-right: 15px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a {
+    font-size: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: -10px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a:nth-child(2) {
+    margin-left: 10px;
+  }
+  body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3) {
+    margin-left: 10px;
+  }
+  body footer .container .row .abaout h1 {
+    font-size: 15px;
+  }
+  body footer .container .row .abaout span {
+    font-size: 11px;
+  }
+  body footer .container .row .abaout .year_company {
+    font-size: 12px;
+  }
+  body footer {
+    height: 280px;
+  }
+}

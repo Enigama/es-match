@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>es-match</title>
 
 	
@@ -30,6 +31,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+	
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -56,7 +58,7 @@ $('.input-group.date').datepicker({
 
 <header>
 	<div class="container">
-	    <nav class="navbar navbar-default">
+	    <nav class="navbar navbar-default ">
 	  		<div class="container container_header">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
@@ -82,48 +84,57 @@ $('.input-group.date').datepicker({
 		</nav>
 	</div>
 </header>
+
 <section class="menu">
   <div class="container container_menu">
-    <ul class="nav nav-pills">
-      <li role="presentation"><a href="#"><img src="img/Linage.png" alt="">Linage</a></li>
-      <li role="presentation"><a href="#"><img src="img/Alods.png" alt="">Alods</a></li>
-      <li role="presentation"><a href="#"><img src="img/Aion.png" alt="">Aion</a></li>
-      <li role="presentation"><a href="#"><img src="img/RF.png" alt="">RF Online</a></li>
-      <li role="presentation"><a href="#"><img src="img/WOT.png" alt="">World of warcraft</a></li>
-      <li role="presentation" class="dropdown_my"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  >Все игры<span class="caret"></span></a>
-    <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-      
-    </ul>
-  </li>
-    <ul class="navbar-right list-inline">
-        <li role="presentation"><a href="#" class="favorites">в избранное</a></li>
-        <li role="presentation"><a href="#"><span>en</span></a></li>
-        <li role="presentation"><a href="#">ru</a></li>
-  </ul>
-  </ul>
+    	<nav class="navbar navbar-default ">
+	  		<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			    	<ul class="nav navbar-nav navbar-left">
+				      <li role="presentation"><a href="#"><img src="img/Linage.png" alt="">Linage</a></li>
+				      <li role="presentation"><a href="#"><img src="img/Alods.png" alt="">Alods</a></li>
+				      <li role="presentation"><a href="#"><img src="img/Aion.png" alt="">Aion</a></li>
+				      <li role="presentation"><a href="#"><img src="img/RF.png" alt="">RF Online</a></li>
+				      <li role="presentation"><a href="#"><img src="img/WOT.png" alt="">World of warcraft</a></li>
+				      <li role="presentation" class="dropdown_my"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  >Все игры<span class="caret"></span></a>
+						    <ul class="dropdown-menu">
+						            <li><a href="#">Action</a></li>
+						            <li><a href="#">Another action</a></li>
+						            <li><a href="#">Something else here</a></li>
+						            <li><a href="#">Separated link</a></li>
+						            <li><a href="#">One more separated link</a></li>
+						    </ul>
+				 		</li>
+					</ul>
+			      <ul class="nav navbar-nav navbar-right list-inline">
+			            <li role="presentation" class="hidden_"><a href="#" class="favorites">в избранное</a></li>
+				        <li role="presentation" class="en"><a href="#"><p>en</p></a></li>
+				        <li role="presentation"><a href="#">ru</a></li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+	  		</div> <!--.container -->
+		</nav>
   </div>
 </section>
 
 <section class="main">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
-        <h2>главные события</h2>
+      <div class="col-md-8 col-sm-6 col-xs-6">
+        <h2 class="mq">главные события</h2>
       </div>
-      <div class="col-md-4 serch">
-          <!-- <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control">
-            </div>
-            <button type="submit" class="btn"><img src="img/search.png" alt=""></button>
-          </form> -->
+      <div class="col-md-4 col-sm-6 col-xs-6 serch">
           <div class="input-group">
               <input type="text" class="form-control">
               <span class="input-group-btn">
@@ -174,27 +185,21 @@ $('.input-group.date').datepicker({
 	<div class="col-md-12">
 		<div class="row">    
 		    <div class="line0 col-md-12">
-		      <div class="tournament_up .col-md-10">
+		      <div class="tournament_up .col-md-10 ">
 		        <h2>турниры (<span>264</span>)</h2>
 		      </div>	
 		        <div class="row header_table"><!--container-->
-		        <dvi class="tournament ">Турнир</dvi>
-		        <dvi class="discipline">Дисциплина</dvi>
-		        <dvi class="region">Регион</dvi>
-		        <dvi class="prize">Приз</dvi>
-		        <dvi class="area">Площадка</dvi>
-		        <dvi class="dates">Даты проведения</dvi>
+			        <dvi class="tournament ">Турнир</dvi>
+			        <dvi class="discipline">Дисциплина</dvi>
+			        <dvi class="region">Регион</dvi>
+			        <dvi class="prize">Приз</dvi>
+			        <dvi class="area">Площадка</dvi>
+			        <dvi class="dates">Даты проведения</dvi>
 		      </div> 
 		    </div>
-		    <div class="col-md-1 col-ofsset-md-10  tesrik">
-			      <span class="filts_">фильтры</span>
-			</div>
-			<div class="col-md-1 col-ofsset-md-10  tesrik">
-				<span class="clear_">Очистить</span>
-			</div>
 		</div>
 
-<div class="row qwe">
+<div class="row qwe col-md-12">
 	<div class="col-md-9 qwe1">
 		<div class="row col-md-10 line1">
 			<div class="game_list">
@@ -674,8 +679,14 @@ $('.input-group.date').datepicker({
 		              </div>
 		          </div>
 		</div>
-	</div><!--qwe1-->
-		<div class="col-md-3 col-offset-10 qwe2">
+	</div><!--qwe1-->		
+		<div class="col-md-3  qwe2"><!--col-offset-md-9-->
+					<div class="col-md-1   tesrik">
+					    <span class="filts_">фильтры</span>
+					</div>
+					<div class="col-md-1 tesrik right_cl">
+						<span class="clear_">Очистить</span>
+					</div>
 			 <div class="filtres">
 	            <span>Тип турнира</span>
 	            <div class="input-group type">
@@ -768,7 +779,7 @@ $('.input-group.date').datepicker({
 </div><!--qwe-->	
 		
 	</div><!-- col-md-12 first-->
-		<div class="col-md-5 col-md-offset-5 number_page">					
+		<div class="col-md-6  col-md-offset-5 number_page">					
 			<nav aria-label="...">
 			  <ul class="pagination">
 			    <li class="disabled"><a href="#" ><span>&lt;</span></a></li>
@@ -791,8 +802,8 @@ $('.input-group.date').datepicker({
 
 <div class="row">
 	<div class="history col-md-12">
-		<div class="img_history col-md-2"></div>
-		<div class="tetx_history col-md-6">
+		<div class="img_history col-md-2 col-sm-2 col-xs-12"></div>
+		<div class="tetx_history col-md-6 col-sm-6 col-xs-12">
 			<h1>история развития linage </h1>
 			<span>Спустя почти 5 лет, 1 октября 2003 года, стартует приквел к первой части Lineage, события в мире которого происходят за 150 лет до событий оригинала. Потомок первой линейки обзавелся полноценной 3D графикой и потрясающей по тем временам детализацией. А в ее широкой груди бьется сердце Unreal Engine 2.0, последующие версии которого ...</span>
 			<div><a href="#">Узнать правду</a></div>
@@ -816,7 +827,7 @@ $('.input-group.date').datepicker({
 	</div>
 </div>
 <div class="row">
-	<div class="page_footer col-md-4">
+	<div class="page_footer col-md-4 col-sm-6">
 		<span>матчи</span>
 		<div class="group_min_icon">
 			<img src="/img/dota_min.png" alt="">
@@ -828,7 +839,7 @@ $('.input-group.date').datepicker({
 			<img src="/img/WOT.png" alt="">
 		</div>
 	</div>
-	<div class="col-md-4 col-md-offset-8 right_link">
+	<div class="col-md-4 col-sm-4  col-offset-md-4 right_link">
 		<a href="">Будущее</a>
 		<a href="">Проводится</a>
 		<a href="">Прошедшее</a>
@@ -993,28 +1004,28 @@ $('.input-group.date').datepicker({
 </section>
 <footer>
 	<div class=" container">
-		<div class="row col-md-12">
-			<div class="col-md-5">
+		<div class="row col-md-12 col-sm-12 media_q">
+			<div class="col-md-5 col-sm-5 col-xs-5 mediaq_768_1">
 				<a href="">главная</a>
 				<a href="">Новости</a>
 				<a href="">контакты</a>
 			</div>
-			<div class="col-md-6 col-md-offset-1">
+			<div class="col-md-6 col-sm-7 col-xs-7 col-md-offset-1 mediaq_768_2">
 				<a href="">реклама</a>
 				<a href="">добавить турнир</a>
 				<a href="">партнеры</a>
 			</div>
-			<div class="row col-md-6 social_fb">
+			<div class="row col-md-6 col-sm-7 col-xs-7 social_fb">
 				<a><img src="/img/vk_logo.png" alt=""></a>
 				<a><img src="/img/fb_logo.png" alt=""></a>
 				<a><img src="/img/skype.png" alt=""><span>es-match.com</span></a>
 				<a><img src="/img/mail.png" alt=""><span>suppor&#64;tes-match.com</span></a>
 			</div>
-			<div class="abaout col-md-12">
+			<div class="abaout col-md-12 col-sm-12 col-xs-12">
 				<h1>о сервисе</h1>
 				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, itaque at distinctio facilis est, voluptates pariatur incidunt provident nihil impedit cupiditate esse voluptatibus deleniti. Rem voluptatem adipisci dolorum, deleniti nobis!Quod ducimus earum esse ab perferendis? Esse ex aut adipisci aliquam voluptate perspiciatis quae facilis illum, atque temporibus ab, incidunt soluta quidem, qui eaque, veritatis sit sunt. Modi, laudantium labore.</span>
 				<div class="year_company">
-					&copy;2015-2016,es-matc
+					&copy;2015-2016,es-match
 				</div>
 			</div>
 		</div>
