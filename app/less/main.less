@@ -495,20 +495,16 @@ body{
 							}
 							.right_t{
 								width:25%;
-								// margin-top: 182px;
+								height: 64px;
 								margin-top: 174px;
-							    //padding-left: 13px;
 							    padding-top: 5px;
 							    padding-bottom: 5px;
 							    margin-right:10px;
-
-							    //100px
-							    //width: 30%;
 								background-color: #191e2b;
 								opacity: 0.85;
 							
 
-								p{//p
+								h3{//p
 									padding-top:1px;
 									.Bo;
 									font-size: 24px;
@@ -1208,20 +1204,21 @@ body{
 			.number_page{
 				padding-right: 0px;
 	    		padding-left: 15px;
-				.pagination>li:first-child>a, .pagination>li:first-child>span,.pagination>li:last-child>a {
-			    margin-left: 0;
-			    margin-right:2px;
-			    border-top-left-radius: 0px;
-			    border-bottom-left-radius: 0px;
-			    border-radius:50px;
-			    background:none;
-			    border:none;
-			    cursor: default;
-				    &:hover{
-				    	background:#323a4a;
-				    	color:#fff;
-				    }
-				}
+	    		float:right;
+					.pagination>li:first-child>a, .pagination>li:first-child>span,.pagination>li:last-child>a {
+				    margin-left: 0;
+				    margin-right:2px;
+				    border-top-left-radius: 0px;
+				    border-bottom-left-radius: 0px;
+				    border-radius:50px;
+				    background:none;
+				    border:none;
+				    cursor: default;
+					    &:hover{
+					    	background:#323a4a;
+					    	color:#fff;
+					    }
+					}
 				.pagination{
 					li{
 						a,span{
@@ -1251,8 +1248,9 @@ body{
 			max-width: 97%;//1120px
 			padding-right: 0px;
 			margin-left: 18px;/***************cheng - **/
-			.img_history{
-				background:url("/img/Lineage_logo.jpg");
+			.newi{//img_history
+				//background:url("/img/Lineage_logo.jpg") no-repeat;
+				background-size:cover;
 				height: 204px;
 	    		width: 18%;
 	    		margin-top: 18px;
@@ -1260,6 +1258,7 @@ body{
 			.tetx_history{
 				height:237px;
 				width:43%;
+				padding-left: 35px;//+++++++++
 				h1{
 					text-transform: uppercase;
 					color: #fff;
@@ -1284,14 +1283,28 @@ body{
 					color: #106ac1;
 					float: right;
 				}
-				.number_page{
-					float: right;
-				    width: 85%;
+				.pagination{
+					//float: right;
+				    width: 100%;
 				    height: 50px;
-				    padding-left: 120px;
-				    .pagination{
-				    	margin-bottom:0px;
-				    }
+				    //padding-left: 120px;
+					
+
+					li{
+						a,span{
+							border-radius:50px;
+							background:none;
+							border:none;
+							color:#82899b;
+							&:hover{
+				    		background:#323a4a;
+				    		color:#fff;
+				    		}
+						}
+					}
+
+
+				    
 				}
 			}
 			.social_page{
@@ -1412,7 +1425,7 @@ body{
 						color: #fff;
 						.Bo;
 						font-size:14px;
-						text-transform: uppercase;
+						//text-transform: uppercase;
 					}
 					span4{
 						color: #969fb3;
@@ -1730,12 +1743,20 @@ body{
 		padding-left: 70px;
 	}
 	body .main .container .number_page{
+		float: none;
+    	text-align: center;
+    	margin: 0 auto;
+
 		margin-left: 29%;
 		padding-left: 0;
 	}
+	
 
-	body .row .history .img_history{
-		width:23%;
+	body .row .history{
+		height:250px;
+	}
+	body .row .history .newi{
+		width:26%;
 	}
 	body .row .history .tetx_history{
 		width:45%;
@@ -1751,8 +1772,11 @@ body{
 		margin-top: -10px;
     	padding-left: 60px;
 	}
+	body .row .history .tetx_history .pagination{
+		height:28px;
+	}
 	body .row .history .social_page{
-		width:30%;
+		width:29%;
 	}
 	body .row .history .social_page .vk{
 		width:205px;
@@ -1760,6 +1784,7 @@ body{
 	}
 	body .row .history .social_page .fb{
 		visibility:hidden;
+		display:none;
 	}
 
 	body .row .right_link a{
@@ -1956,8 +1981,8 @@ body{
 	body .row .history .tetx_history{
 		width:60%;
 	}
-	body .row .history .img_history{
-		width:30%;
+	body .row .history .newi{
+		width:35%;
 	}
 	body .row .history .tetx_history h1{
 		font-size:15px;
@@ -2064,15 +2089,41 @@ body footer .container .row{
 	}
 }
 
-/*MIXIN FOR XS*/
-.dimg{
-	background:none;
-		width:1%;
+
+@media(max-width:758px){
+	
+	body footer .container .row .mediaq_768_1{
+		width:43%;
+	}
+	body footer .container .row .col-md-6:not(.social_fb) a{
+		margin-left: 1px;
+	}
+	body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3){
+		margin-left: 10px;
+	}
+
+
+	body footer .container .row .col-md-6:not(.social_fb) a:nth-child(2){
+		margin-left: 20px;
+	}
+
+
+	body footer .container .row .mediaq_768_1 a{
+		//padding-right:15px;
+	}
+	body footer .container .row .col-md-6:not(.social_fb){
+		float:right;
+	}
+	body footer .container .row .col-md-6:not(.social_fb) a{
+		font-size:11px;
+	}
+	body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3){
+		margin-left: 20px;
+	}
 }
 
-/**************/
 
-@media(max-width:687px){
+@media(max-width:745px){
 	body .main .container .row .mq{
 		max-width:51%;
 	}
@@ -2159,6 +2210,9 @@ body footer .container .row{
 		font-size: 11px;
 		padding-right: 15px;
 	}
+	body footer .container .row .col-md-6:not(.social_fb){
+		float:left;
+	}
 	body footer .container .row .col-md-6:not(.social_fb) a{
 		font-size: 11px;
 		padding-left: 15px;
@@ -2182,6 +2236,661 @@ body footer .container .row{
 	}body footer{
 		height:280px;
 	}
+}
 
+/*MIXIN FOR XS*/
+.dimg{
+	background:none;
+		width:1%;
+}
+
+/**************/
+
+@media(max-width:687px){
+	body .main{
+		height: 6940px;
+	}
+	body .main .container .row .mq{
+		max-width:51%;
+	}
+
+	body .main .container .row .line0 .row .tournament{
+		width:30%;
+	}
+	body .main .container .qwe .qwe1 .game_list .turnament_list{
+		width: 29%;
+	}
+	body .main .container .qwe .qwe1 .game_list .img1{
+		.dimg;
+	}
+	body .main .container .qwe .qwe1 .game_list .dates_1{
+		width:22%;
+	}
+	body .main .container .qwe .qwe1 .game_list .dates_{
+		width:25%;
+	}
+	body .main .container .qwe .qwe1 .game_list .img2{
+		.dimg;
+	}
+	body .main .container .qwe .qwe1 .game_list .img3{
+		.dimg;
+	}
+	body .main .container .qwe .qwe1 .game_list .img4{
+		.dimg;
+	}
+	body .main .container .qwe .qwe1 .game_list .img5{
+		.dimg;
+	}
+	body .main .container .qwe .qwe1 .game_list .img6{
+		.dimg;
+	}
+	body .main .container .qwe .qwe1 .game_list .img7{
+		.dimg;
+	}
+	body .main .container .qwe .qwe1 .game_list .img8{
+		.dimg;
+	}
+
+	body .main .container .number_page{
+		width: 66%;
+    margin-left: 21%;
+	}
+	body .row .right_link{
+		width:42%;
+	}
+	body .row .list_game_footer .list_bot .first_column{
+		width:23%;
+	}
+	body .row .list_game_footer .list_bot .first_column span{
+		font-size:12px;
+	}
+	
+	body .row .list_game_footer .list_bot .second_columd{
+		width: 12%;
+		}
+	body .row .list_game_footer .list_bot .third_column{
+		width:49%;
+	}
+		body .row .list_game_footer .list_bot .third_column span3{
+			font-size:12px;
+		}body .row .list_game_footer .list_bot .third_column span3{
+			font-size:12px;
+		}
+	body .row .list_game_footer .list_bot .fourth_column{
+		width: 14%;
+		}
+		body .row .list_game_footer .list_bot .fourth_column span{
+			margin-top: 15px;
+    		font-size: 12px;
+    		margin-left: 15px;
+		}body .row .list_game_footer .list_bot .fourth_column .comment{
+			margin-left: 5px;
+			}body .row .list_game_footer .list_bot .fourth_column .comment span4{
+				font-size:12px;
+			}
+
+	body footer .container .row .mediaq_768_1{
+		width:50%;
+	}
+	body footer .container .row .mediaq_768_1 a{
+		font-size: 11px;
+		padding-right: 15px;
+	}
+	body footer .container .row .col-md-6:not(.social_fb){
+		float:left;
+	}
+	body footer .container .row .col-md-6:not(.social_fb) a{
+		font-size: 11px;
+		padding-left: 15px;
+    	padding-right: 15px;
+    	margin-left: -10px;
+	}
+	body footer .container .row .col-md-6:not(.social_fb) a:nth-child(2){
+		margin-left: 10px;
+	}
+	body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3){
+		margin-left: 10px;
+	}
+	body footer .container .row .abaout h1{
+		font-size:15px;
+	}
+	body footer .container .row .abaout span{
+		font-size:11px;
+	}
+	body footer .container .row .abaout .year_company{
+		font-size:12px;
+	}body footer{
+		height:300px;
+	}
+
+
+}
+@media(max-width:687px){
+	body .main{
+		height: 6940px;
+	}
+
+	body .main .container .qwe .qwe1 .game_list{
+		height:auto;
+	}
+	body .main .container .qwe .qwe1 .game_list .turnament_list{
+		display:block;
+		width: 50%;
+    	text-align: center;
+		margin:0 auto;
+		height: 40px;
+	}
+	body .main .container .qwe .qwe1 .game_list .turnament_list span:not(.red_word){
+		padding-left: 0px;//21
+	}
+	body .main .container .qwe .qwe1 .game_list .turnament_list .red_word{
+		padding-left: 0px;//21
+	}
+	body .main .container .qwe .qwe1 .game_list .discipline_list{
+		display:block;
+		margin:0 auto;
+		width: 50%;
+    	text-align: center;
+	}
+	body .main .container .qwe .qwe1 .game_list .region_az{
+		display:block;
+		margin:0 auto;
+		width: 50%;
+    	text-align: center;
+	}
+	body .main .container .qwe .qwe1 .game_list .prize_{
+		display:block;
+		margin:0 auto;
+		width: 50%;
+    	text-align: center;
+	}
+	body .main .container .qwe .qwe1 .game_list .area_{
+		display:block;
+		margin:0 auto;
+		width: 50%;
+    	text-align: center;
+	}
+	body .main .container .qwe .qwe1 .game_list .area_ span{
+		margin-left:0px;//8
+	}
+	body .main .container .qwe .qwe1 .game_list .dates_1{
+		display:block;
+		margin:0 auto;
+		width: 50%;
+    	text-align: center;
+	}
+	body .main .container .qwe .qwe1 .game_list .dates_{
+		display:block;
+		margin:0 auto;
+		height: 35px;
+		padding-left:0px;
+		padding-top:5px;
+		width: 50%;
+    	text-align: center;
+	}body .main .container .qwe .qwe1 .game_list .dates_1 span2:not(.rgb_r)::after{
+		width:50%;
+		margin: 0 auto;
+	}
+
+
+	
+	body .row .page_footer{
+		display:block;
+		text-align: center;
+		width:50%;
+		margin:0 auto;
+		padding-left:15px
+	}
+	body .row .right_link{
+		text-align: center;
+   		margin: 0 auto;
+    	margin-top: 25px;
+    	width: 50%;
+    	float:none;
+    	padding-left: 0px;
+    	padding-right:15px;
+	}
+	
+
+
+	body .row .list_game_footer .list_bot{
+		height:auto;
+	}
+	body .row .list_game_footer .list_bot .first_column{
+		display:block;
+		margin:0 auto;
+
+		width: 50%;
+    	text-align: center;
+	}
+	body .row .list_game_footer .list_bot .second_columd{
+		display:block;
+		margin:0 auto;
+
+		width: 50%;
+    	text-align: center;
+	}
+	body .row .list_game_footer .list_bot .third_column{
+		display:block;
+		margin:0 auto;
+
+		width: 50%;
+    	text-align: center;
+	}
+	body .row .list_game_footer .list_bot .fourth_column{
+		display:block;
+		margin:0 auto;
+
+		width: 50%;
+    	text-align: center;
+	}
+
+	
+	body .row .history{
+		height: 470px;
+    	padding-top: 15px;
+	}
+	/*save html and work browser*/
+	body .row .history .newi{
+		margin: 0 auto;
+    	float: none;
+    	width: 40%;
+    	background-size: cover;
+	}
+	body .row .history .tetx_history{
+		margin: 0 auto;
+    	text-align: center;
+    	float: none;
+    	padding-left: 15px;
+	}
+	body .row .history .tetx_history h1 {
+    font-size: 19px;
+	}body .row .history .tetx_history h1:after{
+		font-size:19px;
+	}
+	body .row .history .tetx_history .pagination{
+		min-width: 68%;
+	}
+	body .row .history .social_page{
+		display:none;
+	}
+
+}
+@media(max-width:632px) and (max-width:629px){
+	body .main{
+		height:6980px;
+	}
+	body footer{
+		height:300px;
+	}
+	body .row .list_game_footer .list_bot .third_column{
+		width:100%;
+	}
+}
+
+@media(max-width:600px){
+	body .main{
+		height:7030px;
+	}
+
+	body .main .container .qwe .qwe2{
+		width: 60%;
+    	margin: 0 auto;
+    	margin-top: 70px;
+	}
+	body .main .container .number_page{
+		margin: 0 auto;
+	}
+	body .row .history .newi{
+		width:45%;
+	}
+	
+	body .main .container .row .line0 .row .tournament{
+		display: block;
+    	margin: 0 auto;
+    	width:15%;
+	}
+	body .main .container .row .line0 .row .discipline{
+		display: block;
+    	margin: 0 auto;
+    	width: 25%;
+	}
+		body .row .page_footer{
+			    display: inline;
+		}
+	
+	body .row .history .tetx_history{
+		width:100%;
+	}
+	body .row .history .tetx_history .now_{
+		height:20px;
+	}
+	body .row .history .tetx_history .pagination{
+		min-width:50%;
+	}
+	body .row .history .tetx_history .pagination li a, body .row .history .tetx_history .pagination li span{
+		padding-left: 10px;
+    	padding-right: 10px;
+    	padding-top: 5px;
+    	padding-bottom: 5px;
+	}
+	body .row .right_link{
+		width:100%;
+	}
+	    
+	body .main .container .row .line0 .row .region{
+		display: block;
+    	margin: 0 auto;
+    	width: 15%;
+	}
+	body .main .container .row .line0 .row .prize{
+		display: block;
+    	margin: 0 auto;
+    	width: 15%;
+	}
+	body .main .container .row .line0 .row .area{
+		display: block;
+    	margin: 0 auto;
+    	width: 22%;
+    	padding-left:0px
+	}
+	body .main .container .row .line0 .row .dates{
+		display: block;
+    	margin: 0 auto;
+    	width: 16%;
+    	padding-left: 0;
+	}
+
+	body .row .list_game_footer .list_bot{
+		margin:0 auto;
+		margin-top: 15px;
+	}
+	body .row .list_game_footer .not_m{
+		margin: 0 auto;
+	}
+
+}
+
+@media(max-width:573px){
+	body .main{
+		height:7065px;
+	}
+	body footer .container .row .mediaq_768_1{
+		width:100%;
+	}
+	body footer .container .row .col-md-6:not(.social_fb){
+		width:100%;
+	}
+}
+@media(max-width:566px){
+	body .main{
+		min-height:7100px;
+	}
+}
+
+
+@media(max-width:484px){
+
+	body .main{
+		min-height: 7120px;
+	}
+	body footer{
+		min-height:350px;
+	}
+	body footer .container .row .social_fb{
+		width:97%;
+	}
+	body .row .history .newi{
+		width:63%;
+	}
+	body .main .container .qwe .qwe2{
+		width:85%;
+	}
+	body .main .container .qwe .qwe2 .tesrik{
+		margin-left: -10px;
+	}
+	body .main .container .qwe .qwe2 .right_cl{
+		padding-left: 38px;
+	}
+}
+
+@media(max-width:440px){
+	body footer .container .row .social_fb{
+		height: 66px;
+	}
+	body footer .container .row .social_fb .newl{
+		display:block;
+	}
+	body footer {
+    min-height: 355px;
+	}
+}
+
+
+@media(max-width:400px){
+	body .main .container .row .mq{
+		max-width:100%;
+	}
+	body .main .container .row .serch .form-control{
+		margin-left: 0px;
+		width:70%;
+	}
+	body .main .container .main_picture .row .first_panel .text_bot .right_t{
+		width:24.3%;
+	}
+	body .row .history .newi {
+    	width: 70%;
+	}
+
+	body .row .history .tetx_history .pagination li a, body .row .history .tetx_history .pagination li span{
+		padding-left: 5px;
+    	padding-right: 5px;
+	}
+
+
+
+
+
+	/**/
+		body .row .history .newi{
+		width: 84%;
+	}
+	body .row .history .tetx_history{
+		width:100%;
+	}body .row .history .tetx_history h1{
+		font-size:14px;
+	}body .row .history .tetx_history span{
+		font-size:10px;
+	}
+	/**/
+}
+
+
+
+
+
+@media(max-width:320px){
+	
+
+
+	.navbar-default .navbar-brand{
+		min-height: 50px;
+    	padding-left: 0px;
+    	padding-right: 0px;
+	}
+
+	body .main .container .row .inf{
+		width: 49%;
+    	padding-right: 0px;
+	}
+	body .main .container .row .mq{
+		max-width:100%;
+		font-size: 15px;
+	}
+	body .main .container .row .serch{
+		width:  50%;
+		float:right;
+		margin-top: 13px;
+	}
+	body .main .container .row .serch .form-control{
+		width:100%;
+		margin-left: 0px;
+	}
+
+	body .main .container .main_picture .row .first_panel .text_bot{
+		width:93%;
+	}
+	body .main .container .main_picture .row .first_panel .text_bot .left_t{
+		padding-right: 0px;
+		max-width:100%;
+    	width: 70%;
+    	height: 64px;
+	}
+	body .main .container .main_picture .row .first_panel .text_bot .left_t h5{
+		font-size:12px;
+	}
+	body .main .container .main_picture .row .first_panel .text_bot .left_t span{
+		font-size:10px;
+	}
+	body .main .container .main_picture .row .first_panel .text_bot .right_t{
+		width: 69px;
+    	position: relative;
+    	height: 64px;
+	}
+	body .main .container .main_picture .row .first_panel .text_bot .right_t h3{
+		font-size:18px;
+		margin-top: 18px;
+		padding-top:0px;
+	}
+
+	body .main .container .row .line0 .row .tournament{
+		display: block;
+    	margin: 0 auto;
+    	width:15%;
+	}
+	body .main .container .row .line0 .row .discipline{
+		display: block;
+    	margin: 0 auto;
+    	width: 25%;
+	}
+	body .main .container .row .line0 .row .region{
+		display: block;
+    	margin: 0 auto;
+    	width: 15%;
+	}
+	body .main .container .row .line0 .row .prize{
+		display: block;
+    	margin: 0 auto;
+    	width: 15%;
+	}
+	body .main .container .row .line0 .row .area{
+		display: block;
+    	margin: 0 auto;
+    	width: 22%;
+    	padding-left:0px
+	}
+	body .main .container .row .line0 .row .dates{
+		display: block;
+    	margin: 0 auto;
+    	width: 33%;
+	}
+	body .main .container .qwe .qwe1 .game_list .dates_1{
+		width:82%;
+	}
+	body .main .container .qwe .qwe2 .filtres{
+		text-align: center;
+	}
+	body .main .container .qwe .qwe2{
+		width:95%;
+	}
+	body .main .container .qwe .qwe2 .tesrik{
+		width: 37%;
+    	padding-left: 0px;
+    	padding-right: 0px;
+    	margin-left: -10px;
+	}
+	body .main .container .qwe .qwe2 .right_cl{
+		width: 25%;
+	}
+	body .main .container .number_page .pagination li a, body .main .container .number_page .pagination li span{
+		padding-left: 6px;
+    	padding-right: 6px;
+	}
+
+
+	body .row .page_footer{
+		width:100%;
+	}
+	body .row .right_link{
+		width:100%;
+	}
+
+
+	body .row .history{
+		margin-left: 5px;
+		height: 470px;
+    	padding-left: 0px;
+	}
+	body .row .history .newi{
+		width: 84%;
+	}
+	body .row .history .tetx_history{
+		width:100%;
+	}body .row .history .tetx_history h1{
+		font-size:14px;
+	}body .row .history .tetx_history span{
+		font-size:10px;
+	}
+	body .row .list_game_footer .list_bot{
+		margin: 0 auto;
+    	margin-top: 15px;
+	}
+	body .row .list_game_footer .list_bot .first_column{
+		padding-top: 10px;
+	}
+	body .img14{
+		display: none;
+	}
+	body .row .list_game_footer .list_bot .first_column span{
+		padding-left: 0px;
+	}
+	body .row .list_game_footer .list_bot .third_column{
+		width:100%;
+	}
+	body .img16{
+		margin-left: 0px;
+	}
+	body .img17{
+		margin-left: 0px;
+	}
+	body .row .list_game_footer .list_bot{
+		margin-top:0px
+	}
+	body .row .list_game_footer .txt_active{
+		padding-bottom: 10px;
+	}
+
+	body footer{
+		height:375px;
+	}
+	body footer .container .row{
+		width:96%;
+	}
+	body footer .container .row .mediaq_768_1{
+		width:100%;
+	}
+	body footer .container .row .col-md-6:not(.social_fb){
+		width:100%;
+	}body footer .container .row .col-md-6:not(.social_fb) a:nth-child(2){
+		margin-left: 0px;
+	}body footer .container .row .col-md-6:not(.social_fb) a:nth-child(3){
+		margin-left: 0px;
+	}
+	body footer .container .row .social_fb{
+		height:65px;
+	}
+	body footer .container .row .social_fb .newl{
+		display: block;
+	}
 
 }
