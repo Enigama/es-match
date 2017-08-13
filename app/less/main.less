@@ -294,7 +294,9 @@ body{
 	}
 /*******************************end popover for signed****************************************/
 	}
-
+	.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+		background:green;
+	}
 	.menu{
 		background-color: #282f3d;
 		min-height: 50px;
@@ -332,6 +334,9 @@ body{
 							&:visited{
 								background-color: #16191f;
 							}
+							&:active{
+								background-color: #16191f;
+							}
 							
 							img{
 								padding-right: 7px;
@@ -340,7 +345,9 @@ body{
 						}
 					}
 					.dropdown_my{
+					
 						a{
+
 							color: #6b768c;
 						}	
 					}
@@ -494,7 +501,7 @@ body{
 								}
 							}
 							.right_t{
-								width:25%;
+								width:24.7%;
 								height: 64px;
 								margin-top: 174px;
 							    padding-top: 5px;
@@ -2840,6 +2847,12 @@ body footer .container .row{
 		font-size:14px;
 	}body .row .history .tetx_history span{
 		font-size:10px;
+	}
+	body .row .page_footer{
+		padding-left:5px;
+	}
+	body .row .page_footer .group_min_icon{
+		margin-left:0px;
 	}
 	body .row .list_game_footer .list_bot{
 		margin: 0 auto;

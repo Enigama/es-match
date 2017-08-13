@@ -292,6 +292,11 @@ body header .popover .popover-content .pop_begin form .btn:last-child {
 body header .popover.bottom > .arrow:after {
   border-bottom-color: #282f3d;
 }
+body .navbar-default .navbar-nav > .open > a,
+body .navbar-default .navbar-nav > .open > a:focus,
+body .navbar-default .navbar-nav > .open > a:hover {
+  background: green;
+}
 body .menu {
   background-color: #282f3d;
   min-height: 50px;
@@ -325,6 +330,9 @@ body .menu .container_menu .navbar-left li a:hover {
   background-color: #16191f;
 }
 body .menu .container_menu .navbar-left li a:visited {
+  background-color: #16191f;
+}
+body .menu .container_menu .navbar-left li a:active {
   background-color: #16191f;
 }
 body .menu .container_menu .navbar-left li a img {
@@ -473,7 +481,7 @@ body .main .container .main_picture .row .first_panel .text_bot .left_t span {
   margin-bottom: 7px;
 }
 body .main .container .main_picture .row .first_panel .text_bot .right_t {
-  width: 25%;
+  width: 24.7%;
   height: 64px;
   margin-top: 174px;
   padding-top: 5px;
@@ -2665,6 +2673,12 @@ body footer .container .row .abaout .year_company {
   }
   body .row .history .tetx_history span {
     font-size: 10px;
+  }
+  body .row .page_footer {
+    padding-left: 5px;
+  }
+  body .row .page_footer .group_min_icon {
+    margin-left: 0px;
   }
   body .row .list_game_footer .list_bot {
     margin: 0 auto;
